@@ -1,0 +1,2554 @@
+{
+  "meta": {
+    "version": "1.0",
+    "lastUpdate": "2026-06-27",
+    "totalQuestions": 172,
+    "themes": ["vaccination", "varicelle", "grippe", "zona"]
+  },
+  "questions": [
+    {
+      "id": "q0001",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Quel est le principal objectif de la vaccination ?",
+      "options": [
+        "a) Soigner une maladie déjà déclarée",
+        "b) Renforcer les os",
+        "c) Remplacer les antibiotiques",
+        "d) Améliorer la digestion",
+        "e) Empêcher de contracter une infection"
+      ],
+      "correct": ["e) Empêcher de contracter une infection"],
+      "explanation": "La vaccination prépare le système immunitaire à reconnaître et combattre un agent infectieux (une bactérie, un virus). Si la personne vaccinée rencontre l'agent infectieux, son organisme pourra se défendre et empêcher que la maladie ne se développe.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0002",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Qu'est-ce que le vaccin contient généralement ?",
+      "options": [
+        "a) Des antibiotiques",
+        "b) Des fragments ou des formes inactivées d'un agent infectieux (bactéries, virus)",
+        "c) Des globules rouges",
+        "d) Des hormones",
+        "e) Des sucres complexes"
+      ],
+      "correct": ["b) Des fragments ou des formes inactivées d'un agent infectieux (bactéries, virus)"],
+      "explanation": "Les vaccins contiennent des parties de microbes affaiblies ou tuées, ce qui suffit à déclencher une réponse immunitaire sans provoquer la maladie.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0003",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Comment fonctionne un vaccin dans l'organisme ?",
+      "options": [
+        "a) Il tue directement le virus",
+        "b) Il remplace les globules blancs",
+        "c) Il modifie l'ADN de façon permanente",
+        "d) Il stimule le système immunitaire"
+      ],
+      "correct": ["d) Il stimule le système immunitaire"],
+      "explanation": "Le vaccin « apprend » au système immunitaire à reconnaître un agent infectieux (bactérie ou virus). Des cellules mémoire restent ensuite en alerte pendant des années. Si la personne rencontre l'agent infectieux, le système immunitaire va le reconnaître tout de suite et l'empêcher de provoquer une infection.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0004",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Quels sont les vaccins obligatoires chez les nourrissons en France ?",
+      "options": [
+        "a) Diphtérie – Tétanos – Polio",
+        "b) Coqueluche",
+        "c) Hépatite B",
+        "d) Hépatite C",
+        "e) Zona",
+        "f) Rougeole – Oreillons – Rubéole"
+      ],
+      "correct": [
+        "a) Diphtérie – Tétanos – Polio",
+        "b) Coqueluche",
+        "c) Hépatite B",
+        "f) Rougeole – Oreillons – Rubéole"
+      ],
+      "explanation": "Depuis le 1er janvier 2025, 11 vaccins sont obligatoires pour les nourrissons :\n• Diphtérie, Tétanos, Polio (DTP)\n• Coqueluche\n• Hépatite B\n• Rougeole, Oreillons, Rubéole (ROR)\n• Pneumocoque\n• Haemophilus influenzae b\n• Méningocoques ACWY\n• Méningocoque B\nIl n'existe pas de vaccin contre l'hépatite C. Le vaccin contre le zona concerne principalement les personnes âgées.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0005",
+      "type": "qcm",
+      "theme": "grippe",
+      "question": "Si quelqu'un a eu la grippe l'an dernier, pourquoi lui recommande-t-on de se faire vacciner à nouveau cette année ?",
+      "options": [
+        "a) Parce que le virus qui circule cette année est différent de celui de l'année dernière",
+        "b) Parce que mon immunité naturelle après une grippe ne dure pas plus de 2 ou 3 mois",
+        "c) Parce qu'il faut un rappel chaque année, comme pour le tétanos",
+        "d) Parce que le vaccin de l'an dernier n'est plus fabriqué"
+      ],
+      "correct": ["a) Parce que le virus qui circule cette année est différent de celui de l'année dernière"],
+      "explanation": "Le virus de la grippe mute en permanence. D'une année sur l'autre, les souches en circulation changent. C'est pourquoi l'OMS (Organisation mondiale de la santé) ajuste chaque année la composition du vaccin pour qu'il corresponde aux virus les plus probables de l'hiver à venir. Avoir eu la grippe l'an dernier ne protège donc pas contre la grippe de cette année.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0006",
+      "type": "qcm",
+      "theme": "grippe",
+      "question": "Est-il vrai que le vaccin antigrippal peut donner la grippe ?",
+      "options": [
+        "a) Oui, c'est fréquent : le vaccin contient un virus vivant atténué qui peut déclencher la maladie",
+        "b) Non, car le vaccin injecté ne contient pas de virus vivant capable de se multiplier et de provoquer la grippe",
+        "c) Oui, mais uniquement chez les personnes âgées ou fragiles",
+        "d) Non, jamais, mais il peut arriver d'attraper un simple rhume au même moment, ce qui crée une confusion"
+      ],
+      "correct": ["b) Non, car le vaccin injecté ne contient pas de virus vivant capable de se multiplier et de provoquer la grippe"],
+      "explanation": "Le vaccin antigrippal injecté (le plus courant) est composé de virus inactivés (tués) ou de fragments de virus. Il ne peut donc pas donner la grippe. En revanche, il peut provoquer des effets secondaires bénins (fièvre légère, courbatures) pendant 1 à 2 jours, ce qui fait croire à tort à une grippe. Par ailleurs, il arrive d'attraper un rhume juste après la vaccination, mais c'est une coïncidence, pas une conséquence du vaccin.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0007",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Est-il vrai que les vaccins peuvent provoquer l'autisme ?",
+      "options": [
+        "a) Oui, une étude scientifique célèbre l'a démontré dans les années 1990",
+        "b) Non, cette idée repose sur une étude frauduleuse qui a été rétractée, et aucune recherche sérieuse n'a confirmé ce lien",
+        "c) Oui, mais uniquement avec le vaccin ROR, pas avec les autres vaccins",
+        "d) Non, les vaccins ne causent pas l'autisme, mais ils peuvent le révéler chez des enfants déjà fragiles",
+        "e) Oui, dans de très rares cas, environ 1 enfant sur 10 000"
+      ],
+      "correct": ["b) Non, cette idée repose sur une étude frauduleuse qui a été rétractée, et aucune recherche sérieuse n'a confirmé ce lien"],
+      "explanation": "En 1998, une étude britannique a affirmé un lien entre le vaccin ROR et l'autisme. Cette étude a été rétractée car frauduleuse : des données avaient été manipulées. Depuis, des dizaines d'études menées sur plus de 10 millions d'enfants dans le monde n'ont jamais trouvé de lien entre vaccination et autisme. L'auteur de l'étude a perdu son droit d'exercer la médecine.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0008",
+      "type": "qcm",
+      "theme": "zona",
+      "question": "Une personne de plus de 65 ans qui a eu la varicelle dans l'enfance a-t-elle besoin d'être vaccinée contre le zona ?",
+      "options": [
+        "a) Non, elle est protégée à vie contre le zona",
+        "b) Non, le zona n'est pas une maladie grave",
+        "c) Oui, mais seulement si elle n'a jamais eu de varicelle",
+        "d) Oui, dès l'âge de 20 ans",
+        "e) Oui, le vaccin contre le zona est recommandé à partir d'un certain âge car le virus peut se réactiver"
+      ],
+      "correct": ["e) Oui, le vaccin contre le zona est recommandé à partir d'un certain âge car le virus peut se réactiver"],
+      "explanation": "La varicelle et le zona sont provoqués par un même virus, le virus varicelle-zona. Après une varicelle, le virus reste dormant (inactif) dans les nerfs. Avec l'âge ou en cas de baisse des défenses immunitaires, il peut se réactiver et provoquer un zona. C'est pourquoi le vaccin contre le zona est recommandé à partir de 65 ans, même chez les personnes qui ont eu la varicelle dans l'enfance. Il ne guérit pas le zona, mais il réduit fortement le risque de le développer et, en cas de zona, il diminue les complications comme les douleurs persistantes.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0009",
+      "type": "qcm",
+      "theme": "varicelle",
+      "question": "Laquelle de ces affirmations sur la varicelle est vraie ?",
+      "options": [
+        "a) La varicelle se transmet uniquement par contact direct avec les boutons",
+        "b) La varicelle est généralement bénigne chez l'enfant en bonne santé",
+        "c) La varicelle est toujours une maladie grave, quel que soit l'âge",
+        "d) La varicelle se soigne avec des antibiotiques"
+      ],
+      "correct": ["b) La varicelle est généralement bénigne chez l'enfant en bonne santé"],
+      "explanation": "La varicelle est généralement bénigne chez l'enfant en bonne santé. Elle se manifeste par des boutons qui démangent, une fièvre modérée et une fatigue passagère. La guérison survient en 7 à 10 jours sans séquelles. En revanche, elle peut être plus grave chez l'adulte, la femme enceinte, le nouveau-né et les personnes immunodéprimées. C'est une maladie virale, les antibiotiques sont inefficaces.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0010",
+      "type": "qcm",
+      "theme": "varicelle",
+      "question": "Quels sont les traitements et les mesures d'hygiène en cas de varicelle ?",
+      "options": [
+        "a) Il faut couper les ongles courts pour éviter les surinfections",
+        "b) On peut donner de l'aspirine à un enfant pour faire baisser la fièvre",
+        "c) Les antibiotiques sont systématiquement prescrits pour soigner la varicelle",
+        "d) Il est conseillé de porter des vêtements légers en coton"
+      ],
+      "correct": [
+        "a) Il faut couper les ongles courts pour éviter les surinfections",
+        "d) Il est conseillé de porter des vêtements légers en coton"
+      ],
+      "explanation": "En cas de varicelle, il est recommandé de couper les ongles courts pour éviter une surinfection des boutons. Il est également conseillé de porter des vêtements légers en coton, car ils laissent respirer la peau et limitent la transpiration, qui augmente les démangeaisons. En revanche, l'aspirine est formellement contre-indiquée en cas de varicelle ; on utilise plutôt du paracétamol pour faire baisser la fièvre. Enfin, les antibiotiques sont inefficaces contre le virus de la varicelle et ne sont prescrits qu'en cas de surinfection bactérienne, ils ne sont donc pas systématiques.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0011",
+      "type": "qcm",
+      "theme": "varicelle",
+      "question": "Quels sont les traitements et les mesures d'hygiène en cas de varicelle ?",
+      "options": [
+        "a) Les bains tièdes aident à soulager les démangeaisons",
+        "b) On peut appliquer de la crème solaire sur les boutons pour les faire sécher",
+        "c) On peut appliquer du talc sur les boutons pour les faire sécher",
+        "d) Il est recommandé de couvrir l'enfant avec des vêtements chauds pour éviter les complications"
+      ],
+      "correct": ["a) Les bains tièdes aident à soulager les démangeaisons"],
+      "explanation": "Pour soulager les démangeaisons de la varicelle, les bains tièdes sont recommandés car ils apaisent la peau, contrairement aux bains très chauds qui irritent et augmentent les démangeaisons. La crème solaire est inutile sur les boutons de varicelle et peut même irriter la peau. Le talc est contre-indiqué : il favorise les surinfections bactériennes, qui sont la complication la plus fréquente de la varicelle. Enfin, il ne faut pas couvrir l'enfant avec des vêtements trop chauds, car la transpiration irrite les boutons et aggrave les démangeaisons ; des vêtements légers en coton sont préférables.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0012",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Une femme enceinte peut-elle se faire vacciner ?",
+      "options": [
+        "a) Jamais, tous les vaccins sont dangereux pendant la grossesse",
+        "b) Oui, tous les vaccins sans exception sont autorisés",
+        "c) Oui, certains vaccins comme celui de la grippe et de la coqueluche sont recommandés pour protéger la mère et le nouveau-né",
+        "d) Oui, mais uniquement les vaccins vivants atténués comme celui de la rougeole",
+        "e) Oui, mais uniquement au troisième trimestre"
+      ],
+      "correct": ["c) Oui, certains vaccins comme celui de la grippe et de la coqueluche sont recommandés pour protéger la mère et le nouveau-né"],
+      "explanation": "Pendant la grossesse, certains vaccins sont non seulement autorisés mais vivement recommandés. C'est le cas des vaccins inactivés (qui ne contiennent pas de virus vivant), comme celui de la grippe et celui de la coqueluche. Ils permettent de protéger la mère contre des infections graves et, surtout, de transmettre des anticorps protecteurs au bébé pendant les premiers mois de sa vie, avant qu'il ne puisse être vacciné à son tour. En revanche, les vaccins vivants atténués (comme la rougeole, les oreillons, la rubéole ou la varicelle) sont contre-indiqués pendant la grossesse par précaution. La vaccination n'est pas limitée au troisième trimestre : elle peut être faite à différents moments selon le vaccin et les recommandations d'un professionnel de la santé.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0013",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Pourquoi certains vaccins nécessitent-ils des rappels ?",
+      "options": [
+        "a) Parce que le vaccin initial n'a jamais fonctionné",
+        "b) Parce que la mémoire immunitaire peut diminuer avec le temps pour certains agents infectieux",
+        "c) Parce que les anticorps disparaissent complètement au bout d'un an",
+        "d) Pour éviter les effets secondaires du premier vaccin",
+        "e) Parce que les agents infectieux mutent tous les 6 mois"
+      ],
+      "correct": ["b) Parce que la mémoire immunitaire peut diminuer avec le temps pour certains agents infectieux"],
+      "explanation": "Pour certaines maladies comme le tétanos ou la coqueluche, le niveau d'anticorps protecteurs diminue lentement avec le temps. Le rappel permet de \"rafraîchir\" la mémoire immunitaire : il stimule à nouveau le système immunitaire pour qu'il produise des anticorps. C'est pourquoi certains vaccins doivent être répétés à intervalles réguliers, y compris chez l'adulte. Cela n'a rien à voir avec une inefficacité du vaccin initial, ni avec la disparition totale des anticorps, ni avec des mutations fréquentes d'un virus (qui concernent surtout la grippe).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0014",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Pourquoi certains vaccins contiennent-ils des adjuvants ?",
+      "options": [
+        "a) Les adjuvants sont interdits car ils sont dangereux",
+        "b) Pour diminuer les effets secondaires",
+        "c) Pour conserver le vaccin plus longtemps",
+        "d) Pour améliorer la réponse immunitaire"
+      ],
+      "correct": ["d) Pour améliorer la réponse immunitaire"],
+      "explanation": "Les adjuvants sont des substances ajoutées à certains vaccins pour stimuler et renforcer la réponse du système immunitaire. Ils permettent d'obtenir une protection plus efficace et plus durable avec une quantité moindre d'antigènes (les éléments qui déclenchent la réponse immunitaire). L'adjuvant le plus utilisé est le sel d'aluminium, présent en très faible quantité dans les vaccins. Pour donner une idée, la quantité d'aluminium contenue dans un vaccin est largement inférieure à celle que nous ingérons quotidiennement par l'alimentation (par exemple dans le pain, les légumes, le thé ou les eaux minérales) ou que nous absorbons par les cosmétiques et les médicaments. Cette infime quantité est rapidement éliminée par l'organisme. Les adjuvants ne sont donc pas dangereux aux doses utilisées dans les vaccins, et leur sécurité a été confirmée par de nombreuses études scientifiques. Ils ne sont absolument pas interdits.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0015",
+      "type": "qcm",
+      "theme": "hepatite",
+      "question": "Le vaccin contre l'hépatite B protège contre :",
+      "options": [
+        "a) Toutes les hépatites virales : hépatite A, hépatite B et hépatite C",
+        "b) Une maladie du foie pouvant évoluer en cirrhose ou cancer",
+        "c) Une infection sexuellement transmissible",
+        "d) Le paludisme",
+        "e) La méningite à méningocoque"
+      ],
+      "correct": [
+        "b) Une maladie du foie pouvant évoluer en cirrhose ou cancer",
+        "c) Une infection sexuellement transmissible"
+      ],
+      "explanation": "L'hépatite B est une infection virale du foie. Elle se transmet par le sang, les rapports sexuels non protégés ou de la mère à l'enfant lors de l'accouchement. Dans certains cas l'infection devient chronique et peut évoluer vers une cirrhose ou un cancer du foie (carcinome hépatocellulaire). Le vaccin contre l'hépatite B protège spécifiquement contre ce virus. Il est obligatoire en France chez les nourrissons et chez les professionnels de la santé, et recommandé chez les personnes à risque d'infection (personnes ayant des partenaires multiples, usagers de drogues injectables, etc.).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0016",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Un enfant peut-il recevoir plusieurs vaccins le même jour ?",
+      "options": [
+        "a) Oui, les études montrent que c'est sûr et efficace, et c'est même recommandé dans le calendrier vaccinal",
+        "b) Oui, mais seulement à partir de l'âge de 2 ans",
+        "c) Non, il faut espacer les vaccins d'au moins 3 mois pour une meilleure efficacité",
+        "d) Non, cela surchargerait son système immunitaire et le rendrait vulnérable aux infections",
+        "e) Non, car les vaccins administrés ensemble s'annulent mutuellement"
+      ],
+      "correct": ["a) Oui, les études montrent que c'est sûr et efficace, et c'est même recommandé dans le calendrier vaccinal"],
+      "explanation": "Oui, un enfant peut recevoir plusieurs vaccins le même jour, et c'est même une pratique courante et recommandée. Le système immunitaire des bébés est capable de répondre à des milliers d'antigènes à la fois, bien plus que ce que contiennent les vaccins administrés en même temps. Les études scientifiques montrent que cette pratique est sûre et efficace : elle n'augmente pas les risques d'effets secondaires et n'affaiblit pas la réponse immunitaire. De nombreux vaccins sont même proposés sous forme combinée (comme le ROR, qui protège contre la rougeole, les oreillons et la rubéole en une seule injection) pour limiter le nombre de piqûres. Cette stratégie permet de protéger l'enfant plus tôt et d'éviter les retards de vaccination qui pourraient l'exposer à des maladies graves.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0017",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Selon l'OMS, combien de décès la vaccination permet-elle d'éviter chaque année dans le monde ?",
+      "options": [
+        "a) Environ 1 000",
+        "b) Environ 100 000",
+        "c) Environ 500 000",
+        "d) Environ 2,5 millions",
+        "e) Environ 10 millions"
+      ],
+      "correct": ["d) Environ 2,5 millions"],
+      "explanation": "La vaccination permet de sauver entre 2 et 3 millions de vies chaque année, et jusqu'à 5 millions si la couverture vaccinale était optimale.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0018",
+      "type": "qcm",
+      "theme": "tetanos",
+      "question": "Le vaccin contre le tétanos protège contre une maladie transmise :",
+      "options": [
+        "a) Par un virus contenu dans l'eau",
+        "b) Par une bactérie présente dans la terre",
+        "c) Par la toux d'une personne infectée",
+        "d) Par une piqûre de moustique",
+        "e) Par l'alimentation contaminée"
+      ],
+      "correct": ["b) Par une bactérie présente dans la terre"],
+      "explanation": "La bactérie responsable du tétanos est présente partout dans le sol et la poussière. Il suffit d'une petite plaie (coupure en jardinant, écharde, piqûre de ronce) pour que la bactérie entre dans l'organisme. C'est pourquoi le vaccin est recommandé pour tous, quel que soit l'âge, dès la petite enfance, avec des rappels réguliers. Le tétanos n'est pas contagieux, il ne se transmet pas de personne à personne.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0019",
+      "type": "qcm",
+      "theme": "coqueluche",
+      "question": "Si on a déjà eu la coqueluche, faut-il quand même se faire vacciner plus tard ?",
+      "options": [
+        "a) Non, une fois qu'on l'a eue, on est protégé pour toute la vie",
+        "b) Oui, car l'immunité naturelle (suite à l'infection) s'affaiblit avec le temps, et on peut l'attraper à nouveau",
+        "c) Non, le vaccin ne sert à rien si on a déjà eu la maladie",
+        "d) Oui, mais seulement si on a plus de 65 ans",
+        "e) Non, car le vaccin est réservé aux enfants"
+      ],
+      "correct": ["b) Oui, car l'immunité naturelle (suite à l'infection) s'affaiblit avec le temps, et on peut l'attraper à nouveau"],
+      "explanation": "Avoir eu la coqueluche ne protège pas pour toute la vie. Les défenses naturelles que le corps a fabriquées s'affaiblissent avec le temps, parfois en seulement quelques années. On peut donc attraper la coqueluche plusieurs fois dans sa vie. C'est pourquoi le vaccin est recommandé même pour les personnes qui ont déjà eu la maladie.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0020",
+      "type": "qcm",
+      "theme": "coqueluche",
+      "question": "Qu'est-ce que la stratégie du cocooning contre la coqueluche ?",
+      "options": [
+        "a) Garder le bébé à la maison jusqu'à ses 6 mois sans jamais le sortir",
+        "b) Vacciner les parents, grands-parents et toute personne qui va s'occuper du bébé",
+        "c) Donner un traitement antibiotique au bébé dès sa naissance",
+        "d) Faire porter un masque au bébé en permanence"
+      ],
+      "correct": ["b) Vacciner les parents, grands-parents et toute personne qui va s'occuper du bébé"],
+      "explanation": "La coqueluche est une maladie très contagieuse qui peut être grave chez les nourrissons de moins de 6 mois, car ils ne sont pas encore assez grands pour être vaccinés. Pour les protéger, on vaccine leur entourage : parents, grands-parents, frères et sœurs... C'est ce qu'on appelle la stratégie du « cocooning », comme un cocon protecteur autour du bébé. Ainsi, même si le bébé n'est pas encore vacciné, les personnes qui l'entourent ne peuvent pas lui transmettre la maladie. Cette stratégie est particulièrement importante car la coqueluche se transmet très facilement par la toux, et un adulte peut l'avoir sans même s'en rendre compte.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0021",
+      "type": "qcm",
+      "theme": "coqueluche",
+      "question": "Pourquoi recommande-t-on aux femmes enceintes de se faire vacciner contre la coqueluche ?",
+      "options": [
+        "a) Pour protéger la maman pendant sa grossesse",
+        "b) Pour transmettre des anticorps au bébé avant sa naissance, afin qu'il soit protégé dès ses premiers mois",
+        "c) Pour éviter que le bébé ait besoin de se faire vacciner plus tard",
+        "d) Pour soigner une coqueluche que la maman aurait attrapée pendant la grossesse"
+      ],
+      "correct": [
+        "a) Pour protéger la maman pendant sa grossesse",
+        "b) Pour transmettre des anticorps au bébé avant sa naissance, afin qu'il soit protégé dès ses premiers mois"
+      ],
+      "explanation": "Quand une femme enceinte se fait vacciner contre la coqueluche (entre 20 et 36 semaines de grossesse), son corps fabrique des anticorps. Ces anticorps passent dans le sang du bébé par le placenta et le protègent dès sa naissance. Le bébé bénéficie ainsi d'une protection temporaire pendant ses premiers mois, en attendant qu'il soit assez grand pour recevoir ses propres vaccins (à partir de 2 mois). Cette vaccination est recommandée à chaque grossesse, même si la maman a déjà été vaccinée auparavant, car les anticorps diminuent avec le temps.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0022",
+      "type": "qcm",
+      "theme": "immunologie",
+      "question": "Pourquoi faut-il parfois 2 ou 3 injections d'un même vaccin pour être bien protégé ?",
+      "options": [
+        "a) Parce que le corps oublie la maladie entre deux doses",
+        "b) Parce que la première dose prépare le système immunitaire, et les suivantes le renforcent",
+        "c) Parce que chaque dose protège contre une souche différente",
+        "d) Parce qu'il faut attendre 6 mois entre chaque dose pour que le vaccin agisse"
+      ],
+      "correct": ["b) Parce que la première dose prépare le système immunitaire, et les suivantes le renforcent"],
+      "explanation": "La première dose de vaccin est comme une \"première rencontre\" entre le système immunitaire et le virus. Elle permet de le préparer. Les doses suivantes sont comme des \"exercices d'entraînement\" qui renforcent la mémoire immunitaire. Ainsi, même les personnes dont le système immunitaire est un peu moins réactif finissent par être bien protégées. C'est un peu comme apprendre une nouvelle langue : une première leçon donne les bases, mais il faut plusieurs séances pour bien la maîtriser !",
+      "difficulty": 1
+    },
+    {
+      "id": "q0023",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Les vaccins peuvent-ils être responsables de maladies auto-immunes comme le diabète de type 1 ou la sclérose en plaques ?",
+      "options": [
+        "a) Oui, c'est fréquent, surtout chez les enfants",
+        "b) Non, les grandes études menées sur des millions de personnes n'ont trouvé aucun lien",
+        "c) Oui, mais uniquement le vaccin contre l'hépatite B",
+        "d) Non, sauf chez les personnes de plus de 50 ans",
+        "e) Oui, dans de très rares cas (moins de 1 %)"
+      ],
+      "correct": ["b) Non, les grandes études menées sur des millions de personnes n'ont trouvé aucun lien"],
+      "explanation": "Non, les vaccins ne sont pas responsables des maladies auto-immunes. Des études portant sur des millions d'enfants et d'adultes suivis sur plusieurs années, ont été réalisées dans le monde entier. Aucune n'a montré de lien entre la vaccination et le développement d'un diabète de type 1, d'une sclérose en plaques ou d'autres maladies auto-immunes. Les maladies auto-immunes surviennent quand le système immunitaire s'attaque par erreur à l'organisme, mais les vaccins ne déclenchent pas ce phénomène. Les causes de ces maladies sont encore mal connues, mais elles sont probablement liées à des facteurs génétiques et environnementaux, pas à la vaccination.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0024",
+      "type": "qcm",
+      "theme": "poliomyelite",
+      "question": "Le vaccin contre la poliomyélite (polio) a permis dans le monde de :",
+      "options": [
+        "a) Ne rien changer, car la polio existe toujours autant",
+        "b) Faire reculer la polio de plus de 99 % et rendre la plupart des pays exempts de cette maladie",
+        "c) Éradiquer totalement la polio en 2010",
+        "d) Faire disparaître la polio seulement dans les pays riches"
+      ],
+      "correct": ["b) Faire reculer la polio de plus de 99 % et rendre la plupart des pays exempts de cette maladie"],
+      "explanation": "La poliomyélite est une maladie très contagieuse qui peut entraîner des paralysies. Avant l'utilisation du vaccin dans les années 1950, elle touchait des centaines de milliers d'enfants chaque année dans le monde. Grâce à la vaccination massive, la polio a reculé de plus de 99 % : on est passé de 350 000 cas par an dans les années 1980 à seulement quelques dizaines de cas aujourd'hui. La maladie ne circule plus que dans deux pays (l'Afghanistan et le Pakistan). L'éradication totale est donc en vue, mais elle n'est pas encore atteinte (contrairement à la variole, qui a été complètement éradiquée).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0025",
+      "type": "qcm",
+      "theme": "covid",
+      "question": "Parmi ces affirmations concernant le vaccin à ARN messager contre le Covid-19, laquelle est vraie ?",
+      "options": [
+        "a) Il modifie l'ADN des cellules",
+        "b) Il permet la fabrication par l'organisme d'une protéine virale, qui est ensuite reconnue par le système immunitaire",
+        "c) Il contient le virus vivant du Covid-19",
+        "d) Il reste dans l'organisme plusieurs années",
+        "e) Il provoque systématiquement une forme grave de la maladie"
+      ],
+      "correct": ["b) Il permet la fabrication par l'organisme d'une protéine virale, qui est ensuite reconnue par le système immunitaire"],
+      "explanation": "Le vaccin à ARN messager contient une toute petite partie du code génétique du virus du Covid-19. Cette molécule est comme un \"message\" qui donne une instruction à nos cellules : fabriquer une protéine inoffensive, qui ressemble à une petite partie du virus. Notre système immunitaire reconnaît cette protéine comme étrangère et fabrique des anticorps pour s'en protéger. Ensuite, l'ARN messager est détruit rapidement par l'organisme, en quelques jours. Il ne pénètre pas dans le noyau des cellules où se trouve notre ADN, donc il ne modifie pas notre patrimoine génétique. Il ne contient pas le virus vivant, il ne reste pas des années dans le corps et il ne provoque pas la maladie.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0026",
+      "type": "qcm",
+      "theme": "hpv",
+      "question": "Le vaccin contre le papillomavirus (HPV) permet de prévenir principalement :",
+      "options": [
+        "a) Le cancer du poumon",
+        "b) Le cancer du col de l'utérus",
+        "c) Le cancer du sein",
+        "d) Le cancer de la prostate",
+        "e) Les verrues génitales (condylomes)"
+      ],
+      "correct": [
+        "b) Le cancer du col de l'utérus",
+        "e) Les verrues génitales (condylomes)"
+      ],
+      "explanation": "Le papillomavirus est un virus très répandu qui se transmet par voie sexuelle. Il existe de nombreux types de HPV, certains sont à \"haut risque\" et peuvent provoquer des cancers, d'autres sont à \"bas risque\" et provoquent des verrues génitales (condylomes). Le vaccin HPV protège contre les types les plus dangereux. Il permet de prévenir presque tous les cancers du col de l'utérus, mais aussi d'autres cancers comme ceux de l'anus, du pénis, de la vulve, du vagin et de la gorge. Il protège également contre les verrues génitales.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0027",
+      "type": "qcm",
+      "theme": "hpv",
+      "question": "Le vaccin contre le papillomavirus (HPV) est recommandé en France pour :",
+      "options": [
+        "a) Uniquement les filles âgées de 11 à 26 ans",
+        "b) Uniquement les garçons âgés de 11 à 26 ans",
+        "c) Les filles et les garçons âgés de 11 à 26 ans",
+        "d) Tous les adultes jusqu'à 65 ans",
+        "e) Uniquement les femmes de plus de 30 ans"
+      ],
+      "correct": ["c) Les filles et les garçons âgés de 11 à 26 ans"],
+      "explanation": "En France, la vaccination contre le papillomavirus est recommandée pour tous les adolescents, filles et garçons, entre 11 et 14 ans, avec un rattrapage pour les jeunes adultes non vaccinés, jusqu'à 26 ans révolus. Le vaccin est d'autant plus efficace qu'il est administré précocement, avant le début de la vie sexuelle.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0028",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Quels sont les vaccins obligatoires chez les nourrissons en France ?",
+      "options": [
+        "a) Méningocoques ACWY",
+        "b) Méningocoque B",
+        "c) Pneumocoque",
+        "d) Haemophilus influenzae b"
+      ],
+      "correct": [
+        "a) Méningocoques ACWY",
+        "b) Méningocoque B",
+        "c) Pneumocoque",
+        "d) Haemophilus influenzae b"
+      ],
+      "explanation": "Depuis le 1er janvier 2025, 11 vaccins sont obligatoires pour les nourrissons :\n• Diphtérie, Tétanos, Polio (DTP)\n• Coqueluche\n• Hépatite B\n• Rougeole, Oreillons, Rubéole (ROR)\n• Pneumocoque\n• Haemophilus influenzae b\n• Méningocoques ACWY\n• Méningocoque B",
+      "difficulty": 2
+    },
+    {
+      "id": "q0029",
+      "type": "qcm",
+      "theme": "hpv",
+      "question": "Le cancer du col de l'utérus est principalement causé par :",
+      "options": [
+        "a) Une bactérie (comme la chlamydia)",
+        "b) Un virus, le papillomavirus humain (HPV)",
+        "c) Un parasite",
+        "d) Une prédisposition génétique uniquement",
+        "e) Une mycose"
+      ],
+      "correct": ["b) Un virus, le papillomavirus humain (HPV)"],
+      "explanation": "Plus de 99 % des cancers du col de l'utérus sont causés par une infection persistante par un papillomavirus humain (HPV) à haut risque, principalement les types 16 et 18. Le HPV est un virus très répandu qui se transmet par voie sexuelle. Dans la plupart des cas, l'infection disparaît spontanément, mais chez certaines personnes, le virus persiste et peut provoquer des lésions précancéreuses qui, si elles ne sont pas dépistées et traitées, évoluent vers un cancer. C'est pourquoi le dépistage par frottis (ou test HPV) et la vaccination sont des armes essentielles pour prévenir ce cancer. Le vaccin HPV, recommandé chez les adolescents, permet de prévenir les infections à HPV à haut risque avant l'exposition au virus.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0030",
+      "type": "qcm",
+      "theme": "hpv",
+      "question": "Les hommes peuvent-ils développer un cancer à cause du papillomavirus (HPV) ?",
+      "options": [
+        "a) Non, les HPV ne touchent que les femmes",
+        "b) Oui, les HPV peuvent provoquer des cancers de l'anus, du pénis et de la gorge chez les hommes",
+        "c) Non, les hommes sont naturellement protégés contre les HPV",
+        "d) Oui, le cancer de la prostate"
+      ],
+      "correct": ["b) Oui, les HPV peuvent provoquer des cancers de l'anus, du pénis et de la gorge chez les hommes"],
+      "explanation": "Oui, les papillomavirus humains (HPV) peuvent aussi provoquer des cancers chez les hommes. Les principaux cancers liés au HPV chez l'homme sont le cancer de l'anus, le cancer du pénis et le cancer de l'oropharynx (gorge, amygdales, base de la langue). Le HPV est responsable d'environ 90 % des cancers de l'anus, de 50 % des cancers du pénis et d'une proportion croissante des cancers de la gorge. Les hommes ayant des rapports sexuels avec des hommes (HSH) présentent un risque particulièrement élevé de cancer anal. C'est pourquoi la vaccination contre le HPV est recommandée en France pour les garçons comme pour les filles, dès l'âge de 11 ans. Elle protège les garçons contre ces cancers et contribue surtout à l'immunité collective, c'est-à-dire à réduire la circulation du virus dans la population, protégeant ainsi indirectement les femmes.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0031",
+      "type": "qcm",
+      "theme": "hpv",
+      "question": "Une personne vaccinée contre le papillomavirus (HPV) peut-elle ensuite arrêter de faire le dépistage du cancer du col de l'utérus ?",
+      "options": [
+        "a) Oui, une fois vaccinée, elle est protégée à vie et n'a plus besoin de dépistage",
+        "b) Non, le vaccin ne protège pas contre tous les types de HPV à risque, donc le dépistage reste nécessaire",
+        "c) Oui, mais seulement à partir de 25 ans",
+        "d) Non, le dépistage n'est plus nécessaire après 30 ans"
+      ],
+      "correct": ["b) Non, le vaccin ne protège pas contre tous les types de HPV à risque, donc le dépistage reste nécessaire"],
+      "explanation": "Le vaccin contre le HPV est très efficace, mais il ne protège pas contre tous les types de papillomavirus à risque de cancer. Il cible 9 types d'HPV dont les HPV 16 et 18, responsables d'environ 90 % des cancers du col de l'utérus. D'autres types de HPV peuvent aussi provoquer des cancers, c'est pourquoi le dépistage par frottis ou test HPV reste indispensable, même chez les personnes vaccinées, et ce tout au long de la vie (de 25 à 65 ans). Vaccination et dépistage sont complémentaires.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0032",
+      "type": "qcm",
+      "theme": "histoire_medecine",
+      "question": "Parmi ces maladies, lesquelles sont causées par des microbes découverts par le scientifique Robert Koch ?",
+      "options": [
+        "a) La tuberculose",
+        "b) Le charbon",
+        "c) La peste",
+        "d) Les infections à staphylocoque doré",
+        "e) Le choléra"
+      ],
+      "correct": [
+        "a) La tuberculose",
+        "b) Le charbon",
+        "e) Le choléra"
+      ],
+      "explanation": "Robert Koch est l'un des pères de la microbiologie moderne. Il a découvert les bactéries responsables de plusieurs maladies graves :\n• Le bacille de la tuberculose (Mycobacterium tuberculosis) parfois appelé « bacille de Koch », en 1882. Cette découverte lui a valu le prix Nobel de médecine en 1905.\n• Le bacille du charbon (Bacillus anthracis) en 1876,\n• Le vibrion du choléra (Vibrio cholerae) en 1883.\nCes découvertes ont permis de mieux comprendre comment ces maladies se transmettent et ont ouvert la voie à des traitements et à des mesures de prévention.",
+      "difficulty": 3
+    },
+    {
+      "id": "q0033",
+      "type": "qcm",
+      "theme": "histoire_medecine",
+      "question": "Qui a découvert la pénicilline, le premier antibiotique, en 1928 ?",
+      "options": [
+        "a) Paul Ehrlich",
+        "b) Alexander Fleming",
+        "c) Gerhard Domagk",
+        "d) Howard Florey",
+        "e) Ernst Chain"
+      ],
+      "correct": ["b) Alexander Fleming"],
+      "explanation": "En 1928, le médecin et chercheur britannique Alexander Fleming a fait une découverte par hasard qui allait changer la médecine. En revenant de vacances, il a remarqué qu'une moisissure (un champignon) s'était développée sur une boîte de Petri contenant des bactéries (des staphylocoques). Autour de la moisissure, les bactéries étaient mortes : la moisissure produisait une substance qui les tuait. Il l'a appelée \"pénicilline\", du nom du champignon Penicillium qu'il avait observé. Ce fut le premier antibiotique de l'histoire. Mais il a fallu attendre les années 1940 pour que d'autres chercheurs (notamment Florey et Chain) parviennent à produire la pénicilline en grande quantité, permettant de soigner des milliers de soldats pendant la Seconde Guerre mondiale. Fleming a reçu le prix Nobel de médecine en 1945, avec Florey et Chain, pour cette découverte qui a sauvé des millions de vies.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0034",
+      "type": "qcm",
+      "theme": "poliomyelite",
+      "question": "Le premier vaccin contre la poliomyélite injectable a été mis au point par :",
+      "options": [
+        "a) Albert Sabin",
+        "b) Jonas Salk",
+        "c) Hilary Koprowski",
+        "d) John Enders",
+        "e) Thomas Francis Jr."
+      ],
+      "correct": ["b) Jonas Salk"],
+      "explanation": "En 1955, le docteur Jonas Salk, chercheur américain, a mis au point avec ses équipes le premier vaccin efficace contre la poliomyélite. Ce vaccin était injectable et contenait le virus inactivé (tué). Le vaccin de Salk a marqué un tournant dans la lutte contre la polio, une maladie qui paralysait des milliers d'enfants chaque année. Quelques années plus tard, en 1961, Albert Sabin a développé un vaccin oral (à avaler) contenant un virus vivant atténué, plus facile à administrer.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0035",
+      "type": "qcm",
+      "theme": "poliomyelite",
+      "question": "Le vaccin oral contre la poliomyélite (à avaler) a été développé par :",
+      "options": [
+        "a) Jonas Salk",
+        "b) Albert Sabin",
+        "c) Edward Jenner",
+        "d) Louis Pasteur",
+        "e) Maurice Hilleman"
+      ],
+      "correct": ["b) Albert Sabin"],
+      "explanation": "Dans les années 1960, le docteur Albert Sabin, chercheur américain, et ses équipes ont mis au point un vaccin contre la polio qui se prend par voie orale (quelques gouttes à avaler). Ce vaccin contient un virus vivant atténué (affaibli), qui permet de stimuler une immunité durable. Son principal avantage est qu'il est facile à administrer, sans aiguille, ce qui le rend idéal pour les grandes campagnes de vaccination dans le monde entier. Aujourd'hui encore, le vaccin oral de Sabin est utilisé dans les pays où la polio circule encore, car il protège aussi contre la transmission du virus par voie digestive. Le vaccin injectable de Jonas Salk reste utilisé dans les pays où la polio a disparu. Il est administré concomitamment avec ceux de la diphtérie, du tétanos et de la coqueluche (vaccin DTPCa).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0036",
+      "type": "qcm",
+      "theme": "histoire_medecine",
+      "question": "Qui a découvert le bacille de la peste en 1894 ?",
+      "options": [
+        "a) Robert Koch",
+        "b) Alexandre Yersin",
+        "c) Shibasaburo Kitasato",
+        "d) Louis Pasteur",
+        "e) Émile Roux"
+      ],
+      "correct": [
+        "b) Alexandre Yersin",
+        "c) Shibasaburo Kitasato"
+      ],
+      "explanation": "En 1894, une épidémie de peste éclate à Hong Kong. Deux chercheurs, travaillant indépendamment, identifient presque simultanément la bactérie responsable :\n• Alexandre Yersin, un médecin et bactériologiste suisse qui travaillait avec l'Institut Pasteur, a isolé la bactérie et l'a identifiée comme l'agent de la peste. C'est d'ailleurs en son honneur que la bactérie porte aujourd'hui le nom de Yersinia pestis.\n• Shibasaburo Kitasato, un médecin et bactériologiste japonais, a également identifié la bactérie au même moment, en travaillant à Hong Kong.\nLes deux chercheurs ont donc découvert le bacille de la peste indépendamment et à peu près en même temps. Cette découverte a permis de mieux comprendre comment la maladie se transmettait et d'ouvrir la voie à des mesures de prévention, notamment la lutte contre les rats et les puces, qui sont les principaux vecteurs de la maladie.",
+      "difficulty": 3
+    },
+    {
+      "id": "q0037",
+      "type": "qcm",
+      "theme": "histoire_medecine",
+      "question": "Qui a démontré dans les années 1840 que le lavage des mains réduit la mortalité des femmes en couches ?",
+      "options": [
+        "a) Joseph Lister",
+        "b) Ignace Semmelweis",
+        "c) Louis Pasteur",
+        "d) Robert Koch",
+        "e) Florence Nightingale"
+      ],
+      "correct": ["b) Ignace Semmelweis"],
+      "explanation": "Dans les années 1840, le médecin hongrois Ignace Semmelweis exerçait à Vienne dans une maternité. Il était consterné par le nombre de femmes qui mouraient après l'accouchement de ce qu'on appelait alors la \"fièvre puerpérale\". Il a remarqué que les médecins et les étudiants en médecine passaient directement de la salle d'autopsie à la salle d'accouchement sans se laver les mains. Il a alors imposé un lavage des mains avec une solution chlorée entre les différentes interventions. Les résultats ont été spectaculaires : la mortalité est passée de 18 % à moins de 1 %. Malheureusement, ses idées ont été rejetées par ses confrères, qui ne comprenaient pas encore la théorie des germes. Semmelweis a été moqué et a fini sa vie dans un asile. Ce n'est que plus tard, avec les travaux de Pasteur et Lister, que l'importance du lavage des mains a été reconnue. Aujourd'hui, il est considéré comme le pionnier de l'hygiène hospitalière.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0038",
+      "type": "qcm",
+      "theme": "histoire_medecine",
+      "question": "Qui a démontré l'importance de l'hygiène et de la propreté dans les hôpitaux ?",
+      "options": [
+        "a) Louis Pasteur",
+        "b) Ignace Semmelweis",
+        "c) Joseph Lister",
+        "d) Florence Nightingale",
+        "e) Robert Koch"
+      ],
+      "correct": ["d) Florence Nightingale"],
+      "explanation": "Florence Nightingale (1820-1910) est une infirmière britannique qui a marqué l'histoire de la médecine. Pendant la guerre de Crimée (1853-1856), elle a été envoyée avec une équipe d'infirmières pour soigner les soldats blessés. Elle a constaté que la mortalité était due non seulement aux blessures, mais aussi aux conditions d'hygiène déplorables : hôpitaux sales, mauvaise ventilation, manque d'eau potable. Elle a imposé des mesures strictes de propreté, d'aération et d'organisation des soins. En quelques mois, la mortalité est passée de 42 % à 2 %. Elle a ensuite fondé la première école d'infirmières au monde et a posé les bases des soins infirmiers modernes. Elle est également considérée comme une pionnière de la statistique, car elle a utilisé des données pour prouver l'efficacité de ses méthodes.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0039",
+      "type": "qcm",
+      "theme": "histoire_medecine",
+      "question": "Qui a découvert le parasite du paludisme (Plasmodium) en 1880 ?",
+      "options": [
+        "a) Ronald Ross",
+        "b) Patrick Manson",
+        "c) Giovanni Battista Grassi",
+        "d) Alphonse Laveran"
+      ],
+      "correct": ["d) Alphonse Laveran"],
+      "explanation": "En 1880, le médecin militaire français Alphonse Laveran a découvert le parasite responsable du paludisme. Alors qu'il travaillait à l'hôpital militaire de Constantine, en Algérie, il a observé au microscope des petits organismes mobiles dans le sang d'un soldat atteint de paludisme. Il a compris qu'il s'agissait d'un parasite, qu'il a appelé plus tard Plasmodium. Cette découverte a été l'une des plus importantes de la médecine tropicale. Laveran a reçu le prix Nobel de médecine en 1907 pour ses travaux sur le paludisme. Plus tard, d'autres chercheurs comme Ronald Ross et Giovanni Battista Grassi ont montré que le parasite était transmis par les moustiques.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0040",
+      "type": "qcm",
+      "theme": "infections",
+      "question": "Un rhume est généralement causé par :",
+      "options": [
+        "a) Une bactérie",
+        "b) Un virus",
+        "c) Un champignon",
+        "d) Un parasite",
+        "e) Une allergie"
+      ],
+      "correct": ["b) Un virus"],
+      "explanation": "Le rhume est une infection virale bénigne, causée par de nombreux virus différents (les plus fréquents sont les rhinovirus). Il se transmet par les gouttelettes projetées en toussant ou en éternuant, ou par contact avec des surfaces contaminées. Il n'existe pas de traitement spécifique : on soigne les symptômes (nez bouché, mal de gorge, fatigue) avec du repos, de l'hydratation et éventuellement du paracétamol pour la fièvre. Les antibiotiques sont totalement inutiles car ils ne tuent que les bactéries, pas les virus. Les prendre pour un rhume ne sert à rien et peut même favoriser l'apparition de bactéries résistantes.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0041",
+      "type": "qcm",
+      "theme": "infections",
+      "question": "La grippe est causée par :",
+      "options": [
+        "a) Une bactérie",
+        "b) Un virus",
+        "c) Un parasite",
+        "d) Un champignon"
+      ],
+      "correct": ["b) Un virus"],
+      "explanation": "La grippe est une infection respiratoire causée par le virus influenza, qui se transmet très facilement par la toux, les éternuements ou le contact avec des surfaces contaminées. Les antibiotiques sont totalement inefficaces car ils ne tuent que les bactéries. La meilleure prévention reste la vaccination annuelle, car le virus évolue régulièrement.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0042",
+      "type": "qcm",
+      "theme": "infections",
+      "question": "Les antibiotiques sont efficaces contre :",
+      "options": [
+        "a) Les virus",
+        "b) Les champignons",
+        "c) Les parasites",
+        "d) Les bactéries",
+        "e) Les prions"
+      ],
+      "correct": ["d) Les bactéries"],
+      "explanation": "Les antibiotiques sont des médicaments qui tuent les bactéries ou empêchent leur multiplication. Ils sont donc efficaces contre les infections bactériennes comme les angines à streptocoque, les cystites ou certaines pneumonies. En revanche, ils sont totalement inefficaces contre les virus, y compris ceux qui causent la grippe, le rhume ou le Covid-19. Les prendre pour une infection virale est non seulement inutile, mais peut aussi entraîner des effets secondaires (diarrhées, allergies) et favoriser l'apparition de bactéries résistantes, ce qui rendra les antibiotiques moins efficaces le jour où on en aura vraiment besoin.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0043",
+      "type": "qcm",
+      "theme": "infections",
+      "question": "Parmi ces maladies, lesquelles sont provoquées par des bactéries ?",
+      "options": [
+        "a) La tuberculose",
+        "b) La varicelle",
+        "c) La coqueluche",
+        "d) La rougeole",
+        "e) La méningite à méningocoque"
+      ],
+      "correct": [
+        "a) La tuberculose",
+        "c) La coqueluche",
+        "e) La méningite à méningocoque"
+      ],
+      "explanation": "Certaines maladies sont causées par des bactéries, d'autres par des virus. Il est important de savoir les distinguer, car les traitements ne sont pas les mêmes : les antibiotiques soignent les infections bactériennes, mais sont inefficaces contre les virus.\n• La tuberculose est causée par une bactérie (Mycobacterium tuberculosis), parfois appelée bacille de Koch. Elle touche principalement les poumons et se traite avec des antibiotiques spécifiques sur une longue durée.\n• La coqueluche est une infection respiratoire très contagieuse causée par la bactérie Bordetella pertussis. Elle est dangereuse pour les nourrissons, d'où l'importance de la vaccination.\n• La méningite à méningocoque est une infection grave des méninges (les enveloppes du cerveau) causée par la bactérie Neisseria meningitidis. Elle nécessite une prise en charge médicale urgente. Il existe des vaccins efficaces qui sont obligatoires pour les nourrissons.\nEn revanche, la varicelle et la rougeole sont causées par des virus. Les antibiotiques n'ont donc aucun effet sur ces maladies.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0044",
+      "type": "qcm",
+      "theme": "infections",
+      "question": "Parmi ces maladies, lesquelles sont d'origine virale ?",
+      "options": [
+        "a) L'hépatite B",
+        "b) Le zona",
+        "c) Le tétanos",
+        "d) La polio",
+        "e) La listériose"
+      ],
+      "correct": [
+        "a) L'hépatite B",
+        "b) Le zona",
+        "d) La polio"
+      ],
+      "explanation": "Certaines maladies sont causées par des virus, d'autres par des bactéries. Il est important de savoir les distinguer, car les traitements ne sont pas les mêmes : les antibiotiques soignent les infections bactériennes, mais sont inefficaces contre les virus.\n• L'hépatite B est une infection virale qui attaque le foie. Elle se transmet par le sang, les rapports sexuels ou de la mère à l'enfant. Un vaccin existe, il est obligatoire chez les nourrissons.\n• Le zona est causé par le même virus que la varicelle (le virus varicelle-zona). Après une varicelle, le virus reste dormant dans les nerfs et peut se réactiver des années plus tard, provoquant une éruption cutanée douloureuse. Un vaccin existe pour les personnes âgées.\n• La polio (poliomyélite) est une maladie virale très contagieuse qui peut paralyser les enfants à vie. Grâce à la vaccination, elle a presque disparu dans le monde.\nEn revanche, le tétanos et la listériose sont causés par des bactéries.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0045",
+      "type": "qcm",
+      "theme": "antibiotiques",
+      "question": "Qu'est-ce que la résistance aux antibiotiques ?",
+      "options": [
+        "a) Le malade devient résistant et les antibiotiques n'ont plus d'efficacité chez lui",
+        "b) La bactérie devient résistante à un antibiotique habituellement actif",
+        "c) L'antibiotique devient toxique pour l'organisme",
+        "d) L'antibiotique perd son efficacité naturelle avec le temps"
+      ],
+      "correct": ["b) La bactérie devient résistante à un antibiotique habituellement actif"],
+      "explanation": "La résistance aux antibiotiques est un phénomène qui concerne les bactéries, pas les malades. Une bactérie qui était normalement tuée par un antibiotique donné peut devenir résistante, c'est-à-dire qu'elle survit et continue de se multiplier malgré le traitement. Cela se produit parce que les bactéries peuvent muter ou échanger des gènes de résistance entre elles. Plus on utilise d'antibiotiques, plus on favorise l'émergence de bactéries résistantes. C'est pourquoi il est essentiel de ne prendre des antibiotiques que sur prescription médicale, de respecter les doses et la durée du traitement, et de ne pas les utiliser pour des infections virales (rhume, grippe, etc.). La résistance aux antibiotiques est un problème de santé publique majeur, car certaines infections deviennent de plus en plus difficiles à traiter.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0046",
+      "type": "qcm",
+      "theme": "antibiotiques",
+      "question": "Quelles sont les principales causes de la résistance aux antibiotiques ?",
+      "options": [
+        "a) L'utilisation excessive d'antibiotiques chez l'humain",
+        "b) La prise d'antibiotiques pour un rhume (infection virale)",
+        "c) L'utilisation massive d'antibiotiques dans l'élevage animal",
+        "d) L'arrêt prématuré d'un traitement antibiotique",
+        "e) La mauvaise qualité des antibiotiques"
+      ],
+      "correct": [
+        "a) L'utilisation excessive d'antibiotiques chez l'humain",
+        "b) La prise d'antibiotiques pour un rhume (infection virale)",
+        "c) L'utilisation massive d'antibiotiques dans l'élevage animal",
+        "d) L'arrêt prématuré d'un traitement antibiotique"
+      ],
+      "explanation": "La résistance aux antibiotiques est favorisée par plusieurs facteurs, tous liés à une utilisation excessive ou inappropriée de ces médicaments :\n• a) L'utilisation excessive chez l'humain : plus on utilise d'antibiotiques, plus on expose les bactéries à ces médicaments, ce qui favorise l'apparition de souches résistantes.\n• b) La prise d'antibiotiques pour un rhume : le rhume est causé par un virus, donc les antibiotiques sont inefficaces. Cette utilisation inutile participe à la sélection de bactéries résistantes.\n• c) L'utilisation massive dans l'élevage animal : dans certains pays, les antibiotiques sont donnés en prévention ou pour accélérer la croissance des animaux. Ces bactéries résistantes peuvent se transmettre à l'homme par la chaîne alimentaire.\n• d) L'arrêt prématuré d'un traitement : si on arrête son traitement trop tôt, les bactéries les plus résistantes peuvent survivre et se multiplier, rendant l'infection plus difficile à traiter.\nEn revanche, la mauvaise qualité des antibiotiques (e) n'est pas une cause principale. Les antibiotiques commercialisés sont soumis à des contrôles stricts. Le problème vient de leur utilisation, pas de leur qualité.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0047",
+      "type": "qcm",
+      "theme": "antibiotiques",
+      "question": "Peut-on arrêter de prendre des antibiotiques si l'on se sent mieux après 2 jours de traitement ?",
+      "options": [
+        "a) Vrai",
+        "b) Faux"
+      ],
+      "correct": ["b) Faux"],
+      "explanation": "Lorsqu'on prend des antibiotiques, les bactéries les plus fragiles meurent en premier, mais les plus résistantes peuvent survivre. Si on arrête le traitement trop tôt, ces bactéries résistantes risquent de se multiplier et de provoquer une rechute de l'infection. Cette rechute sera plus difficile à traiter car les bactéries seront moins sensibles à l'antibiotique. C'est pourquoi il est essentiel de toujours terminer la durée complète du traitement prescrit par le médecin, même si les symptômes disparaissent avant la fin. En cas d'effets secondaires gênants, il faut consulter son médecin, mais ne jamais arrêter seul.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0048",
+      "type": "qcm",
+      "theme": "infections",
+      "question": "Qu'est-ce qu'une « surinfection » ?",
+      "options": [
+        "a) Une deuxième infection virale qui s'ajoute à la première",
+        "b) Une infection causée par un parasite",
+        "c) Une infection bactérienne qui survient après une virose (par exemple, une grippe)",
+        "d) Une réaction allergique à un virus"
+      ],
+      "correct": ["c) Une infection bactérienne qui survient après une virose (par exemple, une grippe)"],
+      "explanation": "Une surinfection est une infection bactérienne qui profite d'un organisme affaibli par une infection virale (une virose) pour s'installer. Par exemple, une personne qui a la grippe peut développer quelques jours plus tard une pneumonie bactérienne : le virus de la grippe a fragilisé ses défenses immunitaires et endommagé ses voies respiratoires, ce qui permet aux bactéries de s'installer plus facilement. La surinfection est donc une complication de la maladie initiale. Elle nécessite souvent un traitement antibiotique, contrairement à la virose initiale qui ne se traite pas par antibiotiques.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0049",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "Parmi ces maladies, lesquelles se transmettent par la toux ou les éternuements ?",
+      "options": [
+        "a) La listériose",
+        "b) La tuberculose",
+        "c) Le VIH",
+        "d) L'hépatite B",
+        "e) La grippe"
+      ],
+      "correct": [
+        "b) La tuberculose",
+        "e) La grippe"
+      ],
+      "explanation": "La grippe et la tuberculose se transmettent par voie respiratoire. Lorsqu'une personne infectée tousse ou éternue, elle projette des gouttelettes contenant les virus ou les bactéries. Une personne à proximité peut les inhaler et contracter la maladie. C'est pourquoi il est important de tousser dans son coude, de porter un masque en cas de symptômes et de se laver les mains régulièrement pour limiter la transmission.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0050",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "Certaines personnes infectées par le virus de la grippe ou de la COVID-19 ne présentent aucun symptôme, mais peuvent transmettre le virus à d'autres. Comment appelle-t-on cette situation ?",
+      "options": [
+        "a) Portage asymptomatique",
+        "b) Immunité collective",
+        "c) Contagion indirecte",
+        "d) Zoonose"
+      ],
+      "correct": ["a) Portage asymptomatique"],
+      "explanation": "Le portage asymptomatique est un phénomène important dans la transmission de nombreuses maladies infectieuses. Une personne peut être infectée par un virus ou une bactérie, ne pas présenter de symptômes, mais être contagieuse. C'est pourquoi les mesures de prévention (lavage des mains, masque, distanciation) sont importantes, même lorsqu'on se sent en bonne santé.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0051",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "La période d'incubation est :",
+      "options": [
+        "a) La durée pendant laquelle une personne est contagieuse",
+        "b) La durée du traitement prescrit par le médecin",
+        "c) Le temps nécessaire pour guérir d'une maladie",
+        "d) Le délai entre le moment où l'on est contaminé et l'apparition des premiers symptômes",
+        "e) Le temps de survie du microbe en dehors de l'organisme"
+      ],
+      "correct": ["d) Le délai entre le moment où l'on est contaminé et l'apparition des premiers symptômes"],
+      "explanation": "La période d'incubation est le délai qui s'écoule entre le moment où une personne est infectée (contaminée par un virus, une bactérie, etc.) et l'apparition des premiers symptômes de la maladie. Pendant cette période, la personne ne présente généralement pas encore de signes de la maladie, mais elle peut parfois déjà être contagieuse (c'est le cas par exemple de la grippe ou de la COVID-19). Cette durée varie selon les maladies.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0052",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "Une zoonose est une maladie :",
+      "options": [
+        "a) Transmise uniquement par voie aérienne",
+        "b) Qui ne touche que les enfants de moins de 5 ans",
+        "c) Transmise de l'animal à l'homme",
+        "d) Transmise par l'eau ou les aliments contaminés",
+        "e) Provoquée uniquement par des virus"
+      ],
+      "correct": ["c) Transmise de l'animal à l'homme"],
+      "explanation": "Une zoonose est une maladie infectieuse qui se transmet de l'animal à l'homme. L'agent infectieux peut être un virus, une bactérie, un parasite ou un champignon. De nombreuses maladies humaines sont des zoonoses : la rage (morsure d'animal), la peste (puces des rats), la maladie de Lyme (tiques), la grippe aviaire (oiseaux). Une zoonose peut se transmettre par contact direct avec l'animal, par ses excréments, par une morsure, une griffure...",
+      "difficulty": 2
+    },
+    {
+      "id": "q0053",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "Une infection nosocomiale désigne une infection :",
+      "options": [
+        "a) Transmise par les animaux",
+        "b) Transmise par l'eau ou les aliments contaminés",
+        "c) Contractée lors d'un voyage à l'étranger",
+        "d) Contractée à l'hôpital ou dans un établissement de soins",
+        "e) Transmise uniquement par voie aérienne"
+      ],
+      "correct": ["d) Contractée à l'hôpital ou dans un établissement de soins"],
+      "explanation": "Une infection nosocomiale est une infection contractée à l'hôpital ou dans un établissement de soins (clinique, maison de retraite, centre de rééducation, etc.). Elle survient chez un patient qui est entré dans l'établissement pour une autre raison (opération, soin, maladie) et qui n'avait pas cette infection avant son admission. Ces infections peuvent être causées par des bactéries résistantes aux antibiotiques, ce qui les rend plus difficiles à traiter. La mesure préventive la plus importante est le lavage des mains par le personnel soignant, le malade et les visiteurs.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0054",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "Qu'est-ce qu'une maladie à transmission vectorielle ?",
+      "options": [
+        "a) Une maladie transmise entre deux espèces par un moustique, une tique ou une puce",
+        "b) Une maladie transmise par l'eau ou les aliments contaminés",
+        "c) Une maladie transmise par voie aérienne (toux, éternuements)",
+        "d) Une maladie transmise par contact direct entre personnes"
+      ],
+      "correct": ["a) Une maladie transmise entre deux espèces par un moustique, une tique ou une puce"],
+      "explanation": "Une maladie à transmission vectorielle est une infection qui est transmise à l'homme par un vecteur vivant, généralement un insecte ou un arachnide (moustique, tique, puce, pou, etc.). Le vecteur transporte un agent infectieux (virus, bactérie, parasite) et l'inocule à l'homme en piquant ou en mordant. Le vecteur n'est pas malade, mais il sert d'intermédiaire entre l'animal réservoir (ou l'homme infecté) et une personne saine. Par exemple, le moustique transmet le paludisme, la tique transmet la maladie de Lyme, et la puce transmet la peste.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0055",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "Parmi ces maladies, lesquelles sont des infections sexuellement transmissibles (IST) ?",
+      "options": [
+        "a) La syphilis",
+        "b) Le VIH (virus du sida)",
+        "c) L'hépatite B",
+        "d) Le papillomavirus (HPV)",
+        "e) Le paludisme"
+      ],
+      "correct": [
+        "a) La syphilis",
+        "b) Le VIH (virus du sida)",
+        "c) L'hépatite B",
+        "d) Le papillomavirus (HPV)"
+      ],
+      "explanation": "Les infections sexuellement transmissibles (IST) sont des infections qui se transmettent lors de rapports sexuels non protégés (vaginal, anal, oral). Elles sont causées par des bactéries, des virus ou des parasites. La syphilis, le VIH, l'hépatite B et le papillomavirus (HPV) sont des IST. En revanche, le paludisme n'est pas une IST : il se transmet par la piqûre de moustique.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0056",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "La tuberculose se transmet principalement par :",
+      "options": [
+        "a) Les rapports sexuels non protégés",
+        "b) Les aliments contaminés",
+        "c) L'eau ou les aliments contaminés",
+        "d) Les piqûres de moustiques ou de tiques",
+        "e) La voie respiratoire (toux, éternuements...)"
+      ],
+      "correct": ["e) La voie respiratoire (toux, éternuements...)"],
+      "explanation": "La tuberculose est une maladie infectieuse causée par une bactérie (Mycobacterium tuberculosis), souvent appelée bacille de Koch. Elle se transmet par voie respiratoire, c'est-à-dire par les gouttelettes projetées dans l'air lorsqu'une personne infectée tousse, éternue, parle ou chante. Une personne atteinte de tuberculose pulmonaire non traitée peut contaminer son entourage sans le savoir. La tuberculose touche le plus souvent les poumons, mais elle peut aussi atteindre d'autres organes. Elle se traite avec des antibiotiques spécifiques, sur une longue durée (plusieurs mois). La vaccination par le BCG est recommandée en France pour les enfants exposés à un risque élevé de tuberculose.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0057",
+      "type": "qcm",
+      "theme": "prevention",
+      "question": "Se laver les mains permet de réduire la transmission de certaines maladies. Lesquelles ?",
+      "options": [
+        "a) Les gastro-entérites",
+        "b) Le VIH",
+        "c) La grippe",
+        "d) L'hépatite A",
+        "e) La rougeole"
+      ],
+      "correct": [
+        "a) Les gastro-entérites",
+        "c) La grippe",
+        "d) L'hépatite A"
+      ],
+      "explanation": "Le lavage des mains est l'un des gestes les plus simples et les plus efficaces pour prévenir la transmission de nombreuses infections, notamment celles qui se transmettent par contact avec des surfaces contaminées ou par les mains. Il permet de réduire la transmission des bactéries et des virus responsables de gastro-entérites, des virus respiratoires comme celui de la grippe.\nEn se touchant le nez ou la bouche après avoir touché une surface contaminée, on peut s'infecter. Le lavage des mains limite cette transmission.\nEn revanche, le VIH et la rougeole ne se transmettent pas par les mains ou les surfaces contaminées.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0058",
+      "type": "qcm",
+      "theme": "prevention",
+      "question": "La quarantaine consiste à :",
+      "options": [
+        "a) Vacciner les personnes malades",
+        "b) Abattre les animaux porteurs d'une maladie",
+        "c) Soigner les malades à l'hôpital",
+        "d) Désinfecter les locaux et les surfaces contaminés",
+        "e) Isoler les personnes exposées à une maladie contagieuse avant l'apparition éventuelle des symptômes"
+      ],
+      "correct": ["e) Isoler les personnes exposées à une maladie contagieuse avant l'apparition éventuelle des symptômes"],
+      "explanation": "La quarantaine est une mesure de santé publique qui consiste à isoler des personnes saines (ou apparemment saines) qui ont été exposées à une maladie contagieuse, afin de vérifier si elles développent des symptômes et d'éviter qu'elles ne contaminent d'autres personnes si elles sont infectées. Elle s'applique aux personnes qui ont été en contact avec un malade ou qui reviennent d'une zone où circule une épidémie.\nLa quarantaine a été largement utilisée lors des épidémies de COVID-19, d'Ebola ou encore de peste dans l'histoire.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0059",
+      "type": "qcm",
+      "theme": "prevention",
+      "question": "La distanciation physique (1 à 2 mètres) vise à :",
+      "options": [
+        "a) Remplacer la vaccination",
+        "b) Réduire les transmissions respiratoires d'agents infectieux entre personnes",
+        "c) Isoler tous les malades à l'hôpital",
+        "d) Empêcher toute vie sociale",
+        "e) Protéger uniquement les personnes âgées"
+      ],
+      "correct": ["b) Réduire les transmissions respiratoires d'agents infectieux entre personnes"],
+      "explanation": "Quand on tousse, on éternue ou on parle, on projette des petites gouttelettes autour de soi. Si on est infecté, ces gouttelettes peuvent contenir des virus ou des bactéries. En restant à distance (1 à 2 mètres généralement), on évite de les respirer. Cette mesure est utilisée en cas d'épidémie, comme pour la COVID-19 ou la grippe, pour ralentir la propagation.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0060",
+      "type": "qcm",
+      "theme": "infections",
+      "question": "Les toxi-infections alimentaires sont des maladies causées par la consommation d'aliments contaminés. Elles peuvent être dues à :",
+      "options": [
+        "a) Le virus de la grippe",
+        "b) La bactérie Salmonella",
+        "c) Le Norovirus",
+        "d) Le Rotavirus"
+      ],
+      "correct": [
+        "b) La bactérie Salmonella",
+        "c) Le Norovirus",
+        "d) Le Rotavirus"
+      ],
+      "explanation": "Les toxi-infections alimentaires sont souvent causées par des bactéries (salmonelle) ou des virus (norovirus) qui contaminent les aliments. En revanche, la grippe ne se transmet pas par les aliments, les parasites comme le paludisme sont transmis par les moustiques, et les champignons ne sont pas la cause habituelle des toxi-infections alimentaires.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0061",
+      "type": "qcm",
+      "theme": "voyage",
+      "question": "En vacances dans un pays où l'eau du robinet n'est pas sûre (risque de turista ou diarrhée du voyageur), quelles précautions faut-il prendre ?",
+      "options": [
+        "a) Boire uniquement de l'eau en bouteille capsulée",
+        "b) Éviter les glaçons dans les boissons",
+        "c) Se brosser les dents avec l'eau du robinet",
+        "d) Se laver les mains régulièrement avec de l'eau et du savon ou du gel hydroalcoolique",
+        "e) Manger des fruits et légumes crus"
+      ],
+      "correct": [
+        "a) Boire uniquement de l'eau en bouteille capsulée",
+        "b) Éviter les glaçons dans les boissons",
+        "d) Se laver les mains régulièrement avec de l'eau et du savon ou du gel hydroalcoolique"
+      ],
+      "explanation": "Pour éviter la diarrhée du voyageur (tourista) et d'autres maladies infectieuses transmises par l'eau, il est essentiel de respecter quelques règles d'hygiène simples :\n• Boire uniquement de l'eau en bouteille capsulée. L'eau du robinet peut contenir des bactéries ou des virus responsables de diarrhées. Une bouteille scellée garantit qu'elle n'a pas été remplie avec de l'eau non potable. Vérifiez aussi que le bouchon est intact avant de boire.\n• Éviter les glaçons. Ils sont souvent fabriqués avec de l'eau du robinet non traitée et peuvent être contaminés.\n• Se laver les mains régulièrement avec de l'eau et du savon, ou avec une solution hydroalcoolique, surtout avant de manger et après être allé aux toilettes. Les mains sont un vecteur important de transmission des microbes.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0062",
+      "type": "qcm",
+      "theme": "rotavirus",
+      "question": "Le rotavirus est une cause fréquente de gastro-entérite sévère chez les nourrissons. Qu'est-ce qui permet de l'éviter ?",
+      "options": [
+        "a) Le port du masque",
+        "b) Les antibiotiques",
+        "c) Le lavage régulier des mains",
+        "d) Un vaccin"
+      ],
+      "correct": [
+        "c) Le lavage régulier des mains",
+        "d) Un vaccin"
+      ],
+      "explanation": "Le rotavirus est un virus très contagieux qui provoque des gastro-entérites, surtout chez les nourrissons et les jeunes enfants. Chez les nourrissons, la gastro-entérite à rotavirus peut entraîner une déshydratation sévère. Deux moyens sont efficaces pour l'éviter :\n• La vaccination : il existe un vaccin oral (administré en gouttes dans la bouche) recommandé pour les nourrissons avant l'âge de 6 mois. Il réduit de façon importante les formes graves de la maladie et les hospitalisations.\n• Le lavage des mains : le rotavirus se transmet par contact avec des mains ou des surfaces souillées. Un lavage régulier des mains, surtout après être allé aux toilettes et avant de préparer les repas, limite la propagation.\nEn revanche, les antibiotiques sont inefficaces contre les virus, et le port du masque n'est pas utile car le rotavirus ne se transmet pas par voie aérienne.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0063",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "Quelle distance les gouttelettes de toux ou d'éternuement peuvent-elles atteindre ?",
+      "options": [
+        "a) Moins de 1 mètre",
+        "b) 1 à 2 mètres",
+        "c) 2 à 5 mètres",
+        "d) Plus de 5 mètres"
+      ],
+      "correct": ["b) 1 à 2 mètres"],
+      "explanation": "Lorsqu'une personne tousse ou éternue, elle projette des gouttelettes de salive ou de mucus. Ces gouttelettes sont relativement lourdes et tombent rapidement au sol, en général dans un rayon de 1 à 2 mètres. C'est pourquoi il est recommandé de garder cette distance avec les autres en cas de maladie respiratoire (grippe, COVID-19, etc.) et de se couvrir la bouche avec le coude ou un mouchoir.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0064",
+      "type": "qcm",
+      "theme": "grippe",
+      "question": "Pour ne pas attraper la grippe, quel est le geste le plus efficace ?",
+      "options": [
+        "a) Se laver souvent les mains",
+        "b) Se faire vacciner chaque année",
+        "c) Porter un masque",
+        "d) Prendre des antibiotiques"
+      ],
+      "correct": ["b) Se faire vacciner chaque année"],
+      "explanation": "Le vaccin contre la grippe est le moyen le plus efficace pour se protéger. Il est fabriqué chaque année pour correspondre aux virus qui circulent. Se laver les mains et porter un masque sont utiles, mais ils ne suffisent pas à eux seuls. Les antibiotiques, eux, ne soignent pas les virus, donc ils ne servent à rien contre la grippe.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0065",
+      "type": "qcm",
+      "theme": "prevention",
+      "question": "Pour éviter la transmission de microbes dans une famille, il est conseillé de :",
+      "options": [
+        "a) Éviter de partager les rasoirs, brosses à dents ou serviettes",
+        "b) Laver le linge à 60 °C pour certaines infections",
+        "c) Se laver les mains avant de préparer un repas",
+        "d) Aérer le domicile régulièrement"
+      ],
+      "correct": [
+        "a) Éviter de partager les rasoirs, brosses à dents ou serviettes",
+        "b) Laver le linge à 60 °C pour certaines infections",
+        "c) Se laver les mains avant de préparer un repas",
+        "d) Aérer le domicile régulièrement"
+      ],
+      "explanation": "Pour limiter la propagation des infections au sein d'une famille, plusieurs gestes simples mais efficaces sont recommandés :\n• Ne pas partager les rasoirs, brosses à dents ou serviettes, ces objets peuvent être contaminés par du sang, de la salive ou des bactéries cutanées.\n• Laver le linge à 60 °C : cette température élimine la plupart des microbes, notamment en cas de gale, d'impétigo ou de poux.\n• Se laver les mains avant de préparer un repas : les mains sont un vecteur important de transmission des microbes. Un lavage soigneux avec de l'eau et du savon (ou du gel hydroalcoolique) réduit les risques de contamination des aliments et des personnes.\n• Aérer le domicile : cela renouvelle l'air et réduit la concentration de microbes en suspension, surtout en cas de maladies respiratoires (grippe, rhume, COVID-19).",
+      "difficulty": 1
+    },
+    {
+      "id": "q0066",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Qu'est-ce qu'un test PCR ?",
+      "options": [
+        "a) Une prise de sang pour mesurer le nombre de globules blancs",
+        "b) Une radiographie des poumons",
+        "c) Un test urinaire pour savoir si on est enceinte",
+        "d) Une technique qui détecte l'ADN d'un microbe",
+        "e) Une technique qui détecte les protéines d'un microbe"
+      ],
+      "correct": ["d) Une technique qui détecte l'ADN d'un microbe"],
+      "explanation": "Le test PCR est une technique de laboratoire qui permet de détecter la présence d'un agent infectieux (virus ou bactérie) en recherchant son matériel génétique (ADN ou ARN) dans un échantillon prélevé chez le patient (nez, gorge, sang, selles...). C'est un test très sensible, c'est-à-dire qu'il peut détecter une infime quantité du microbe, même avant l'apparition des symptômes. Il a été largement utilisé pendant la pandémie de COVID-19 pour diagnostiquer l'infection. Il est également utilisé pour d'autres maladies (grippe, tuberculose, etc.).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0067",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Qu'est-ce qu'une sérologie ?",
+      "options": [
+        "a) Un examen d'imagerie médicale (radiographie)",
+        "b) Une analyse d'urine",
+        "c) Un test d'allergie cutanée",
+        "d) Un test qui recherche des anticorps"
+      ],
+      "correct": ["d) Un test qui recherche des anticorps"],
+      "explanation": "La sérologie est une analyse de sang qui permet de détecter la présence d'anticorps. Les anticorps sont des protéines fabriquées par notre système immunitaire pour lutter contre un microbe (virus, bactérie, parasite). Une sérologie permet donc de savoir si une personne a déjà été infectée par un microbe (comme le VIH, l'hépatite B, la toxoplasmose ou le virus de la COVID-19). Elle peut aussi indiquer si la personne est protégée (par exemple, après une vaccination). Elle ne détecte pas le microbe lui-même, mais la trace laissée par l'infection.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0068",
+      "type": "qcm",
+      "theme": "oms",
+      "question": "Où se trouve le siège de l'Organisation mondiale de la santé (OMS) ?",
+      "options": [
+        "a) À Paris",
+        "b) À New York",
+        "c) À Londres",
+        "d) À Bruxelles",
+        "e) À Genève"
+      ],
+      "correct": ["e) À Genève"],
+      "explanation": "Le siège de l'Organisation mondiale de la santé (OMS) se trouve à Genève, en Suisse. L'organisation y est installée depuis sa création en 1948. Le bâtiment principal, inauguré en 1966, abrite aujourd'hui environ 2 400 employés. L'OMS compte également six bureaux régionaux répartis dans le monde (notamment à Copenhague, Washington, Le Caire, New Delhi, Manille et Brazzaville), mais son siège mondial est bien à Genève.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0069",
+      "type": "qcm",
+      "theme": "oms",
+      "question": "En quelle année l'Organisation mondiale de la santé (OMS) a-t-elle été créée ?",
+      "options": [
+        "a) 1945",
+        "b) 1946",
+        "c) 1948",
+        "d) 1950",
+        "e) 1955"
+      ],
+      "correct": ["c) 1948"],
+      "explanation": "L'Organisation mondiale de la Santé (OMS) a été créée le 7 avril 1948, date à laquelle sa Constitution est entrée en vigueur. C'est pour cette raison que la Journée mondiale de la Santé est célébrée chaque année le 7 avril.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0070",
+      "type": "qcm",
+      "theme": "oms",
+      "question": "Combien de pays sont membres de l'OMS en 2026 ?",
+      "options": [
+        "a) 192 pays",
+        "b) 193 pays",
+        "c) 194 pays",
+        "d) 195 pays",
+        "e) 211 pays"
+      ],
+      "correct": ["a) 192 pays"],
+      "explanation": "L'OMS compte actuellement 192 États membres. Ce nombre a récemment évolué : les États-Unis et l'Argentine se sont retirés de l'OMS en 2026. L'organisation compte également deux membres associés (Porto Rico et Tokelau) qui participent aux activités avec des droits limités. Pour comparaison, la FIFA compte 211 pays membres.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0071",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Qu'est-ce qu'un test antigénique ?",
+      "options": [
+        "a) Une prise de sang pour mesurer le nombre de globules blancs",
+        "b) Une radiographie des poumons",
+        "c) Un test urinaire pour savoir si on est enceinte",
+        "d) Une technique qui détecte l'ADN d'un microbe",
+        "e) Une technique qui détecte les protéines d'un microbe"
+      ],
+      "correct": ["e) Une technique qui détecte les protéines d'un microbe"],
+      "explanation": "Un test antigénique est un test rapide (résultat en 15 à 30 minutes) qui détecte la présence d'une protéine spécifique (appelée antigène) située à la surface du virus ou de la bactérie. Il est utilisé pour le dépistage du COVID-19, de la grippe, ou d'autres infections. Il est moins sensible que le test PCR (qui détecte le matériel génétique), car il requiert une charge virale plus élevée pour être positif. En revanche, il est plus rapide, moins coûteux et plus facile à réaliser. Il est particulièrement utile en période épidémique pour tester rapidement un grand nombre de personnes.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0072",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Une radiographie des poumons (radio du thorax) est surtout utile pour diagnostiquer :",
+      "options": [
+        "a) Une angine",
+        "b) Un rhume",
+        "c) Une pneumonie",
+        "d) Une bronchite",
+        "e) Une gastro-entérite"
+      ],
+      "correct": ["c) Une pneumonie"],
+      "explanation": "La radiographie des poumons (ou radio du thorax) est un examen d'imagerie qui permet de visualiser les poumons, le cœur et les côtes. Elle est surtout utilisée pour diagnostiquer une pneumonie (infection pulmonaire). La radiographie est également utile pour détecter d'autres affections pulmonaires comme la tuberculose, un cancer du poumon. En revanche, elle ne permet pas d'identifier le microbe responsable (virus ou bactérie) ; elle oriente le médecin vers le bon traitement. La radiographie n'est pas utile pour diagnostiquer une angine, un rhume, une bronchite ou une gastro-entérite.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0073",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Un « antibiogramme » est un examen qui permet de :",
+      "options": [
+        "a) Voir si un patient est allergique à un antibiotique",
+        "b) Mesurer le niveau de fièvre",
+        "c) Détecter la présence d'un virus",
+        "d) Tester quels antibiotiques sont efficaces contre une bactérie précise",
+        "e) Compter le nombre de globules rouges"
+      ],
+      "correct": ["d) Tester quels antibiotiques sont efficaces contre une bactérie précise"],
+      "explanation": "Un antibiogramme est un examen de laboratoire qui permet de déterminer quels antibiotiques sont efficaces contre une bactérie spécifique trouvée dans un prélèvement. Après avoir identifié la bactérie responsable de l'infection, on la met en contact avec plusieurs antibiotiques. L'antibiogramme montre lesquels peuvent tuer la bactérie, et lesquels sont inefficaces. Cela permet au médecin de prescrire l'antibiotique le plus adapté pour soigner l'infection.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0074",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Qu'est-ce qu'une numération formule sanguine (NFS) ?",
+      "options": [
+        "a) Une radiographie des os",
+        "b) Un test de grossesse",
+        "c) Un test d'urine",
+        "d) Une mesure de la tension artérielle",
+        "e) Une analyse de sang qui compte les globules rouges, les globules blancs et les plaquettes"
+      ],
+      "correct": ["e) Une analyse de sang qui compte les globules rouges, les globules blancs et les plaquettes"],
+      "explanation": "La numération formule sanguine (NFS) – aussi appelée hémogramme – permet de mesurer et de compter les trois principales familles de cellules présentes dans le sang :\n• Les globules rouges : ils transportent l'oxygène. Un taux bas peut indiquer une anémie (fatigue, pâleur).\n• Les globules blancs : ils participent à la défense immunitaire. Un taux élevé peut orienter vers une infection (bactérienne ou virale) ou une inflammation.\n• Les plaquettes : elles permettent la coagulation du sang.\nElle est réalisée à partir d'une prise de sang.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0075",
+      "type": "qcm",
+      "theme": "bronchiolite",
+      "question": "La bronchiolite du nourrisson est due à :",
+      "options": [
+        "a) Un champignon",
+        "b) Une bactérie",
+        "c) Un virus",
+        "d) Une allergie",
+        "e) Un parasite"
+      ],
+      "correct": ["c) Un virus"],
+      "explanation": "La bronchiolite est une infection respiratoire aiguë qui touche surtout les bébés de moins de 2 ans. Elle est très fréquente à l'automne et au début de l'hiver. Elle est causée dans la majorité des cas par le virus respiratoire syncytial (VRS). Ce virus infecte les bronchioles (les petites voies respiratoires dans les poumons). C'est une infection virale, les antibiotiques sont donc inefficaces contre la bronchiolite.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0076",
+      "type": "qcm",
+      "theme": "bronchiolite",
+      "question": "Quels gestes permettent d'éviter de transmettre la bronchiolite à un nourrisson ?",
+      "options": [
+        "a) Se laver les mains régulièrement avec de l'eau et du savon ou du gel hydroalcoolique",
+        "b) Porter un masque en cas de toux ou de rhume (pour les adultes)",
+        "c) Aérer les pièces plusieurs fois par jour",
+        "d) Donner des antibiotiques à titre préventif"
+      ],
+      "correct": [
+        "a) Se laver les mains régulièrement avec de l'eau et du savon ou du gel hydroalcoolique",
+        "b) Porter un masque en cas de toux ou de rhume (pour les adultes)",
+        "c) Aérer les pièces plusieurs fois par jour"
+      ],
+      "explanation": "La bronchiolite est une infection virale respiratoire qui touche principalement les nourrissons de moins de 2 ans. Elle est due au virus respiratoire syncytial (VRS), très contagieux. Pour l'éviter, plusieurs gestes simples sont efficaces :\n• Se laver les mains régulièrement : le VRS se transmet par les mains sales.\n• Porter un masque en cas de toux ou de rhume pour les adultes au contact des bébés.\n• Aérer les pièces : cela renouvelle l'air et diminue la concentration de virus en suspension dans les espaces clos.\nDepuis 2023-2024, une nouvelle stratégie de prévention existe avec un anticorps monoclonal administré aux nourrissons avant l'hiver. Un vaccin maternel contre le VRS est également disponible pour protéger le bébé par transfert d'anticorps pendant la grossesse.\nEn revanche, les antibiotiques sont inefficaces contre les virus.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0077",
+      "type": "qcm",
+      "theme": "bronchiolite",
+      "question": "Qu'est-ce que l'immunisation passive des nourrissons contre le VRS (virus responsable de la bronchiolite) ?",
+      "options": [
+        "a) Un vaccin administré au nourrisson pour qu'il fabrique lui-même des anticorps",
+        "b) Une mesure d'hygiène comme le lavage des mains",
+        "c) Un traitement antibiotique pour soigner la bronchiolite",
+        "d) Une injection d'anticorps déjà tout faits pour protéger le bébé rapidement et temporairement",
+        "e) Un vaccin administré à la mère pour protéger le bébé pendant la grossesse"
+      ],
+      "correct": ["d) Une injection d'anticorps déjà tout faits pour protéger le bébé rapidement et temporairement"],
+      "explanation": "L'immunisation passive des nourrissons contre le VRS consiste à administrer directement au bébé des anticorps déjà tout faits (appelés anticorps monoclonaux), par une seule injection. Ces anticorps agissent comme une protection \"clé en main\" qui neutralise le virus si le bébé y est exposé. Cette protection est immédiate. Elle dure environ 5 à 6 mois, le temps de traverser la saison hivernale où le VRS circule. Elle réduit le risque de forme grave de bronchiolite et d'hospitalisation. L'immunisation passive est différente de la vaccination : le vaccin stimule le corps du bébé pour qu'il fabrique ses propres anticorps (immunité active), alors que l'immunisation passive apporte des anticorps déjà fabriqués.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0078",
+      "type": "qcm",
+      "theme": "bronchiolite",
+      "question": "Pourquoi propose-t-on aux femmes enceintes de se faire vacciner contre le VRS (virus responsable de la bronchiolite) ?",
+      "options": [
+        "a) Pour protéger la mère contre la bronchiolite",
+        "b) Pour éviter d'avoir à vacciner le bébé plus tard",
+        "c) Pour soigner une bronchiolite que le bébé aurait déjà contractée",
+        "d) Pour remplacer les gestes barrières (lavage des mains, masque)",
+        "e) Pour fabriquer des anticorps transmis au bébé par le placenta et le protéger dès sa naissance"
+      ],
+      "correct": ["e) Pour fabriquer des anticorps transmis au bébé par le placenta et le protéger dès sa naissance"],
+      "explanation": "Le vaccin est administré à la mère pendant le 8e mois de grossesse. La femme enceinte fabrique alors des anticorps contre le VRS, qui sont transmis à son bébé par le placenta. Le nourrisson est ainsi protégé dès sa naissance, en attendant que son propre système immunitaire soit mature. Cette stratégie réduit de façon importante le risque de bronchiolite sévère et d'hospitalisation. Elle permet de protéger le bébé pendant les premiers mois de sa vie, une période où il est particulièrement vulnérable. La vaccination maternelle est l'une des deux options disponibles pour protéger les nourrissons, l'autre étant l'immunisation directe du bébé par des anticorps monoclonaux.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0079",
+      "type": "qcm",
+      "theme": "infections",
+      "question": "Qu'est-ce que le syndrome pieds-mains-bouche ?",
+      "options": [
+        "a) Une infection virale bénigne",
+        "b) Une maladie grave due à une bactérie",
+        "c) Une allergie alimentaire",
+        "d) Une maladie transmise par les piqûres de moustiques",
+        "e) Une infection bactérienne qui touche uniquement les adultes"
+      ],
+      "correct": ["a) Une infection virale bénigne"],
+      "explanation": "Le syndrome pieds-mains-bouche est une infection virale bénigne très fréquente chez les enfants de moins de 10 ans, surtout en été et en automne. Elle est due à un entérovirus, le Coxsackie. Il se manifeste par de petits boutons rouges ou vésicules sur les mains, les pieds, et autour de la bouche (d'où son nom). La maladie est contagieuse mais généralement bénigne. Les boutons disparaissent spontanément en 7 à 10 jours. Le traitement repose sur le soulagement des symptômes (paracétamol pour la fièvre, hydratation, alimentation froide pour calmer les douleurs buccales).",
+      "difficulty": 1
+    },
+    {
+      "id": "q0080",
+      "type": "qcm",
+      "theme": "coqueluche",
+      "question": "La coqueluche chez le nourrisson :",
+      "options": [
+        "a) Donne une simple toux grasse sans gravité",
+        "b) Provoque des quintes de toux sévères avec risque d'apnée et de décès",
+        "c) Ne se transmet pas aux adultes",
+        "d) Se soigne par des sirops antitussifs puissants",
+        "e) Disparaît toute seule en une semaine"
+      ],
+      "correct": ["b) Provoque des quintes de toux sévères avec risque d'apnée et de décès"],
+      "explanation": "La coqueluche est une infection respiratoire très contagieuse causée par une bactérie (Bordetella pertussis). Chez le nourrisson, elle peut être particulièrement grave, voire mortelle, car ses voies respiratoires sont encore très étroites et son système immunitaire immature. Elle se manifeste par des quintes de toux violentes et incontrôlables, souvent suivies d'une reprise de souffle difficile, avec un risque d'apnée (arrêt respiratoire) et de décès. Les nourrissons de moins de 6 mois sont les plus vulnérables. C'est pourquoi la vaccination est recommandée dès l'âge de 2 mois, et il est essentiel de vacciner également l'entourage (parents, grands-parents, fratrie) pour créer un \"cocon\" protecteur autour du bébé (stratégie du cocooning).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0081",
+      "type": "qcm",
+      "theme": "scarlatine",
+      "question": "Qu'est-ce que la scarlatine ?",
+      "options": [
+        "a) Une infection des oreilles",
+        "b) Une maladie causée par un virus",
+        "c) Une infection causée par une bactérie",
+        "d) Une allergie à un médicament",
+        "e) Une infection causée par un parasite"
+      ],
+      "correct": ["c) Une infection causée par une bactérie"],
+      "explanation": "La scarlatine est une infection bactérienne qui touche surtout les enfants. Elle est très contagieuse. C'est la même bactérie que celle qui donne une angine. Elle provoque une forte fièvre, un mal de gorge important, une éruption cutanée. Les complications sont rares mais peuvent être graves. Le traitement par antibiotiques permet de guérir et d'éviter ces complications.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0082",
+      "type": "qcm",
+      "theme": "rotavirus",
+      "question": "Le rotavirus est une cause fréquente de gastro-entérite sévère chez les nourrissons. Qu'est-ce qui permet de l'éviter ?",
+      "options": [
+        "a) Le port du masque",
+        "b) Les antibiotiques",
+        "c) Le lavage régulier des mains",
+        "d) Un vaccin"
+      ],
+      "correct": [
+        "c) Le lavage régulier des mains",
+        "d) Un vaccin"
+      ],
+      "explanation": "Le rotavirus est un virus très contagieux qui provoque des gastro-entérites, surtout chez les nourrissons et les jeunes enfants. Chez les nourrissons, la gastro-entérite à rotavirus peut entraîner une déshydratation sévère. Deux moyens sont efficaces pour l'éviter :\n• La vaccination : il existe un vaccin oral (administré en gouttes dans la bouche) recommandé pour les nourrissons avant l'âge de 6 mois. Il réduit de façon importante les formes graves de la maladie et les hospitalisations.\n• Le lavage des mains : le rotavirus se transmet par contact avec des mains ou des surfaces souillées. Un lavage régulier des mains, surtout après être allé aux toilettes et avant de préparer les repas, limite la propagation.\nEn revanche, les antibiotiques sont inefficaces contre les virus, et le port du masque n'est pas utile car le rotavirus ne se transmet pas par voie aérienne.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0083",
+      "type": "qcm",
+      "theme": "transmission",
+      "question": "Quelle distance les gouttelettes de toux ou d'éternuement peuvent-elles atteindre ?",
+      "options": [
+        "a) Moins de 1 mètre",
+        "b) 1 à 2 mètres",
+        "c) 2 à 5 mètres",
+        "d) Plus de 5 mètres"
+      ],
+      "correct": ["b) 1 à 2 mètres"],
+      "explanation": "Lorsqu'une personne tousse ou éternue, elle projette des gouttelettes de salive ou de mucus. Ces gouttelettes sont relativement lourdes et tombent rapidement au sol, en général dans un rayon de 1 à 2 mètres. C'est pourquoi il est recommandé de garder cette distance avec les autres en cas de maladie respiratoire (grippe, COVID-19, etc.) et de se couvrir la bouche avec le coude ou un mouchoir.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0084",
+      "type": "qcm",
+      "theme": "grippe",
+      "question": "Pour ne pas attraper la grippe, quel est le geste le plus efficace ?",
+      "options": [
+        "a) Se laver souvent les mains",
+        "b) Se faire vacciner chaque année",
+        "c) Porter un masque",
+        "d) Prendre des antibiotiques"
+      ],
+      "correct": ["b) Se faire vacciner chaque année"],
+      "explanation": "Le vaccin contre la grippe est le moyen le plus efficace pour se protéger. Il est fabriqué chaque année pour correspondre aux virus qui circulent. Se laver les mains et porter un masque sont utiles, mais ils ne suffisent pas à eux seuls. Les antibiotiques, eux, ne soignent pas les virus, donc ils ne servent à rien contre la grippe.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0085",
+      "type": "qcm",
+      "theme": "prevention",
+      "question": "Pour éviter la transmission de microbes dans une famille, il est conseillé de :",
+      "options": [
+        "a) Éviter de partager les rasoirs, brosses à dents ou serviettes",
+        "b) Laver le linge à 60 °C pour certaines infections",
+        "c) Se laver les mains avant de préparer un repas",
+        "d) Aérer le domicile régulièrement"
+      ],
+      "correct": [
+        "a) Éviter de partager les rasoirs, brosses à dents ou serviettes",
+        "b) Laver le linge à 60 °C pour certaines infections",
+        "c) Se laver les mains avant de préparer un repas",
+        "d) Aérer le domicile régulièrement"
+      ],
+      "explanation": "Pour limiter la propagation des infections au sein d'une famille, plusieurs gestes simples mais efficaces sont recommandés :\n• Ne pas partager les rasoirs, brosses à dents ou serviettes, ces objets peuvent être contaminés par du sang, de la salive ou des bactéries cutanées.\n• Laver le linge à 60 °C : cette température élimine la plupart des microbes, notamment en cas de gale, d'impétigo ou de poux.\n• Se laver les mains avant de préparer un repas : les mains sont un vecteur important de transmission des microbes. Un lavage soigneux avec de l'eau et du savon (ou du gel hydroalcoolique) réduit les risques de contamination des aliments et des personnes.\n• Aérer le domicile : cela renouvelle l'air et réduit la concentration de microbes en suspension, surtout en cas de maladies respiratoires (grippe, rhume, COVID-19).",
+      "difficulty": 1
+    },
+    {
+      "id": "q0086",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Qu'est-ce qu'un test PCR ?",
+      "options": [
+        "a) Une prise de sang pour mesurer le nombre de globules blancs",
+        "b) Une radiographie des poumons",
+        "c) Un test urinaire pour savoir si on est enceinte",
+        "d) Une technique qui détecte l'ADN d'un microbe",
+        "e) Une technique qui détecte les protéines d'un microbe"
+      ],
+      "correct": ["d) Une technique qui détecte l'ADN d'un microbe"],
+      "explanation": "Le test PCR est une technique de laboratoire qui permet de détecter la présence d'un agent infectieux (virus ou bactérie) en recherchant son matériel génétique (ADN ou ARN) dans un échantillon prélevé chez le patient (nez, gorge, sang, selles...). C'est un test très sensible, c'est-à-dire qu'il peut détecter une infime quantité du microbe, même avant l'apparition des symptômes. Il a été largement utilisé pendant la pandémie de COVID-19 pour diagnostiquer l'infection. Il est également utilisé pour d'autres maladies (grippe, tuberculose, etc.).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0087",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Qu'est-ce qu'une sérologie ?",
+      "options": [
+        "a) Un examen d'imagerie médicale (radiographie)",
+        "b) Une analyse d'urine",
+        "c) Un test d'allergie cutanée",
+        "d) Un test qui recherche des anticorps"
+      ],
+      "correct": ["d) Un test qui recherche des anticorps"],
+      "explanation": "La sérologie est une analyse de sang qui permet de détecter la présence d'anticorps. Les anticorps sont des protéines fabriquées par notre système immunitaire pour lutter contre un microbe (virus, bactérie, parasite). Une sérologie permet donc de savoir si une personne a déjà été infectée par un microbe (comme le VIH, l'hépatite B, la toxoplasmose ou le virus de la COVID-19). Elle peut aussi indiquer si la personne est protégée (par exemple, après une vaccination). Elle ne détecte pas le microbe lui-même, mais la trace laissée par l'infection.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0088",
+      "type": "qcm",
+      "theme": "oms",
+      "question": "Où se trouve le siège de l'Organisation mondiale de la santé (OMS) ?",
+      "options": [
+        "a) À Paris",
+        "b) À New York",
+        "c) À Londres",
+        "d) À Bruxelles",
+        "e) À Genève"
+      ],
+      "correct": ["e) À Genève"],
+      "explanation": "Le siège de l'Organisation mondiale de la santé (OMS) se trouve à Genève, en Suisse. L'organisation y est installée depuis sa création en 1948. Le bâtiment principal, inauguré en 1966, abrite aujourd'hui environ 2 400 employés. L'OMS compte également six bureaux régionaux répartis dans le monde (notamment à Copenhague, Washington, Le Caire, New Delhi, Manille et Brazzaville), mais son siège mondial est bien à Genève.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0089",
+      "type": "qcm",
+      "theme": "oms",
+      "question": "En quelle année l'Organisation mondiale de la santé (OMS) a-t-elle été créée ?",
+      "options": [
+        "a) 1945",
+        "b) 1946",
+        "c) 1948",
+        "d) 1950",
+        "e) 1955"
+      ],
+      "correct": ["c) 1948"],
+      "explanation": "L'Organisation mondiale de la Santé (OMS) a été créée le 7 avril 1948, date à laquelle sa Constitution est entrée en vigueur. C'est pour cette raison que la Journée mondiale de la Santé est célébrée chaque année le 7 avril.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0090",
+      "type": "qcm",
+      "theme": "oms",
+      "question": "Combien de pays sont membres de l'OMS en 2026 ?",
+      "options": [
+        "a) 192 pays",
+        "b) 193 pays",
+        "c) 194 pays",
+        "d) 195 pays",
+        "e) 211 pays"
+      ],
+      "correct": ["a) 192 pays"],
+      "explanation": "L'OMS compte actuellement 192 États membres. Ce nombre a récemment évolué : les États-Unis et l'Argentine se sont retirés de l'OMS en 2026. L'organisation compte également deux membres associés (Porto Rico et Tokelau) qui participent aux activités avec des droits limités. Pour comparaison, la FIFA compte 211 pays membres.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0091",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Qu'est-ce qu'un test antigénique ?",
+      "options": [
+        "a) Une prise de sang pour mesurer le nombre de globules blancs",
+        "b) Une radiographie des poumons",
+        "c) Un test urinaire pour savoir si on est enceinte",
+        "d) Une technique qui détecte l'ADN d'un microbe",
+        "e) Une technique qui détecte les protéines d'un microbe"
+      ],
+      "correct": ["e) Une technique qui détecte les protéines d'un microbe"],
+      "explanation": "Un test antigénique est un test rapide (résultat en 15 à 30 minutes) qui détecte la présence d'une protéine spécifique (appelée antigène) située à la surface du virus ou de la bactérie. Il est utilisé pour le dépistage du COVID-19, de la grippe, ou d'autres infections. Il est moins sensible que le test PCR (qui détecte le matériel génétique), car il requiert une charge virale plus élevée pour être positif. En revanche, il est plus rapide, moins coûteux et plus facile à réaliser. Il est particulièrement utile en période épidémique pour tester rapidement un grand nombre de personnes.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0092",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Une radiographie des poumons (radio du thorax) est surtout utile pour diagnostiquer :",
+      "options": [
+        "a) Une angine",
+        "b) Un rhume",
+        "c) Une pneumonie",
+        "d) Une bronchite",
+        "e) Une gastro-entérite"
+      ],
+      "correct": ["c) Une pneumonie"],
+      "explanation": "La radiographie des poumons (ou radio du thorax) est un examen d'imagerie qui permet de visualiser les poumons, le cœur et les côtes. Elle est surtout utilisée pour diagnostiquer une pneumonie (infection pulmonaire). La radiographie est également utile pour détecter d'autres affections pulmonaires comme la tuberculose, un cancer du poumon. En revanche, elle ne permet pas d'identifier le microbe responsable (virus ou bactérie) ; elle oriente le médecin vers le bon traitement. La radiographie n'est pas utile pour diagnostiquer une angine, un rhume, une bronchite ou une gastro-entérite.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0093",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Un « antibiogramme » est un examen qui permet de :",
+      "options": [
+        "a) Voir si un patient est allergique à un antibiotique",
+        "b) Mesurer le niveau de fièvre",
+        "c) Détecter la présence d'un virus",
+        "d) Tester quels antibiotiques sont efficaces contre une bactérie précise",
+        "e) Compter le nombre de globules rouges"
+      ],
+      "correct": ["d) Tester quels antibiotiques sont efficaces contre une bactérie précise"],
+      "explanation": "Un antibiogramme est un examen de laboratoire qui permet de déterminer quels antibiotiques sont efficaces contre une bactérie spécifique trouvée dans un prélèvement. Après avoir identifié la bactérie responsable de l'infection, on la met en contact avec plusieurs antibiotiques. L'antibiogramme montre lesquels peuvent tuer la bactérie, et lesquels sont inefficaces. Cela permet au médecin de prescrire l'antibiotique le plus adapté pour soigner l'infection.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0094",
+      "type": "qcm",
+      "theme": "diagnostic",
+      "question": "Qu'est-ce qu'une numération formule sanguine (NFS) ?",
+      "options": [
+        "a) Une radiographie des os",
+        "b) Un test de grossesse",
+        "c) Un test d'urine",
+        "d) Une mesure de la tension artérielle",
+        "e) Une analyse de sang qui compte les globules rouges, les globules blancs et les plaquettes"
+      ],
+      "correct": ["e) Une analyse de sang qui compte les globules rouges, les globules blancs et les plaquettes"],
+      "explanation": "La numération formule sanguine (NFS) – aussi appelée hémogramme – permet de mesurer et de compter les trois principales familles de cellules présentes dans le sang :\n• Les globules rouges : ils transportent l'oxygène. Un taux bas peut indiquer une anémie (fatigue, pâleur).\n• Les globules blancs : ils participent à la défense immunitaire. Un taux élevé peut orienter vers une infection (bactérienne ou virale) ou une inflammation.\n• Les plaquettes : elles permettent la coagulation du sang.\nElle est réalisée à partir d'une prise de sang.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0095",
+      "type": "qcm",
+      "theme": "bronchiolite",
+      "question": "La bronchiolite du nourrisson est due à :",
+      "options": [
+        "a) Un champignon",
+        "b) Une bactérie",
+        "c) Un virus",
+        "d) Une allergie",
+        "e) Un parasite"
+      ],
+      "correct": ["c) Un virus"],
+      "explanation": "La bronchiolite est une infection respiratoire aiguë qui touche surtout les bébés de moins de 2 ans. Elle est très fréquente à l'automne et au début de l'hiver. Elle est causée dans la majorité des cas par le virus respiratoire syncytial (VRS). Ce virus infecte les bronchioles (les petites voies respiratoires dans les poumons). C'est une infection virale, les antibiotiques sont donc inefficaces contre la bronchiolite.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0096",
+      "type": "qcm",
+      "theme": "bronchiolite",
+      "question": "Quels gestes permettent d'éviter de transmettre la bronchiolite à un nourrisson ?",
+      "options": [
+        "a) Se laver les mains régulièrement avec de l'eau et du savon ou du gel hydroalcoolique",
+        "b) Porter un masque en cas de toux ou de rhume (pour les adultes)",
+        "c) Aérer les pièces plusieurs fois par jour",
+        "d) Donner des antibiotiques à titre préventif"
+      ],
+      "correct": [
+        "a) Se laver les mains régulièrement avec de l'eau et du savon ou du gel hydroalcoolique",
+        "b) Porter un masque en cas de toux ou de rhume (pour les adultes)",
+        "c) Aérer les pièces plusieurs fois par jour"
+      ],
+      "explanation": "La bronchiolite est une infection virale respiratoire qui touche principalement les nourrissons de moins de 2 ans. Elle est due au virus respiratoire syncytial (VRS), très contagieux. Pour l'éviter, plusieurs gestes simples sont efficaces :\n• Se laver les mains régulièrement : le VRS se transmet par les mains sales.\n• Porter un masque en cas de toux ou de rhume pour les adultes au contact des bébés.\n• Aérer les pièces : cela renouvelle l'air et diminue la concentration de virus en suspension dans les espaces clos.\nDepuis 2023-2024, une nouvelle stratégie de prévention existe avec un anticorps monoclonal administré aux nourrissons avant l'hiver. Un vaccin maternel contre le VRS est également disponible pour protéger le bébé par transfert d'anticorps pendant la grossesse.\nEn revanche, les antibiotiques sont inefficaces contre les virus.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0097",
+      "type": "qcm",
+      "theme": "bronchiolite",
+      "question": "Qu'est-ce que l'immunisation passive des nourrissons contre le VRS (virus responsable de la bronchiolite) ?",
+      "options": [
+        "a) Un vaccin administré au nourrisson pour qu'il fabrique lui-même des anticorps",
+        "b) Une mesure d'hygiène comme le lavage des mains",
+        "c) Un traitement antibiotique pour soigner la bronchiolite",
+        "d) Une injection d'anticorps déjà tout faits pour protéger le bébé rapidement et temporairement",
+        "e) Un vaccin administré à la mère pour protéger le bébé pendant la grossesse"
+      ],
+      "correct": ["d) Une injection d'anticorps déjà tout faits pour protéger le bébé rapidement et temporairement"],
+      "explanation": "L'immunisation passive des nourrissons contre le VRS consiste à administrer directement au bébé des anticorps déjà tout faits (appelés anticorps monoclonaux), par une seule injection. Ces anticorps agissent comme une protection \"clé en main\" qui neutralise le virus si le bébé y est exposé. Cette protection est immédiate. Elle dure environ 5 à 6 mois, le temps de traverser la saison hivernale où le VRS circule. Elle réduit le risque de forme grave de bronchiolite et d'hospitalisation. L'immunisation passive est différente de la vaccination : le vaccin stimule le corps du bébé pour qu'il fabrique ses propres anticorps (immunité active), alors que l'immunisation passive apporte des anticorps déjà fabriqués.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0098",
+      "type": "qcm",
+      "theme": "bronchiolite",
+      "question": "Pourquoi propose-t-on aux femmes enceintes de se faire vacciner contre le VRS (virus responsable de la bronchiolite) ?",
+      "options": [
+        "a) Pour protéger la mère contre la bronchiolite",
+        "b) Pour éviter d'avoir à vacciner le bébé plus tard",
+        "c) Pour soigner une bronchiolite que le bébé aurait déjà contractée",
+        "d) Pour remplacer les gestes barrières (lavage des mains, masque)",
+        "e) Pour fabriquer des anticorps transmis au bébé par le placenta et le protéger dès sa naissance"
+      ],
+      "correct": ["e) Pour fabriquer des anticorps transmis au bébé par le placenta et le protéger dès sa naissance"],
+      "explanation": "Le vaccin est administré à la mère pendant le 8e mois de grossesse. La femme enceinte fabrique alors des anticorps contre le VRS, qui sont transmis à son bébé par le placenta. Le nourrisson est ainsi protégé dès sa naissance, en attendant que son propre système immunitaire soit mature. Cette stratégie réduit de façon importante le risque de bronchiolite sévère et d'hospitalisation. Elle permet de protéger le bébé pendant les premiers mois de sa vie, une période où il est particulièrement vulnérable. La vaccination maternelle est l'une des deux options disponibles pour protéger les nourrissons, l'autre étant l'immunisation directe du bébé par des anticorps monoclonaux.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0099",
+      "type": "qcm",
+      "theme": "infections",
+      "question": "Qu'est-ce que le syndrome pieds-mains-bouche ?",
+      "options": [
+        "a) Une infection virale bénigne",
+        "b) Une maladie grave due à une bactérie",
+        "c) Une allergie alimentaire",
+        "d) Une maladie transmise par les piqûres de moustiques",
+        "e) Une infection bactérienne qui touche uniquement les adultes"
+      ],
+      "correct": ["a) Une infection virale bénigne"],
+      "explanation": "Le syndrome pieds-mains-bouche est une infection virale bénigne très fréquente chez les enfants de moins de 10 ans, surtout en été et en automne. Elle est due à un entérovirus, le Coxsackie. Il se manifeste par de petits boutons rouges ou vésicules sur les mains, les pieds, et autour de la bouche (d'où son nom). La maladie est contagieuse mais généralement bénigne. Les boutons disparaissent spontanément en 7 à 10 jours. Le traitement repose sur le soulagement des symptômes (paracétamol pour la fièvre, hydratation, alimentation froide pour calmer les douleurs buccales).",
+      "difficulty": 1
+    },
+    {
+      "id": "q0100",
+      "type": "qcm",
+      "theme": "coqueluche",
+      "question": "La coqueluche chez le nourrisson :",
+      "options": [
+        "a) Donne une simple toux grasse sans gravité",
+        "b) Provoque des quintes de toux sévères avec risque d'apnée et de décès",
+        "c) Ne se transmet pas aux adultes",
+        "d) Se soigne par des sirops antitussifs puissants",
+        "e) Disparaît toute seule en une semaine"
+      ],
+      "correct": ["b) Provoque des quintes de toux sévères avec risque d'apnée et de décès"],
+      "explanation": "La coqueluche est une infection respiratoire très contagieuse causée par une bactérie (Bordetella pertussis). Chez le nourrisson, elle peut être particulièrement grave, voire mortelle, car ses voies respiratoires sont encore très étroites et son système immunitaire immature. Elle se manifeste par des quintes de toux violentes et incontrôlables, souvent suivies d'une reprise de souffle difficile, avec un risque d'apnée (arrêt respiratoire) et de décès. Les nourrissons de moins de 6 mois sont les plus vulnérables. C'est pourquoi la vaccination est recommandée dès l'âge de 2 mois, et il est essentiel de vacciner également l'entourage (parents, grands-parents, fratrie) pour créer un \"cocon\" protecteur autour du bébé (stratégie du cocooning).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0101",
+      "type": "qcm",
+      "theme": "scarlatine",
+      "question": "Qu'est-ce que la scarlatine ?",
+      "options": [
+        "a) Une infection des oreilles",
+        "b) Une maladie causée par un virus",
+        "c) Une infection causée par une bactérie",
+        "d) Une allergie à un médicament",
+        "e) Une infection causée par un parasite"
+      ],
+      "correct": ["c) Une infection causée par une bactérie"],
+      "explanation": "La scarlatine est une infection bactérienne qui touche surtout les enfants. Elle est très contagieuse. C'est la même bactérie que celle qui donne une angine. Elle provoque une forte fièvre, un mal de gorge important, une éruption cutanée. Les complications sont rares mais peuvent être graves. Le traitement par antibiotiques permet de guérir et d'éviter ces complications.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0102",
+      "type": "qcm",
+      "theme": "ror",
+      "question": "Contre quoi protège le vaccin ROR ?",
+      "options": [
+        "a) La varicelle",
+        "b) La rubéole",
+        "c) La rougeole",
+        "d) La coqueluche",
+        "e) Les oreillons"
+      ],
+      "correct": [
+        "b) La rubéole",
+        "c) La rougeole",
+        "e) Les oreillons"
+      ],
+      "explanation": "Le vaccin ROR protège contre trois maladies virales :\n• La rougeole : maladie très contagieuse, elle provoque une forte fièvre, une éruption cutanée et peut entraîner des complications graves comme des pneumonies ou des encéphalites (inflammation du cerveau).\n• Les oreillons : ils se manifestent par un gonflement douloureux des glandes salivaires (joues gonflées). Ils peuvent entraîner des complications comme une méningite ou, chez les garçons, une orchite (inflammation des testicules).\n• La rubéole : chez l'enfant, elle est généralement bénigne, mais elle est très dangereuse chez les femmes enceintes avec risque de malformations congénitales graves.\nLe ROR fait partie des vaccins obligatoires chez les nourrissons en France. Il est très efficace et a permis de réduire fortement ces maladies.\nDans le monde, la vaccination contre la rougeole a permis d'éviter 94 millions de décès au cours des 50 dernières années.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0103",
+      "type": "qcm",
+      "theme": "impétigo",
+      "question": "Comment se transmet l'impétigo ?",
+      "options": [
+        "a) Par l'eau contaminée",
+        "b) Par la toux et les éternuements",
+        "c) Par les piqûres de moustiques",
+        "d) Par contact direct avec les lésions ou par les objets contaminés (serviettes, vêtements, jouets)"
+      ],
+      "correct": ["d) Par contact direct avec les lésions ou par les objets contaminés (serviettes, vêtements, jouets)"],
+      "explanation": "L'impétigo se transmet par contact direct avec une personne infectée ou par des objets contaminés (serviettes, vêtements, jouets, draps, etc.). Les bactéries pénètrent par une petite plaie, une égratignure ou une piqûre d'insecte. C'est pourquoi il est important de :\n• Ne pas partager les serviettes, les vêtements ou le linge de lit,\n• Laver les mains régulièrement,\n• Couvrir les lésions avec un pansement pour éviter la contamination,\n• Laver le linge à 60 °C pour éliminer les bactéries.\nL'impétigo ne se transmet pas par voie aérienne ni par les moustiques.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0104",
+      "type": "qcm",
+      "theme": "impétigo",
+      "question": "L'impétigo est une infection cutanée due à :",
+      "options": [
+        "a) Une bactérie",
+        "b) Un virus",
+        "c) Un champignon",
+        "d) Un parasite",
+        "e) Une allergie"
+      ],
+      "correct": ["a) Une bactérie"],
+      "explanation": "L'impétigo est une infection de la peau très contagieuse, causée par des bactéries (staphylocoque ou streptocoque). Elle touche surtout les jeunes enfants. L'impétigo se transmet par contact direct avec les lésions ou par les objets contaminés (vêtements, serviettes, jouets). Le lavage des mains régulier et l'hygiène corporelle sont essentiels pour limiter la propagation dans la famille et en collectivité.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0105",
+      "type": "order",
+      "theme": "choléra",
+      "question": "Remettez ces événements relatifs au choléra dans l'ordre chronologique, du plus ancien au plus récent :",
+      "options": [
+        "a) John Snow démontre que le choléra se transmet par l'eau contaminée",
+        "b) Robert Koch identifie le vibrion cholérique, la bactérie responsable du choléra",
+        "c) Première pandémie de choléra",
+        "d) Construction d'un réseau d'assainissement à Hambourg"
+      ],
+      "correctOrder": [
+        "c) Première pandémie de choléra",
+        "a) John Snow démontre que le choléra se transmet par l'eau contaminée",
+        "b) Robert Koch identifie le vibrion cholérique, la bactérie responsable du choléra",
+        "d) Construction d'un réseau d'assainissement à Hambourg"
+      ],
+      "explanation": "• 1817 - Le choléra apparaît en Asie du Sud. La première pandémie de choléra débute en Asie du Sud et s'étend à d'autres régions du monde (Inde, Chine, puis Proche-Orient, Europe et Amériques). À cette époque, on ignore encore comment la maladie se transmet.\n• 1854 - John Snow retire la pompe à eau de Broad Street. A Londres, une épidémie de choléra sévit dans le quartier de Soho. John Snow, un médecin, soupçonne que l'eau contaminée est à l'origine de la maladie. Il identifie la pompe à eau de Broad Street comme la source de l'épidémie : les habitants qui s'y approvisionnent sont les plus touchés. Il fait retirer la poignée de la pompe, et les nouveaux cas de choléra cessent presque immédiatement dans le quartier. C'est la première fois qu'on démontre scientifiquement le lien entre l'eau contaminée et le choléra, marquant la naissance de l'épidémiologie moderne.\n• 1883 - Robert Koch identifie la bactérie du choléra (1883). Il isole Vibrio cholerae et confirme que le choléra est une infection bactérienne. La cause exacte de la maladie est enfin connue, ce qui valide les travaux de Snow.\n• 1892 - Construction d'un réseau d'assainissement à Hambourg. Après une épidémie meurtrière (plus de 8 600 morts en un mois et demi), la ville construit son premier réseau d'assainissement moderne. C'est l'application concrète des découvertes de Snow et Koch.",
+      "difficulty": 3
+    },
+    {
+      "id": "q0106",
+      "type": "order",
+      "theme": "histoire_medecine",
+      "question": "Remettez ces découvertes dans l'ordre chronologique, de la plus ancienne à la plus récente :",
+      "options": [
+        "a) Fleming découvre la pénicilline",
+        "b) Behring met au point la sérothérapie contre le tétanos",
+        "c) Koch identifie le bacille de la tuberculose",
+        "d) Montagnier et Barré-Sinoussi identifient le VIH",
+        "e) Theiler met au point le vaccin contre la fièvre jaune"
+      ],
+      "correctOrder": [
+        "c) Koch identifie le bacille de la tuberculose",
+        "b) Behring met au point la sérothérapie contre le tétanos",
+        "a) Fleming découvre la pénicilline",
+        "e) Theiler met au point le vaccin contre la fièvre jaune",
+        "d) Montagnier et Barré-Sinoussi identifient le VIH"
+      ],
+      "explanation": "• 1882 - Robert Koch identifie le bacille de la tuberculose (Mycobacterium tuberculosis).\n• 1890 - Emil von Behring met au point la sérothérapie contre le tétanos et la diphtérie. Ce traitement utilise des anticorps.\n• 1928 - Alexander Fleming découvre par hasard que la moisissure Penicillium tue les bactéries.\n• 1937 - Max Theiler met au point le vaccin contre la fièvre jaune.\n• 1983 - Luc Montagnier et Françoise Barré-Sinoussi identifient le VIH, le virus responsable du sida.",
+      "difficulty": 3
+    },
+    {
+      "id": "q0107",
+      "type": "order",
+      "theme": "hygiene",
+      "question": "Remettez ces découvertes relatives à l'hygiène dans l'ordre chronologique, de la plus ancienne à la plus récente :",
+      "options": [
+        "a) John Snow prouve que le choléra se transmet par l'eau contaminée",
+        "b) Florence Nightingale révolutionne l'hygiène hospitalière pendant la guerre de Crimée",
+        "c) Ignace Semmelweis impose le lavage des mains en maternité",
+        "d) Joseph Lister introduit l'antisepsie en chirurgie"
+      ],
+      "correctOrder": [
+        "c) Ignace Semmelweis impose le lavage des mains en maternité",
+        "a) John Snow prouve que le choléra se transmet par l'eau contaminée",
+        "b) Florence Nightingale révolutionne l'hygiène hospitalière pendant la guerre de Crimée",
+        "d) Joseph Lister introduit l'antisepsie en chirurgie"
+      ],
+      "explanation": "• 1847 - Ignace Semmelweis impose le lavage des mains à la solution chlorée en maternité, faisant chuter la mortalité des femmes en couches de 18 % à 1 %.\n• 1854 - John Snow retire la pompe à eau de Broad Street à Londres, prouvant que le choléra se transmet par l'eau. Il est considéré comme le père de l'épidémiologie.\n• 1855 - Florence Nightingale pendant la guerre de Crimée, elle révolutionne l'hygiène hospitalière (propreté, aération, organisation des soins), réduisant la mortalité des soldats de 42 % à 2 %.\n• 1865 - Joseph Lister introduit l'utilisation de l'acide phénique (phénol) pour désinfecter les plaies et le matériel chirurgical, fondant l'antisepsie moderne.",
+      "difficulty": 3
+    },
+    {
+      "id": "q0108",
+      "type": "order",
+      "theme": "vaccination",
+      "question": "Remettez ces découvertes relatives à la vaccination dans l'ordre chronologique, de la plus ancienne à la plus récente :",
+      "options": [
+        "a) Louis Pasteur met au point le vaccin contre la rage",
+        "b) Lady Mary Montagu introduit la variolisation (inoculation) en Europe",
+        "c) Maurice Hilleman met au point le vaccin contre la rougeole",
+        "d) Jonas Salk développe le premier vaccin injectable contre la polio",
+        "e) Edward Jenner invente le vaccin contre la variole"
+      ],
+      "correctOrder": [
+        "b) Lady Mary Montagu introduit la variolisation (inoculation) en Europe",
+        "e) Edward Jenner invente le vaccin contre la variole",
+        "a) Louis Pasteur met au point le vaccin contre la rage",
+        "d) Jonas Salk développe le premier vaccin injectable contre la polio",
+        "c) Maurice Hilleman met au point le vaccin contre la rougeole"
+      ],
+      "explanation": "• 1718 - Lady Mary Montagu introduit la variolisation (inoculation) en Europe, une technique préventive contre la variole importée de Turquie. Elle fait vacciner ses propres enfants.\n• 1796 - Edward Jenner invente le premier vaccin de l'histoire contre la variole, en utilisant le cowpox (vaccine) pour protéger contre la variole humaine. C'est l'origine du mot \"vaccin\".\n• 1885 - Louis Pasteur met au point le premier vaccin contre la rage, administré avec succès à Joseph Meister, un enfant mordu par un chien enragé.\n• 1955 - Jonas Salk développe le premier vaccin injectable contre la polio, contenant le virus inactivé.\n• 1963 - Maurice Hilleman met au point le vaccin contre la rougeole (ainsi que de nombreux autres vaccins comme les oreillons, la rubéole, l'hépatite B, etc.). Il est considéré comme l'un des plus grands vaccinologues de l'histoire.",
+      "difficulty": 3
+    },
+    {
+      "id": "q0109",
+      "type": "order",
+      "theme": "vaccination",
+      "question": "Remettez ces découvertes relatives à la vaccination dans l'ordre chronologique, de la plus ancienne à la plus récente :",
+      "options": [
+        "a) Le vaccin contre la fièvre jaune est mis au point par Max Theiler",
+        "b) Le vaccin contre l'hépatite B est développé par Maurice Hilleman",
+        "c) Le vaccin contre la polio (injectable) est développé par Jonas Salk",
+        "d) Le vaccin contre la rage est mis au point par Louis Pasteur",
+        "e) Le vaccin contre la diphtérie est mis au point par Gaston Ramon"
+      ],
+      "correctOrder": [
+        "d) Le vaccin contre la rage est mis au point par Louis Pasteur",
+        "e) Le vaccin contre la diphtérie est mis au point par Gaston Ramon",
+        "a) Le vaccin contre la fièvre jaune est mis au point par Max Theiler",
+        "c) Le vaccin contre la polio (injectable) est développé par Jonas Salk",
+        "b) Le vaccin contre l'hépatite B est développé par Maurice Hilleman"
+      ],
+      "explanation": "• 1885 - Louis Pasteur met au point le vaccin contre la rage, sauvant un enfant mordu par un chien enragé.\n• 1923 - Gaston Ramon met au point le vaccin contre la diphtérie, une maladie qui tuait de nombreux enfants.\n• 1937 - Max Theiler développe le vaccin contre la fièvre jaune, une maladie transmise par les moustiques.\n• 1955 - Jonas Salk développe le premier vaccin injectable contre la polio.\n• 1981 - Maurice Hilleman met au point le vaccin contre l'hépatite B, le premier vaccin anticancéreux.",
+      "difficulty": 3
+    },
+    {
+      "id": "q0110",
+      "type": "order",
+      "theme": "peste",
+      "question": "Remettez ces grandes épidémies de peste dans l'ordre chronologique, de la plus ancienne à la plus récente :",
+      "options": [
+        "a) La peste de Marseille",
+        "b) La peste noire",
+        "c) La peste de Justinien",
+        "d) La troisième pandémie de peste",
+        "e) Grande Peste de Londres"
+      ],
+      "correctOrder": [
+        "c) La peste de Justinien",
+        "b) La peste noire",
+        "e) Grande Peste de Londres",
+        "a) La peste de Marseille",
+        "d) La troisième pandémie de peste"
+      ],
+      "explanation": "• 541 – Peste de Justinien : première grande pandémie de peste de l'histoire. Elle frappe l'empire byzantin sous le règne de l'empereur Justinien et se répand autour de la Méditerranée, causant des millions de morts.\n• 1347-1351 – Peste noire : l'épidémie la plus meurtrière de l'histoire. Elle arrive en Europe par des navires marchands et tue environ 50 millions de personnes, soit entre 40 et 60 % de la population européenne.\n• 1665-1666 – Grande Peste de Londres : dernière grande épidémie de peste en Angleterre. Elle fait environ 100 000 morts à Londres, soit près de 20 % de sa population. Elle s'éteint en février 1666, peu après le Grand Incendie de Londres qui détruit une grande partie de la ville.\n• 1720 – Peste de Marseille : dernière grande épidémie de peste en France. Elle débute avec l'arrivée du navire Grand Saint-Antoine en provenance du Levant et fait environ 90 000 morts en Provence.\n• 1894 – Troisième pandémie de peste : elle débute à Hong Kong et permet à Alexandre Yersin et Shibasaburo Kitasato de découvrir simultanément le bacille de la peste, que l'on nommera Yersinia pestis en hommage à Yersin.",
+      "difficulty": 3
+    },
+    {
+      "id": "q0111",
+      "type": "order",
+      "theme": "diphtérie",
+      "question": "Remettez ces événements relatifs à la diphtérie dans l'ordre chronologique, du plus ancien au plus récent :",
+      "options": [
+        "a) Gaston Ramon met au point le vaccin contre la diphtérie",
+        "b) Première description clinique précise de la diphtérie par Pierre Bretonneau",
+        "c) La vaccination contre la diphtérie devient obligatoire en France",
+        "d) Émile Roux découvre la toxine diphtérique",
+        "e) Dernière grande épidémie de diphtérie en Europe (1945)",
+        "f) Théodor Klebs et Friedrich Löffler découvrent le bacille diphtérique"
+      ],
+      "correctOrder": [
+        "b) Première description clinique précise de la diphtérie par Pierre Bretonneau",
+        "f) Théodor Klebs et Friedrich Löffler découvrent le bacille diphtérique",
+        "d) Émile Roux découvre la toxine diphtérique",
+        "a) Gaston Ramon met au point le vaccin contre la diphtérie",
+        "e) Dernière grande épidémie de diphtérie en Europe (1945)",
+        "c) La vaccination contre la diphtérie devient obligatoire en France"
+      ],
+      "explanation": "• 1818 – Pierre Bretonneau, médecin français, décrit précisément la diphtérie, une infection grave qui touche la gorge et les voies respiratoires, pouvant provoquer une suffocation. Il est le premier à distinguer cette maladie d'autres infections de la gorge.\n• 1883-1884 – Théodor Klebs observe la bactérie dans les fausses membranes des patients diphtériques, puis Friedrich Löffler l'isole et la cultive en laboratoire. Ce bacille sera appelé Corynebacterium diphtheriae (ou bacille de Klebs-Löffler), identifiant enfin l'agent responsable de la maladie.\n• 1888 – Émile Roux démontre que ce n'est pas la bactérie elle-même qui provoque les symptômes graves, mais la toxine qu'elle produit. Cette toxine peut attaquer le cœur et les nerfs. Cette découverte permettra de développer un traitement par sérothérapie.\n• 1923 – Gaston Ramon, vétérinaire et biologiste français, met au point le vaccin contre la diphtérie. Il utilise une toxine rendue inoffensive (appelée anatoxine) qui permet au corps de fabriquer des anticorps sans déclencher la maladie. Ce vaccin sauvera des milliers d'enfants.\n• 1945 – Dernière grande épidémie de diphtérie en Europe (en Allemagne) après la Seconde Guerre mondiale, due aux conditions sanitaires précaires (destruction des infrastructures, déplacements de populations, malnutrition), ce qui permet au bacille de se propager à nouveau.\n• 1938 – La vaccination contre la diphtérie devient obligatoire en France, marquant une avancée majeure en santé publique. Cette obligation permettra de faire reculer la maladie jusqu'à la faire quasi disparaître dans les pays où la couverture vaccinale est élevée.",
+      "difficulty": 3
+    },
+    {
+      "id": "q0112",
+      "type": "vf",
+      "theme": "paludisme",
+      "question": "Le paludisme se transmet par la toux ou les éternuements.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Le paludisme est transmis par la piqûre d'un moustique du genre Anopheles. Il ne se transmet ni par la toux, ni par les éternuements, ni par contact direct entre personnes.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0113",
+      "type": "vf",
+      "theme": "tetanos",
+      "question": "Le tétanos se contracte par une plaie souillée, et non par contact avec une personne infectée.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "La bactérie du tétanos (Clostridium tetani) vit dans la terre, la poussière et le fumier. Elle entre dans l'organisme par une blessure (coupure, brûlure, piqûre). On ne l'attrape pas au contact d'une personne malade.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0114",
+      "type": "vf",
+      "theme": "lyme",
+      "question": "La maladie de Lyme est transmise par une piqûre de tique.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "La maladie de Lyme est due à une bactérie (Borrelia burgdorferi) transmise par la piqûre d'une tique infectée. Retirer la tique rapidement et correctement réduit fortement le risque de contamination.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0115",
+      "type": "vf",
+      "theme": "gastroenterite",
+      "question": "La gastro-entérite se transmet souvent par des mains sales ou par des aliments contaminés.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les gastro-entérites virales (comme celles à rotavirus ou norovirus) se transmettent surtout par la voie féco-orale : mains souillées, aliments contaminés ou eau polluée. Le lavage régulier des mains est la meilleure prévention.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0116",
+      "type": "vf",
+      "theme": "hygiene_alimentaire",
+      "question": "Laver un fruit avant de le manger permet d'éliminer une partie des microbes présents en surface.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Laver un fruit à l'eau (avec éventuellement une brosse) permet d'éliminer une partie des microbes présents en surface, réduisant ainsi les risques d'infections digestives.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0117",
+      "type": "vf",
+      "theme": "hygiene_alimentaire",
+      "question": "Manger un œuf cru est sans risque pour la santé des femmes enceintes.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Les œufs crus peuvent contenir la bactérie Salmonella, responsable de toxi-infections alimentaires. Les femmes enceintes, les jeunes enfants et les personnes âgées doivent les consommer bien cuits pour éviter tout risque d'infection.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0118",
+      "type": "vf",
+      "theme": "hygiene_alimentaire",
+      "question": "Mettre un plat chaud directement au réfrigérateur peut faire monter la température du frigo.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Un plat chaud placé au réfrigérateur peut réchauffer les aliments voisins, créant des zones de température favorables à la multiplication des bactéries. Il est conseillé de le laisser tiédir avant de le réfrigérer.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0119",
+      "type": "vf",
+      "theme": "hygiene_alimentaire",
+      "question": "Les bactéries se multiplient plus vite à température ambiante qu'au frigo.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les bactéries se multiplient rapidement entre 20 °C et 40 °C (température ambiante). Le froid ralentit leur croissance, ce qui limite les risques de contamination alimentaire et permet une meilleure conservation.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0120",
+      "type": "vf",
+      "theme": "vaccination",
+      "question": "Un vaccin entraîne le système immunitaire à reconnaître un microbe.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Le vaccin présente une partie du microbe au système immunitaire, qui fabrique des anticorps mémoire. En cas de rencontre réelle avec le microbe, le corps réagit immédiatement pour le neutraliser.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0121",
+      "type": "vf",
+      "theme": "vaccination",
+      "question": "Les vaccins ne sont plus nécessaires quand une maladie a disparu d'un pays.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Même si une maladie a disparu d'un pays, le virus peut y être réintroduit par des voyageurs en provenance de zones où la maladie circule encore. Si la couverture vaccinale baisse, l'épidémie peut rapidement réapparaître, comme on l'a vu avec la rougeole.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0122",
+      "type": "vf",
+      "theme": "vaccination",
+      "question": "L'immunité collective protège les personnes non vaccinées.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Lorsqu'une grande partie de la population est vaccinée, la circulation du virus diminue, ce qui réduit le risque de contamination. Cependant, le risque de contamination n'est pas totalement nul : la vaccination individuelle reste le moyen le plus sûr de se protéger.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0123",
+      "type": "vf",
+      "theme": "grippe",
+      "question": "Il faut se faire vacciner contre la grippe tous les ans.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Le virus de la grippe mute constamment. Chaque année, de nouvelles souches circulent, ce qui nécessite un nouveau vaccin adapté aux variants les plus récents. C'est pourquoi la vaccination doit être renouvelée chaque automne.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0124",
+      "type": "vf",
+      "theme": "antibiotiques",
+      "question": "On peut arrêter un traitement antibiotique dès qu'on se sent mieux.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Il faut toujours terminer son traitement antibiotique, même si on se sent mieux. Arrêter trop tôt peut entraîner une rechute et favoriser l'apparition de bactéries résistantes, rendant les futurs traitements moins efficaces.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0125",
+      "type": "vf",
+      "theme": "antibiotiques",
+      "question": "Un médicament périmé peut être moins efficace et parfois dangereux.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "La date de péremption garantit l'efficacité et la sécurité du médicament. Passé ce délai, il peut perdre son effet thérapeutique ou se dégrader en composés potentiellement toxiques pour l'organisme.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0126",
+      "type": "vf",
+      "theme": "vaccination",
+      "question": "Faire plusieurs vaccins sur un temps très court peut affaiblir le système immunitaire.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Le système immunitaire est capable de répondre à des milliers de stimulations simultanément. Recevoir plusieurs vaccins en même temps ne l'affaiblit pas. C'est d'ailleurs ce qui est pratiqué chez les nourrissons avec le vaccin hexavalent, qui protège contre six maladies (diphtérie, tétanos, poliomyélite, hépatite B, infections à Haemophilus influenzae b et coqueluche) en une seule injection.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0127",
+      "type": "vf",
+      "theme": "antibiotiques",
+      "question": "Le paracétamol fait baisser la fièvre.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Le paracétamol est un antipyrétique : il fait baisser la fièvre. En revanche, il ne traite pas la cause sous-jacente de la fièvre (infection virale ou bactérienne), qui doit être prise en charge par ailleurs.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0128",
+      "type": "vf",
+      "theme": "prevention",
+      "question": "Se laver les mains à l'eau seule suffit à éliminer les microbes.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "L'eau seule n'élimine pas les microbes. Il faut utiliser du savon (qui détruit la membrane des virus et des bactéries) ou une solution hydroalcoolique pour un nettoyage efficace.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0129",
+      "type": "vf",
+      "theme": "prevention",
+      "question": "Tousser dans son coude est plus hygiénique que dans sa main.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les mains souillées peuvent contaminer tout ce qu'on touche ensuite (poignées de porte, téléphone, nourriture). Le coude, en revanche, n'entre pas en contact avec les objets du quotidien, ce qui limite la propagation des microbes. C'est pourquoi tousser dans son coude est plus hygiénique.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0130",
+      "type": "vf",
+      "theme": "prevention",
+      "question": "Aérer une pièce permet de réduire le risque de transmission de virus.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les virus restent en suspension dans l'air, en particulier dans les espaces confinés et peu ventilés. Aérer une pièce pendant 10 minutes renouvelle l'air et dilue la concentration de particules virales, réduisant ainsi le risque de transmission.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0131",
+      "type": "vf",
+      "theme": "prevention",
+      "question": "Porter un masque chirurgical protège quand on est malade et réduit le risque de transmission de virus.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Porter un masque chirurgical limite la projection de gouttelettes respiratoires lorsqu'on tousse, éternue ou parle. Il protège donc les autres en cas de maladie et contribue à freiner la propagation des virus dans la population.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0132",
+      "type": "vf",
+      "theme": "poux",
+      "question": "Les poux se transmettent par les contacts directs entre personnes, notamment entre enfants.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les poux se transmettent essentiellement par contact direct entre les cheveux. Les enfants sont particulièrement concernés car ils jouent souvent en groupe et ont des contacts rapprochés.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0133",
+      "type": "vf",
+      "theme": "poux",
+      "question": "Laver les vêtements et les draps à 40 °C suffit à tuer les poux et leurs lentes.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Les poux et les lentes sont résistants aux basses températures. Un lavage à 40 °C ne suffit pas à les éliminer. Il faut laver le linge et les draps à 60 °C minimum pour les tuer efficacement.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0134",
+      "type": "vf",
+      "theme": "poux",
+      "question": "Les poux survivent plusieurs jours hors du cuir chevelu.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Les poux survivent moins de 48 heures hors du cuir chevelu, car ils ont besoin de se nourrir de sang humain pour survivre. Les lentes (les œufs), quant à elles, n'éclosent pas si la température est inférieure à la température corporelle.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0135",
+      "type": "vf",
+      "theme": "poux",
+      "question": "Les poux peuvent transmettre des maladies graves.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Les poux de tête ne sont pas vecteurs de maladies graves en Europe. Leur principal problème reste les démangeaisons et les surinfections dues au grattage.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0136",
+      "type": "vf",
+      "theme": "poux",
+      "question": "Les poux se transmettent par les casquettes, les bonnets et les brosses à cheveux.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Bien que la transmission directe entre têtes soit la plus fréquente, les poux peuvent également se transmettre par l'intermédiaire d'objets contaminés : casquettes, bonnets, brosses, peignes, élastiques à cheveux. Il est recommandé de ne pas partager ces affaires.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0137",
+      "type": "vf",
+      "theme": "poux",
+      "question": "Les poux préfèrent les cheveux sales.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Les poux n'ont aucune préférence pour les cheveux sales ou propres. Ils recherchent simplement un cuir chevelu pour se nourrir de sang. La propreté n'est pas un facteur de risque.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0138",
+      "type": "vf",
+      "theme": "poux",
+      "question": "Les poux peuvent survivre sur les animaux domestiques (chiens, chats).",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Les poux de tête sont des parasites spécifiques à l'humain. Ils ne peuvent pas survivre sur les chiens, les chats ou tout autre animal domestique.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0139",
+      "type": "vf",
+      "theme": "poux",
+      "question": "Les démangeaisons du cuir chevelu sont dues aux piqûres des poux.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les démangeaisons sont une réaction allergique à la salive du poux lorsqu'il pique le cuir chevelu pour se nourrir de sang. Toutefois, toutes les personnes infestées ne ressentent pas de démangeaisons.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0140",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Les femmes enceintes peuvent consommer des œufs cuits à la coque sans risque.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Les œufs cuits à la coque, mollets ou au plat (avec jaune liquide) ne sont pas assez cuits pour éliminer le risque de salmonellose. Il est recommandé de consommer les œufs bien cuits (jaune et blanc fermes).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0141",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Les fromages au lait cru sont déconseillés pendant la grossesse.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les fromages au lait cru (reblochon, camembert, roquefort, chèvre non pasteurisé) peuvent contenir la bactérie Listeria. Il est préférable de consommer des fromages à pâte cuite (comté, emmental) ou au lait pasteurisé.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0142",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Le poisson cru (sushi, sashimi) est autorisé pendant la grossesse.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Le poisson cru est à éviter. La cuisson à cœur élimine ces risques. Les poissons fumés et les crustacés vendus cuits doivent également être évités.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0143",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Les femmes enceintes peuvent consommer des fruits de mer cuits.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les fruits de mer doivent être bien cuits afin d'éliminer les risques bactériens.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0144",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "La charcuterie crue (jambon cru, saucisson) est déconseillée pendant la grossesse.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "La charcuterie crue (jambon cru, saucisson, chorizo) est déconseillée en raison du risque de toxoplasmose, en particulier chez les femmes non immunisées. Le jambon cuit et les rillettes en conserve sont autorisés.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0145",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Les femmes enceintes doivent éviter de consommer des graines germées crues.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les graines germées (alfalfa, soja, radis) crues peuvent être contaminées par des bactéries. Il est recommandé de les consommer bien cuites ou de les éviter totalement pendant la grossesse.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0146",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Le poisson fumé (saumon fumé, truite fumée) est déconseillé pendant la grossesse.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Le poisson fumé (saumon fumé, truite fumée) est déconseillé car il peut contenir la bactérie Listeria. En revanche, le poisson cuit est permis.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0147",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Il est recommandé de bien laver les fruits et légumes avant de les consommer.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Un lavage soigneux des fruits et légumes à l'eau est essentiel pour éliminer les résidus de pesticides et surtout les parasites comme le toxoplasme.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0148",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Le tiramisu est autorisé pendant la grossesse.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Le tiramisu traditionnel est préparé avec des œufs crus et du mascarpone non cuit, ce qui présente un risque pour les femmes enceintes.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0149",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Les poissons gras (saumon, sardine) sont recommandés pendant la grossesse.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les poissons gras (saumon, sardine, maquereau, hareng) sont riches en oméga-3, essentiels au développement du fœtus. Il est recommandé de les consommer cuits.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0150",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Les femmes enceintes peuvent consommer de la viande saignante si elle est de bonne qualité.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "La viande saignante ou peu cuite présente un risque de toxoplasmose et de bactéries. Il est recommandé de consommer la viande bien cuite à cœur.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0151",
+      "type": "vf",
+      "theme": "grossesse",
+      "question": "Il est déconseillé de consommer des coquillages crus (huîtres) pendant la grossesse.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les coquillages crus sont déconseillés en raison du risque d'infection par des bactéries. Ils doivent être consommés bien cuits pour éliminer tout risque.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0152",
+      "type": "vf",
+      "theme": "grippe",
+      "question": "Le vaccin contre la grippe peut donner la grippe.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Le vaccin antigrippal contient des virus inactivés (tués). Il ne peut pas donner la grippe. Certaines personnes peuvent ressentir une légère fièvre ou des courbatures dans les jours qui suivent l'injection, mais ce n'est pas la grippe. Cette réaction témoigne simplement de la réponse immunitaire de l'organisme.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0153",
+      "type": "vf",
+      "theme": "grippe",
+      "question": "Une grippe peut être grave chez les personnes fragiles et les personnes âgées.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "La grippe peut être grave, surtout chez les personnes fragiles, les femmes enceintes et les personnes âgées. Elle peut entraîner des complications sévères comme une pneumonie, une déshydratation ou une aggravation de maladies chroniques (cardiaques, respiratoires, diabète).",
+      "difficulty": 2
+    },
+    {
+      "id": "q0154",
+      "type": "vf",
+      "theme": "grippe",
+      "question": "Il est recommandé de se faire vacciner contre la grippe chaque année.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Le virus de la grippe mute constamment. Chaque année, de nouvelles souches circulent, le vaccin est donc adapté chaque saison pour offrir une protection optimale contre les variants les plus récents.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0155",
+      "type": "vf",
+      "theme": "grippe",
+      "question": "La vaccination antigrippale est recommandée chez les femmes enceintes.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "La vaccination antigrippale est recommandée chez les femmes enceintes, les personnes âgées de 65 ans et plus, les personnes en surpoids, et celles souffrant de maladies chroniques, car elles présentent un risque plus élevé de développer une forme grave de la grippe.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0156",
+      "type": "vf",
+      "theme": "refrigerateur",
+      "question": "Un réfrigérateur propre et bien entretenu limite la prolifération des bactéries, même en cas de panne.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Un réfrigérateur propre limite certes la contamination, mais en cas de panne prolongée ou de température trop élevée, la prolifération bactérienne peut reprendre rapidement. La propreté ne compense pas un défaut de température.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0157",
+      "type": "vf",
+      "theme": "refrigerateur",
+      "question": "Il suffit de baisser le thermostat du réfrigérateur en été pour compenser la chaleur ambiante.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Baisser le thermostat ne suffit pas toujours à maintenir une température stable en été. Il est préférable de vérifier la température avec un thermomètre et, si nécessaire, de limiter les ouvertures fréquentes.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0158",
+      "type": "vf",
+      "theme": "refrigerateur",
+      "question": "Placer les aliments cuits en haut du réfrigérateur et les aliments crus en bas est une bonne pratique.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Placer les aliments cuits en haut et les aliments crus en bas est une bonne pratique : cela évite que des liquides issus des produits crus (viande, poisson) ne coulent sur les aliments déjà cuits ou prêts à consommer.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0159",
+      "type": "vf",
+      "theme": "refrigerateur",
+      "question": "Une date limite de consommation (DLC) dépassée de quelques jours ne présente aucun risque si l'aliment n'a pas d'odeur suspecte.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Une DLC dépassée est un risque, même en l'absence d'odeur ou d'aspect suspect. Certaines bactéries pathogènes comme Listeria peuvent se développer sans altérer visiblement l'aliment.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0160",
+      "type": "vf",
+      "theme": "microbiologie",
+      "question": "Les virus sont plus petits que les bactéries.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Les virus sont beaucoup plus petits que les bactéries. Un virus est 10 à 50 fois plus petit qu'une bactérie.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0161",
+      "type": "vf",
+      "theme": "microbiologie",
+      "question": "Les antibiotiques sont efficaces contre les virus et les bactéries.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "Les antibiotiques ne sont efficaces que contre les bactéries. Ils sont totalement inefficaces contre les virus (grippe, rhume, COVID-19, etc.). Leur utilisation inappropriée en cas d'infection virale est non seulement inutile, mais peut aussi favoriser l'apparition de bactéries résistantes.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0162",
+      "type": "vf",
+      "theme": "microbiologie",
+      "question": "Tous les microbes sont nocifs pour l'homme.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Faux"],
+      "explanation": "La plupart des microbes sont inoffensifs ou utiles. Notre corps contient des milliards de bactéries (le microbiote) qui nous aident à digérer, à fabriquer des vitamines et à nous protéger contre les microbes pathogènes. Seule une infime partie des microbes est pathogène.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0163",
+      "type": "vf",
+      "theme": "microbiologie",
+      "question": "Notre corps héberge des milliards de bactéries utiles.",
+      "options": ["Vrai", "Faux"],
+      "correct": ["Vrai"],
+      "explanation": "Le microbiote intestinal contient des centaines d'espèces de bactéries, représentant environ 100 000 milliards de micro-organismes. Il joue un rôle clé dans la digestion, la synthèse de certaines vitamines (comme la vitamine K) et la régulation du système immunitaire.",
+      "difficulty": 1
+    },
+    {
+      "id": "q0164",
+      "type": "match",
+      "theme": "transmission",
+      "question": "Associez chaque maladie au mode de transmission qui lui correspond :",
+      "pairs": [
+        { "left": "Gale", "right": "Contact direct peau contre peau ou objets contaminés (vêtements, linge)" },
+        { "left": "Hépatite B", "right": "Rapports sexuels" },
+        { "left": "Grippe", "right": "Eternuements" },
+        { "left": "Maladie de Lyme", "right": "Piqûre de tique" },
+        { "left": "Tétanos", "right": "Plaie souillée par de la terre" },
+        { "left": "Paludisme", "right": "Piqûre de moustique" },
+        { "left": "Gastro-entérite", "right": "Eau ou aliments contaminés" }
+      ],
+      "explanation": "1. Gale – E : La gale est une maladie parasitaire cutanée causée par un acarien. Elle se transmet par contact direct peau contre peau, mais aussi par l'intermédiaire d'objets contaminés (vêtements, literie, serviettes). Les principaux symptômes sont des démangeaisons intenses, surtout la nuit.\n2. Hépatite B – C : Le virus de l'hépatite B se transmet par contact avec le sang ou les liquides biologiques d'une personne infectée (rapports sexuels non protégés, transmission de la mère à l'enfant à la naissance). Il existe un vaccin efficace.\n3. Grippe – F : La grippe se transmet par voie respiratoire : les gouttelettes projetées lors de la toux, des éternuements ou de la parole. Les mains sales peuvent également contaminer les surfaces et jouer un rôle dans la transmission.\n4. Maladie de Lyme – G : La maladie de Lyme est transmise par la piqûre d'une tique infectée par la bactérie Borrelia.\n5. Tétanos – A : La bactérie du tétanos (Clostridium tetani) vit dans la terre, la poussière, le fumier et les excréments d'animaux. Elle pénètre dans l'organisme par une plaie souillée (coupure, brûlure, piqûre). La vaccination est le seul moyen de protection.\n6. Paludisme – B : Le paludisme est transmis par la piqûre d'un moustique du genre Anopheles, lui-même infecté par un parasite (Plasmodium). Il n'existe pas de transmission directe entre personnes. La prévention repose sur la protection contre les piqûres.\n7. Gastro-entérite – D : Les gastro-entérites virales (rotavirus, norovirus) se transmettent principalement par la voie féco-orale : mains sales, aliments souillés ou eau contaminée. Un lavage régulier des mains est la meilleure prévention.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0165",
+      "type": "qcm",
+      "theme": "variole",
+      "question": "Quand a été lancée la première campagne de vaccination contre la variole en France ?",
+      "options": [
+        "a) 1804",
+        "b) 1842",
+        "c) 1890",
+        "d) 1917",
+        "e) 1936",
+        "f) 1948"
+      ],
+      "correct": ["a) 1804"],
+      "explanation": "C'est bien en 1804 que la France a organisé la première grande campagne de vaccination contre la variole, sous l'impulsion de Napoléon Bonaparte. Le système préfectoral, fraîchement créé, reçut pour mission prioritaire de promouvoir la vaccination. Le ministre de l'Intérieur, Jean-Antoine Chaptal, ordonna aux préfets de faire de la vaccination un \"objet prioritaire\" au nom \"des plus chers intérêts de l'État\". Une \"Société pour l'extinction de la petite vérole\" fut créée, rassemblant les médecins les plus prestigieux. L'armée fut vaccinée en premier, puis préfets, sous-préfets et maires durent organiser des campagnes de vaccination et persuader les récalcitrants. Le nombre de vaccinations passa de 150 000 en 1806 à 750 000 en 1812.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0166",
+      "type": "qcm",
+      "theme": "variole",
+      "question": "Quand a été réalisée la première vaccination contre la variole ?",
+      "options": [
+        "a) 1674",
+        "b) 1796",
+        "c) 1854",
+        "d) 1894",
+        "e) 1935"
+      ],
+      "correct": ["b) 1796"],
+      "explanation": "C'est en 1796 qu'un médecin anglais nommé Edward Jenner a mis au point le premier vaccin. Il a remarqué que les fermières qui attrapaient une maladie bénigne des vaches (appelée \"vaccine\") ne tombaient jamais malades de la variole. Il a alors prélevé du liquide d'une pustule de vache et l'a inoculé à un petit garçon de 8 ans. Plus tard, il a essayé de donner la variole à l'enfant, mais celui-ci ne l'a pas attrapée : le vaccin fonctionnait. Jenner a publié sa découverte en 1798, ce qui a permis à la vaccination de se diffuser rapidement en Europe, puis dans le monde. Aujourd'hui, grâce à ce vaccin, la variole a complètement disparu depuis 1980.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0167",
+      "type": "qcm",
+      "theme": "variole",
+      "question": "En quelle année la variole a-t-elle été éradiquée ?",
+      "options": [
+        "a) 1967",
+        "b) 1977",
+        "c) 1980",
+        "d) 1984",
+        "e) 1990"
+      ],
+      "correct": ["c) 1980"],
+      "explanation": "Le 8 mai 1980, l'Organisation mondiale de la santé (OMS) a officiellement déclaré la variole éradiquée dans le monde. C'est la première et la seule maladie humaine à avoir été totalement éliminée grâce à la vaccination.\nLe dernier cas naturel de variole a été recensé en 1977 en Somalie. Après deux années d'enquête et de surveillance dans le monde entier, les experts ont pu certifier que la maladie avait disparu.\nC'est un succès historique de la médecine et de la coopération internationale, rendu possible par un vaccin efficace et une campagne mondiale de vaccination menée par l'OMS à partir de 1967.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0168",
+      "type": "qcm",
+      "theme": "infections_urinaires",
+      "question": "Quelle est la principale bactérie responsable d'infection urinaire ?",
+      "options": [
+        "a) Staphylococcus saprophyticus",
+        "b) Klebsiella pneumoniae",
+        "c) Escherichia coli",
+        "d) Proteus mirabilis",
+        "e) Streptococcus agalactiae"
+      ],
+      "correct": ["c) Escherichia coli"],
+      "explanation": "La principale bactérie responsable d'infection urinaire est Escherichia coli, plus connue sous le nom d'E. coli. Elle est retrouvée dans environ 80% des infections urinaires. E. coli est une bactérie naturellement présente dans le tube digestif et les matières fécales des mammifères. Elle peut migrer de la région anale vers l'urètre, puis remonter jusqu'à la vessie où elle se multiplie et provoque une infection.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0169",
+      "type": "qcm",
+      "theme": "vaccination",
+      "question": "Quel est le meilleur moyen de prévention de la méningite à méningocoque ?",
+      "options": [
+        "a) Se laver régulièrement les mains",
+        "b) Éviter les lieux bondés",
+        "c) La vaccination",
+        "d) Porter un masque chirurgical",
+        "e) Prendre des antibiotiques en prévention"
+      ],
+      "correct": ["c) La vaccination"],
+      "explanation": "La vaccination est le moyen le plus efficace pour se protéger contre la méningite à méningocoque, une infection grave et qui peut tuer en quelques heures. En France, la vaccination est obligatoire chez les nourrissons, elle est également recommandée chez les adolescents.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0170",
+      "type": "qcm",
+      "theme": "infections_urinaires",
+      "question": "Quels moyens permettent de réduire le risque d'infection urinaire ?",
+      "options": [
+        "a) Boire suffisamment d'eau",
+        "b) S'essuyer d'avant en arrière après être allé aux toilettes",
+        "c) Uriner après un rapport sexuel",
+        "d) Porter des vêtements serrés",
+        "e) Prendre des antibiotiques en prévention"
+      ],
+      "correct": [
+        "a) Boire suffisamment d'eau",
+        "b) S'essuyer d'avant en arrière après être allé aux toilettes",
+        "c) Uriner après un rapport sexuel"
+      ],
+      "explanation": "Les infections urinaires sont le plus souvent causées par la bactérie E. coli, qui vit naturellement dans l'intestin. Elle peut migrer de la région anale vers l'urètre et remonter jusqu'à la vessie. Leur prévention repose sur :\n• Boire suffisamment d'eau. Boire au moins 1,5 litre d'eau par jour permet d'uriner régulièrement. Des urines diluées et fréquentes empêchent les bactéries de s'installer et de se multiplier dans la vessie.\n• S'essuyer d'avant en arrière. Après être allé aux toilettes, il est recommandé de s'essuyer d'avant en arrière (du pubis vers l'anus) pour éviter de transporter les bactéries présentes dans les selles vers l'urètre. C'est particulièrement important chez les femmes, dont l'urètre est plus court.\n• Uriner après un rapport sexuel. Uriner dans les minutes qui suivent un rapport sexuel permet d'éliminer les bactéries qui auraient pu être poussées vers l'urètre pendant l'acte. C'est une mesure simple et efficace.\nCe qu'il faut éviter :\n• Les vêtements trop serrés. Ils favorisent l'humidité et la chaleur, des conditions idéales pour la prolifération des bactéries. Il est préférable de porter des sous-vêtements en coton et des vêtements amples.\n• Les douches vaginales. Elles perturbent l'équilibre naturel de la flore bactérienne protectrice.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0171",
+      "type": "qcm",
+      "theme": "infections_urinaires",
+      "question": "Quels moyens permettent de réduire le risque d'infection urinaire ?",
+      "options": [
+        "a) Prendre des antibiotiques de façon systématique",
+        "b) Éviter de se retenir quand on a envie d'uriner",
+        "c) Faire une toilette intime tous les jours avec du savon antiseptique",
+        "d) Porter des sous-vêtements en coton",
+        "e) Bien s'hydrater"
+      ],
+      "correct": [
+        "b) Éviter de se retenir quand on a envie d'uriner",
+        "d) Porter des sous-vêtements en coton",
+        "e) Bien s'hydrater"
+      ],
+      "explanation": "Il est important de boire suffisamment d'eau tout au long de la journée afin d'uriner régulièrement, ce qui aide à \"chasser\" les bactéries et les empêche de s'installer dans la vessie. Il est également conseillé de ne pas se retenir quand on a envie d'uriner, car le fait de garder les urines trop longtemps dans la vessie favorise la multiplication des bactéries. Les sous-vêtements en coton sont préférables aux matières synthétiques comme le polyester ou le nylon, car ils sont plus respirants et limitent l'humidité et la chaleur, qui sont des facteurs favorisant la prolifération bactérienne.\nCertaines pratiques sont à éviter. L'utilisation de savons antiseptiques ou de douches vaginales est déconseillée, car ils perturbent la flore naturelle protectrice et peuvent au contraire favoriser les infections. A l'exception de cas particuliers, la prise systématique d'antibiotiques en prévention est fortement déconseillée : elle favorise l'apparition de bactéries résistantes et peut perturber l'équilibre de la flore.",
+      "difficulty": 2
+    },
+    {
+      "id": "q0172",
+      "type": "qcm",
+      "theme": "bronchite",
+      "question": "La bronchite aiguë chez un adulte en bonne santé est le plus souvent due à :",
+      "options": [
+        "a) Bactérienne",
+        "b) Parasitaire",
+        "c) Fongique",
+        "d) Virale",
+        "e) Toxique"
+      ],
+      "correct": ["d) Virale"],
+      "explanation": "La grande majorité des bronchites aiguës chez l'adulte en bonne santé dues à des virus. Les virus en cause sont le plus souvent ceux de la grippe, le virus respiratoire syncytial (VRS), les rhinovirus ou les coronavirus.",
+      "difficulty": 1
+    }
+  ]
+}
