@@ -1082,18 +1082,30 @@
     let questionsLoaded = false;
     let loadingError = null;
 
-    async function loadQuestions() {
-      try {
-        const response = await fetch(QUESTIONS_URL + '?t=' + Date.now());
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status} - ${response.statusText}`);
-        }
-        const data = await response.json();
-        
-        // Vérifier la structure du fichier
-        if (!data || typeof data !== 'object') {
-          throw new Error('Format de fichier invalide');
-        }
+async function loadQuestions() {
+
+  alert("Début");
+
+  try {
+
+    alert("Avant fetch");
+
+    const response = await fetch(QUESTIONS_URL + '?t=' + Date.now());
+
+    alert("Après fetch : " + response.status);
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status} - ${response.statusText}`);
+    }
+
+    const data = await response.json();
+
+    alert("JSON reçu");
+
+    // Vérifier la structure du fichier
+    if (!data || typeof data !== 'object') {
+      throw new Error('Format de fichier invalide');
+    }
         
         // Si le fichier a une structure avec "questions"
         if (data.questions && Array.isArray(data.questions)) {
