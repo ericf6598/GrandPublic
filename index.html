@@ -1074,99 +1074,125 @@
 
 <script>
   (function() {
-    // ============================================================
-    // CHARGEMENT DU FICHIER question.json (version XMLHttpRequest)
-    // ============================================================
-    const QUESTIONS_URL = 'question.json';
-    let questionBank = [];
-    let questionsLoaded = false;
-    let loadingError = null;
+// ============================================================
+// CHARGEMENT DU FICHIER question.json (avec localStorage)
+// ============================================================
+const QUESTIONS_URL = 'question.json';
+let questionBank = [];
+let questionsLoaded = false;
+let loadingError = null;
 
-    function loadQuestions() {
-      console.log('🔍 Chargement depuis :', QUESTIONS_URL);
-      
-      var qv = document.getElementById('questionView');
-      qv.innerHTML = `
+function loadQuestions() {
+    console.log('🔍 Chargement des questions...');
+    
+    // 1. Vérifier si les questions sont déjà dans le localStorage
+    try {
+        var stored = localStorage.getItem('clin92_questions');
+        if (stored) {
+            questionBank = JSON.parse(stored);
+            if (questionBank && questionBank.length > 0) {
+                questionsLoaded = true;
+                console.log('✅ ' + questionBank.length + ' questions chargées depuis localStorage');
+                iq();
+                ub();
+                return;
+            }
+        }
+    } catch (e) {
+        console.warn('⚠️ Erreur lecture localStorage:', e);
+    }
+    
+    // 2. Si pas dans localStorage, on télécharge
+    console.log('📡 Téléchargement depuis:', QUESTIONS_URL);
+    
+    var qv = document.getElementById('questionView');
+    qv.innerHTML = `
         <div class="loading-container">
-          <div class="loading-spinner"></div>
-          <p>Chargement des questions...</p>
+            <div class="loading-spinner"></div>
+            <p>Téléchargement des questions...</p>
         </div>
-      `;
-      
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', QUESTIONS_URL + '?t=' + Date.now(), true);
-      xhr.timeout = 15000;
-      
-      xhr.onload = function() {
+    `;
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', QUESTIONS_URL + '?t=' + Date.now(), true);
+    xhr.timeout = 30000; // 30 secondes
+    
+    xhr.onload = function() {
         console.log('📡 Statut HTTP:', xhr.status);
         if (xhr.status === 200) {
-          try {
-            var data = JSON.parse(xhr.responseText);
-            console.log('📦 Données reçues:', typeof data);
-            
-            if (!data || typeof data !== 'object') {
-              throw new Error('Format de fichier invalide');
+            try {
+                var data = JSON.parse(xhr.responseText);
+                
+                if (data.questions && Array.isArray(data.questions)) {
+                    questionBank = data.questions;
+                } else if (Array.isArray(data)) {
+                    questionBank = data;
+                } else {
+                    throw new Error('Structure de fichier non reconnue');
+                }
+                
+                if (questionBank.length === 0) {
+                    throw new Error('Aucune question');
+                }
+                
+                // 3. Stocker dans localStorage pour la prochaine fois
+                try {
+                    localStorage.setItem('clin92_questions', JSON.stringify(questionBank));
+                    console.log('💾 Questions stockées dans localStorage');
+                } catch (e) {
+                    console.warn('⚠️ Impossible de stocker dans localStorage:', e);
+                }
+                
+                questionsLoaded = true;
+                console.log('✅ ' + questionBank.length + ' questions chargées');
+                iq();
+                ub();
+                
+            } catch (error) {
+                handleLoadError(error.message);
             }
-            
-            if (data.questions && Array.isArray(data.questions)) {
-              questionBank = data.questions;
-            } else if (Array.isArray(data)) {
-              questionBank = data;
-            } else {
-              throw new Error('Structure de fichier non reconnue');
-            }
-            
-            if (questionBank.length === 0) {
-              throw new Error('Le fichier ne contient aucune question');
-            }
-            
-            questionsLoaded = true;
-            console.log('✅ ' + questionBank.length + ' questions chargées');
-            
-            // Lancer le quiz
-            iq();
-            ub();
-            
-          } catch (error) {
-            handleLoadError(error.message);
-          }
         } else {
-          handleLoadError('HTTP ' + xhr.status + ' - ' + xhr.statusText);
+            handleLoadError('HTTP ' + xhr.status + ' - ' + xhr.statusText);
         }
-      };
-      
-      xhr.onerror = function() {
+    };
+    
+    xhr.onerror = function() {
         handleLoadError('Erreur réseau - Vérifiez votre connexion Internet');
-      };
-      
-      xhr.ontimeout = function() {
+    };
+    
+    xhr.ontimeout = function() {
         handleLoadError('Délai d\'attente dépassé - Le serveur ne répond pas');
-      };
-      
-      xhr.send();
-    }
+    };
+    
+    xhr.send();
+}
 
-    function handleLoadError(message) {
-      loadingError = message;
-      console.error('❌ Erreur:', message);
-      
-      var qv = document.getElementById('questionView');
-      qv.innerHTML = `
+function handleLoadError(message) {
+    loadingError = message;
+    console.error('❌ Erreur:', message);
+    
+    var qv = document.getElementById('questionView');
+    qv.innerHTML = `
         <div style="text-align:center;padding:40px 20px;background:#fee2e2;border-radius:12px;border:1px solid #fecaca;">
-          <div style="font-size:48px;margin-bottom:16px;">⚠️</div>
-          <h3 style="color:#dc2626;margin-bottom:12px;">Erreur de chargement</h3>
-          <p style="color:#475569;margin-bottom:8px;">Impossible de charger les questions</p>
-          <p style="color:#64748b;font-size:14px;">${message}</p>
-          <button class="btn btn-primary" id="retryLoadBtn" style="margin-top:16px;">⟳ Réessayer</button>
+            <div style="font-size:48px;margin-bottom:16px;">⚠️</div>
+            <h3 style="color:#dc2626;margin-bottom:12px;">Erreur de chargement</h3>
+            <p style="color:#475569;margin-bottom:8px;">Impossible de charger les questions</p>
+            <p style="color:#64748b;font-size:14px;">${message}</p>
+            <button class="btn btn-primary" id="retryLoadBtn" style="margin-top:16px;">⟳ Réessayer</button>
+            <button class="btn btn-secondary" id="resetCacheBtn" style="margin-top:16px;margin-left:8px;">🗑️ Vider le cache</button>
         </div>
-      `;
-      var retryBtn = document.getElementById('retryLoadBtn');
-      if (retryBtn) {
-        retryBtn.onclick = function() {
-          location.reload();
+    `;
+    document.getElementById('retryLoadBtn').onclick = function() {
+        location.reload();
+    };
+    var resetBtn = document.getElementById('resetCacheBtn');
+    if (resetBtn) {
+        resetBtn.onclick = function() {
+            try { localStorage.removeItem('clin92_questions'); } catch(e) {}
+            alert('Cache vidé. Cliquez sur "Réessayer".');
         };
-      }
     }
+}
 
     // ============================================================
     // STOCKAGE DES SESSIONS
@@ -1188,16 +1214,16 @@
     }
 
     function ub() {
-      var b = document.getElementById('sessionBanner');
-      if (activeSessionId) { var s = gas(); b.className='session-banner session-active'; b.innerHTML='<span>💾 <strong>' + (s?.sessionName||'Session') + '</strong></span><div style="display:flex;gap:8px;flex-wrap:wrap;"><button class="session-btn" id="rb">✏️</button><button class="session-btn danger" id="cb">✕</button><button class="session-btn" id="sb">📂</button></div>'; }
-      else { b.className='session-banner'; b.innerHTML='<span>⚡ <strong>Quiz rapide</strong></span><div style="display:flex;gap:8px;flex-wrap:wrap;"><button class="session-btn primary" id="svb">💾</button><button class="session-btn" id="sb">📂</button></div>'; }
+      const b=document.getElementById('sessionBanner');
+      if(activeSessionId) { const s=gas(); b.className='session-banner session-active'; b.innerHTML=`<span>💾 <strong>${s?.sessionName||'Session'}</strong></span><div style="display:flex;gap:8px;flex-wrap:wrap;"><button class="session-btn" id="rb">✏️</button><button class="session-btn danger" id="cb">✕</button><button class="session-btn" id="sb">📂</button></div>`; }
+      else { b.className='session-banner'; b.innerHTML=`<span>⚡ <strong>Quiz rapide</strong></span><div style="display:flex;gap:8px;flex-wrap:wrap;"><button class="session-btn primary" id="svb">💾</button><button class="session-btn" id="sb">📂</button></div>`; }
       abe();
     }
     function abe() {
-      var svb=document.getElementById('svb'); if(svb) svb.onclick=osm;
-      var rb=document.getElementById('rb'); if(rb) rb.onclick=function(){ document.getElementById('saveSessionName').value=gas()?.sessionName||''; document.getElementById('saveModalOverlay').style.display='flex'; document.getElementById('saveModalOverlay').dataset.rename='true'; };
-      var cb=document.getElementById('cb'); if(cb) cb.onclick=function(){ if(confirm('Fermer cette session ?')){ deas(); ub(); } };
-      var sb=document.getElementById('sb'); if(sb) sb.onclick=shs;
+      const svb=document.getElementById('svb'); if(svb) svb.onclick=osm;
+      const rb=document.getElementById('rb'); if(rb) rb.onclick=()=>{ document.getElementById('saveSessionName').value=gas()?.sessionName||''; document.getElementById('saveModalOverlay').style.display='flex'; document.getElementById('saveModalOverlay').dataset.rename='true'; };
+      const cb=document.getElementById('cb'); if(cb) cb.onclick=()=>{ if(confirm('Fermer cette session ?')){ deas(); ub(); } };
+      const sb=document.getElementById('sb'); if(sb) sb.onclick=shs;
     }
     function osm() { document.getElementById('saveModalOverlay').style.display='flex'; document.getElementById('saveSessionName').value=activeSessionId?(gas()?.sessionName||''):('Quiz '+new Date().toLocaleDateString()); }
     function shs() { document.getElementById('quizContainer').style.display='none'; document.getElementById('finishContainer').style.display='none'; document.getElementById('sessionsContainer').style.display='block'; rsl(); }
@@ -1205,79 +1231,78 @@
     // ============================================================
     // GESTION DU QUIZ
     // ============================================================
-    var cq=[], ua={}, vd={}, sc=0, tq=0, ci=0, qo=[];
-    var qv=document.getElementById('questionView'), sd=document.getElementById('scoreDisplay'), pb=document.getElementById('prevBtn'), nb=document.getElementById('nextBtn'), pl=document.getElementById('progressLabel'), pf=document.getElementById('progressFill');
-    function sh(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var temp=a[i]; a[i]=a[j]; a[j]=temp; } return a; }
+    let cq=[], ua={}, vd={}, sc=0, tq=0, ci=0, qo=[];
+    const qv=document.getElementById('questionView'), sd=document.getElementById('scoreDisplay'), pb=document.getElementById('prevBtn'), nb=document.getElementById('nextBtn'), pl=document.getElementById('progressLabel'), pf=document.getElementById('progressFill');
+    const sh=a=>{ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
     function gst() { return {questionOrder:qo,currentIndex:ci,userAnswers:ua,validated:vd,score:sc}; }
-    function rs(s) { qo=s.questionOrder||[]; ci=s.currentIndex||0; ua=s.userAnswers||{}; vd=s.validated||{}; sc=s.score||0; var temp=[]; for(var i=0;i<qo.length;i++){ var found=null; for(var j=0;j<questionBank.length;j++){ if(questionBank[j].id===qo[i]){ found=questionBank[j]; break; } } if(found) temp.push(found); } cq=temp; tq=cq.length; if(ci>=tq) ci=tq-1; if(ci<0) ci=0; }
+    function rs(s) { qo=s.questionOrder||[]; ci=s.currentIndex||0; ua=s.userAnswers||{}; vd=s.validated||{}; sc=s.score||0; cq=qo.map(id=>questionBank.find(q=>q.id===id)).filter(Boolean); tq=cq.length; if(ci>=tq) ci=tq-1; if(ci<0) ci=0; }
 
-    var sel=null;
+    let sel=null;
 
-    function iq(fn) {
+    function iq(fn=false) {
       if (!questionsLoaded) {
-        qv.innerHTML = '<div class="loading-container"><div class="loading-spinner"></div><p>Chargement des questions...</p></div>';
+        // Afficher le chargement
+        qv.innerHTML = `
+          <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <p>Chargement des questions...</p>
+          </div>
+        `;
         return;
       }
       
-      var session = fn ? null : gas();
-      if(session && session.questionOrder && session.questionOrder.length > 0) { rs(session); }
+      const session=fn?null:gas();
+      if(session&&session.questionOrder&&session.questionOrder.length>0) { rs(session); }
       else {
+        // Créer un nouvel ordre de questions à partir de la banque chargée
         if (questionBank.length === 0) {
-          qv.innerHTML = '<div style="text-align:center;padding:40px;color:#dc2626;">❌ Aucune question disponible</div>';
+          qv.innerHTML = `<div style="text-align:center;padding:40px;color:#dc2626;">❌ Aucune question disponible</div>`;
           return;
         }
-        var ids = [];
-        for(var i=0;i<questionBank.length;i++){ ids.push(questionBank[i].id); }
-        qo = sh(ids);
-        var tempCq = [];
-        for(var i=0;i<qo.length;i++){ for(var j=0;j<questionBank.length;j++){ if(questionBank[j].id===qo[i]){ tempCq.push(questionBank[j]); break; } } }
-        cq = tempCq;
+        qo=sh(questionBank.map(q=>q.id)); 
+        cq=qo.map(id=>questionBank.find(q=>q.id===id)).filter(Boolean);
         ua={}; vd={}; sc=0; tq=cq.length; ci=0; sel=null;
-        for(var idx=0;idx<cq.length;idx++){
-          var q=cq[idx];
-          if(q.type==='order'){ var arr=[]; for(var k=0;k<q.options.length;k++){ arr.push(q.options[k]); } ua[idx]=sh(arr); }
-          else if(q.type==='vf'){ var arr=[]; for(var k=0;k<q.options.length;k++){ arr.push(null); } ua[idx]=arr; }
-          else if(q.type==='match'){ ua[idx]=[]; }
-          else if(q.type==='qcm'){ ua[idx]=[]; }
-          else { ua[idx]=null; }
-        }
+        cq.forEach((q,idx)=>{
+          if(q.type==='order') ua[idx]=sh([...q.options]);
+          else if(q.type==='vf') ua[idx]=Array(q.options.length).fill(null);
+          else if(q.type==='match') ua[idx]=[];
+          else if(q.type==='qcm') ua[idx]=[];
+          else ua[idx]=null;
+        });
         if(activeSessionId) sas(gst());
       }
       ub(); sq(); rq(); un(); us(); rsl();
     }
 
     function sq() { document.getElementById('quizContainer').style.display='block'; document.getElementById('finishContainer').style.display='none'; document.getElementById('sessionsContainer').style.display='none'; }
-    function sf() { document.getElementById('quizContainer').style.display='none'; document.getElementById('finishContainer').style.display='block'; var keys=Object.keys(vd); var ac=keys.length; document.getElementById('finishAnswered').textContent=ac; document.getElementById('finishTotal').textContent=tq; document.getElementById('finishCorrect').textContent=sc; document.getElementById('finishScore').textContent=ac>0?Math.round((sc/ac)*100)+'%':'0%'; }
+    function sf() { document.getElementById('quizContainer').style.display='none'; document.getElementById('finishContainer').style.display='block'; const ac=Object.keys(vd).length; document.getElementById('finishAnswered').textContent=ac; document.getElementById('finishTotal').textContent=tq; document.getElementById('finishCorrect').textContent=sc; document.getElementById('finishScore').textContent=ac>0?Math.round((sc/ac)*100)+'%':'0%'; }
 
     function ic(q,ans) {
       if(!ans) return false;
-      if(q.type==='order') { if(!Array.isArray(ans)) return false; if(ans.length!==q.correctOrder.length) return false; for(var i=0;i<ans.length;i++){ if(ans[i]!==q.correctOrder[i]) return false; } return true; }
-      if(q.type==='vf') { if(!Array.isArray(ans)) return false; for(var i=0;i<ans.length;i++){ if(ans[i]!==q.correct[i]) return false; } return true; }
-      if(q.type==='qcm') {
-        if(!Array.isArray(ans)) return false;
-        var correctArr = Array.isArray(q.correct) ? q.correct.slice() : [q.correct];
-        var su = ans.slice().sort();
-        var sc2 = correctArr.slice().sort();
-        if(su.length !== sc2.length) return false;
-        for(var i=0;i<su.length;i++){ if(su[i]!==sc2[i]) return false; }
-        return true;
+      switch(q.type) {
+        case 'order': return Array.isArray(ans)&&ans.length===q.correctOrder.length&&ans.every((v,i)=>v===q.correctOrder[i]);
+        case 'vf': return Array.isArray(ans)&&ans.every((v,i)=>v===q.correct[i]);
+        case 'qcm':
+          if(!Array.isArray(ans)) return false;
+          const correctArr=Array.isArray(q.correct)?q.correct:[q.correct];
+          const su=[...ans].sort(),sc2=[...correctArr].sort();
+          return su.length===sc2.length&&su.every((v,i)=>v===sc2[i]);
+        case 'match': return ans.length===q.pairs.length&&ans.every(a=>q.pairs.find(p=>p.left===a.left).right===a.right);
+        default: return false;
       }
-      if(q.type==='match') { if(ans.length!==q.pairs.length) return false; for(var i=0;i<ans.length;i++){ var found=false; for(var j=0;j<q.pairs.length;j++){ if(q.pairs[j].left===ans[i].left && q.pairs[j].right===ans[i].right){ found=true; break; } } if(!found) return false; } return true; }
-      return false;
     }
 
     function hmc(col, val) {
       if(vd[ci]) return;
-      var ans=ua[ci];
-      if(!sel) { sel={col: col, val: val}; if(activeSessionId) sas(gst()); rq(); return; }
+      const ans=ua[ci];
+      if(!sel) { sel={col, val}; if(activeSessionId) sas(gst()); rq(); return; }
       if(sel.col===col && sel.val===val) { sel=null; if(activeSessionId) sas(gst()); rq(); return; }
-      if(sel.col===col) { sel={col: col, val: val}; if(activeSessionId) sas(gst()); rq(); return; }
-      var left, right;
+      if(sel.col===col) { sel={col, val}; if(activeSessionId) sas(gst()); rq(); return; }
+      let left, right;
       if(sel.col==='left') { left=sel.val; right=val; }
       else { left=val; right=sel.val; }
-      var newAns = [];
-      for(var i=0;i<ans.length;i++){ if(ans[i].left!==left || ans[i].right!==right){ newAns.push(ans[i]); } }
-      newAns.push({left: left, right: right});
+      let newAns=ans.filter(a=>a.left!==left && a.right!==right);
+      newAns.push({left, right});
       ua[ci]=newAns;
       sel=null;
       if(activeSessionId) sas(gst());
@@ -1287,10 +1312,10 @@
 
     function hv() {
       if(vd[ci]) return;
-      var q=cq[ci], ans=ua[ci];
+      const q=cq[ci], ans=ua[ci];
       if(q.type==='match' && (!ans||ans.length<q.pairs.length)) { alert('Associez tous les éléments.'); return; }
       if(q.type==='order' && (!ans||ans.length===0)) { alert('Organisez les éléments.'); return; }
-      if(q.type==='vf' && (!ans||ans.every(function(v){return v===null;}))) { alert('Répondez à toutes les questions.'); return; }
+      if(q.type==='vf' && (!ans||ans.every(v=>v===null))) { alert('Répondez à toutes les questions.'); return; }
       if(q.type==='qcm' && (!ans||ans.length===0)) { alert('Sélectionnez au moins une réponse.'); return; }
       vd[ci]=true;
       if(ic(q,ans)) sc++;
@@ -1300,12 +1325,12 @@
       rq(); us();
     }
 
-    function mo(i,d) { if(vd[ci]) return; var a=ua[ci]; var ni=i+d; if(ni<0||ni>=a.length) return; var temp=a[i]; a[i]=a[ni]; a[ni]=temp; ua[ci]=a.slice(); if(activeSessionId) sas(gst()); hapticFeedback(); rq(); }
-    function svf(oi,v) { if(vd[ci]) return; if(!ua[ci]) { var arr=[]; for(var k=0;k<cq[ci].options.length;k++){ arr.push(null); } ua[ci]=arr; } ua[ci][oi]=v; if(activeSessionId) sas(gst()); hapticFeedback(); rq(); }
+    function mo(i,d) { if(vd[ci]) return; const a=ua[ci]; const ni=i+d; if(ni<0||ni>=a.length) return; [a[i],a[ni]]=[a[ni],a[i]]; ua[ci]=[...a]; if(activeSessionId) sas(gst()); hapticFeedback(); rq(); }
+    function svf(oi,v) { if(vd[ci]) return; if(!ua[ci]) ua[ci]=Array(cq[ci].options.length).fill(null); ua[ci][oi]=v; if(activeSessionId) sas(gst()); hapticFeedback(); rq(); }
     function tqcm(val) {
       if(vd[ci]) return;
-      var ans=ua[ci]||[];
-      var idx=ans.indexOf(val);
+      let ans=ua[ci]||[];
+      const idx=ans.indexOf(val);
       if(idx>=0) ans.splice(idx,1);
       else ans.push(val);
       ua[ci]=ans;
@@ -1317,96 +1342,132 @@
     function gt(i) { if(i<0||i>=tq) return; ci=i; sel=null; if(activeSessionId) sas(gst()); rq(); un(); }
     function gn() { if(ci<tq-1) gt(ci+1); }
     function gp() { if(ci>0) gt(ci-1); }
-    function un() { pb.disabled=ci===0; nb.disabled=ci===tq-1; pl.textContent='Question '+(ci+1)+'/'+tq; pf.style.width=tq>0?((ci+1)/tq)*100+'%':'0%'; }
-    function us() { sd.textContent=sc+' / '+tq; }
+    function un() { pb.disabled=ci===0; nb.disabled=ci===tq-1; pl.textContent=`Question ${ci+1}/${tq}`; pf.style.width=tq>0?((ci+1)/tq)*100+'%':'0%'; }
+    function us() { sd.textContent=`${sc} / ${tq}`; }
 
     function rq() {
       if(!cq.length || cq.length === 0) { qv.innerHTML='<p style="padding:20px;text-align:center;">Aucune question disponible.</p>'; return; }
       if(ci >= cq.length) { ci = cq.length - 1; }
-      var q=cq[ci], idx=ci, iv=vd[idx]||false, ans=ua[idx], corr=iv?ic(q,ans):null;
-      var h='<div class="question-block"><div class="question-text">'+q.question+'</div>';
+      const q=cq[ci], idx=ci, iv=vd[idx]||false, ans=ua[idx], corr=iv?ic(q,ans):null;
+      let h=`<div class="question-block"><div class="question-text">${q.question}</div>`;
 
       if(q.type==='match') {
-        var lefts=[]; for(var p=0;p<q.pairs.length;p++){ lefts.push(q.pairs[p].left); }
-        var rights=[]; var rightsSet={}; for(var p=0;p<q.pairs.length;p++){ if(!rightsSet[q.pairs[p].right]){ rightsSet[q.pairs[p].right]=true; rights.push(q.pairs[p].right); } }
-        h+='<div class="match-instruction">👆 Cliquez un élément, puis son correspondant dans l\'autre colonne</div>';
-        h+='<div class="match-container">';
-        h+='<div class="match-column"><div class="match-column-title">'+(q.leftLabel||'Colonne 1')+'</div>';
-        for(var li=0;li<lefts.length;li++){ var l=lefts[li]; var match=null; for(var mi=0;mi<ans.length;mi++){ if(ans[mi].left===l){ match=ans[mi]; break; } } var isSel=sel&&sel.col==='left'&&sel.val===l; var isMatched=!!match; var isCorr=iv&&match&&q.pairs.find(function(p){return p.left===l;}).right===match.right; var isWro=iv&&match&&q.pairs.find(function(p){return p.left===l;}).right!==match.right; var cls='match-item'; if(isSel) cls+=' selected'; else if(isMatched&&!iv) cls+=' matched'; if(isCorr) cls+=' correct-match'; if(isWro) cls+=' wrong-match'; h+='<div class="'+cls+'" data-col="left" data-val="'+l+'">'+l+(match&&!iv?'<span class="match-check">✓</span>':'')+'</div>'; }
-        h+='</div>';
-        h+='<div class="match-connector">';
-        for(var li=0;li<lefts.length;li++){ var l=lefts[li]; var match=null; for(var mi=0;mi<ans.length;mi++){ if(ans[mi].left===l){ match=ans[mi]; break; } } h+='<div class="match-line-group">'; if(match){ var number=0; for(var mi=0;mi<ans.length;mi++){ if(ans[mi].left===l){ number=mi+1; break; } } h+='<div class="match-pair-number">'+number+'</div>'; } else { h+='<div style="width:22px;height:22px;"></div>'; } if(li<lefts.length-1) h+='<div class="match-connector-line"></div>'; h+='</div>'; }
-        h+='</div>';
-        h+='<div class="match-column"><div class="match-column-title">'+(q.rightLabel||'Colonne 2')+'</div>';
-        for(var ri=0;ri<rights.length;ri++){ var r=rights[ri]; var match=null; for(var mi=0;mi<ans.length;mi++){ if(ans[mi].right===r){ match=ans[mi]; break; } } var isSel=sel&&sel.col==='right'&&sel.val===r; var isMatched=!!match; var isCorr=iv&&match&&q.pairs.find(function(p){return p.left===match.left;}).right===r; var isWro=iv&&match&&q.pairs.find(function(p){return p.left===match.left;}).right!==r; var cls='match-item'; if(isSel) cls+=' selected'; else if(isMatched&&!iv) cls+=' matched'; if(isCorr) cls+=' correct-match'; if(isWro) cls+=' wrong-match'; h+='<div class="'+cls+'" data-col="right" data-val="'+r+'">'+r+(match&&!iv?'<span class="match-check">✓</span>':'')+'</div>'; }
-        h+='</div></div>';
+        const lefts=q.pairs.map(p=>p.left);
+        const rights=[...new Set(q.pairs.map(p=>p.right))];
+        h+=`<div class="match-instruction">👆 Cliquez un élément, puis son correspondant dans l'autre colonne</div>`;
+        h+=`<div class="match-container">`;
+        h+=`<div class="match-column"><div class="match-column-title">${q.leftLabel || 'Colonne 1'}</div>`;
+        lefts.forEach(l=>{
+          const match=ans.find(a=>a.left===l);
+          const isSel=sel&&sel.col==='left'&&sel.val===l;
+          const isMatched=!!match;
+          const isCorr=iv&&match&&q.pairs.find(p=>p.left===l).right===match.right;
+          const isWro=iv&&match&&q.pairs.find(p=>p.left===l).right!==match.right;
+          let cls='match-item';
+          if(isSel) cls+=' selected';
+          else if(isMatched&&!iv) cls+=' matched';
+          if(isCorr) cls+=' correct-match';
+          if(isWro) cls+=' wrong-match';
+          h+=`<div class="${cls}" data-col="left" data-val="${l}">${l}${match&&!iv?'<span class="match-check">✓</span>':''}</div>`;
+        });
+        h+=`</div>`;
+        h+=`<div class="match-connector">`;
+        lefts.forEach((l,i)=>{
+          const match=ans.find(a=>a.left===l);
+          h+=`<div class="match-line-group">`;
+          if(match) h+=`<div class="match-pair-number">${ans.indexOf(match)+1}</div>`;
+          else h+=`<div style="width:22px;height:22px;"></div>`;
+          if(i<lefts.length-1) h+=`<div class="match-connector-line"></div>`;
+          h+=`</div>`;
+        });
+        h+=`</div>`;
+        h+=`<div class="match-column"><div class="match-column-title">${q.rightLabel || 'Colonne 2'}</div>`;
+        rights.forEach(r=>{
+          const match=ans.find(a=>a.right===r);
+          const isSel=sel&&sel.col==='right'&&sel.val===r;
+          const isMatched=!!match;
+          const isCorr=iv&&match&&q.pairs.find(p=>p.left===match.left).right===r;
+          const isWro=iv&&match&&q.pairs.find(p=>p.left===match.left).right!==r;
+          let cls='match-item';
+          if(isSel) cls+=' selected';
+          else if(isMatched&&!iv) cls+=' matched';
+          if(isCorr) cls+=' correct-match';
+          if(isWro) cls+=' wrong-match';
+          h+=`<div class="${cls}" data-col="right" data-val="${r}">${r}${match&&!iv?'<span class="match-check">✓</span>':''}</div>`;
+        });
+        h+=`</div></div>`;
       }
 
       if(q.type==='order') {
-        h+='<div class="options-grid" style="gap:6px;">';
-        for(var oi=0;oi<(ans||[]).length;oi++){ var item=ans[oi]; h+='<div class="order-item"><span class="order-number">'+(oi+1)+'</span><span style="flex:1;">'+item+'</span><div class="order-controls"><button class="order-btn" data-action="moveUp" data-itemidx="'+oi+'" '+(iv?'disabled':'')+'>▲</button><button class="order-btn" data-action="moveDown" data-itemidx="'+oi+'" '+(iv?'disabled':'')+'>▼</button></div></div>'; }
-        h+='</div>';
+        h+=`<div class="options-grid" style="gap:6px;">`;
+        (ans||[]).forEach((item,i)=>h+=`<div class="order-item"><span class="order-number">${i+1}</span><span style="flex:1;">${item}</span><div class="order-controls"><button class="order-btn" data-action="moveUp" data-itemidx="${i}" ${iv?'disabled':''}>▲</button><button class="order-btn" data-action="moveDown" data-itemidx="${i}" ${iv?'disabled':''}>▼</button></div></div>`);
+        h+=`</div>`;
       }
       if(q.type==='vf') {
-        h+='<div class="options-grid" style="gap:4px;">';
-        for(var oi=0;oi<q.options.length;oi++){ var opt=q.options[oi]; var sl=(ans&&ans[oi])?ans[oi]:null; h+='<div class="vf-row"><span class="vf-label">'+opt+'</span><div class="vf-buttons"><button class="vf-btn '+(sl==='Vrai'?'selected-true':'')+'" data-action="vfSelect" data-optidx="'+oi+'" data-value="Vrai" '+(iv?'disabled':'')+'>👍 Vrai</button><button class="vf-btn '+(sl==='Faux'?'selected-false':'')+'" data-action="vfSelect" data-optidx="'+oi+'" data-value="Faux" '+(iv?'disabled':'')+'>👎 Faux</button></div></div>'; }
-        h+='</div>';
+        h+=`<div class="options-grid" style="gap:4px;">`;
+        q.options.forEach((opt,oi)=>{ const sl=(ans&&ans[oi])?ans[oi]:null; h+=`<div class="vf-row"><span class="vf-label">${opt}</span><div class="vf-buttons"><button class="vf-btn ${sl==='Vrai'?'selected-true':''}" data-action="vfSelect" data-optidx="${oi}" data-value="Vrai" ${iv?'disabled':''}>👍 Vrai</button><button class="vf-btn ${sl==='Faux'?'selected-false':''}" data-action="vfSelect" data-optidx="${oi}" data-value="Faux" ${iv?'disabled':''}>👎 Faux</button></div></div>`; });
+        h+=`</div>`;
       }
       if(q.type==='qcm') {
-        var correctArr = Array.isArray(q.correct)?q.correct.slice():[q.correct];
-        h+='<div class="options-grid">';
-        for(var oi=0;oi<q.options.length;oi++){ var opt=q.options[oi]; var isSel=Array.isArray(ans)&&ans.indexOf(opt)!==-1; var cls='qcm-option'; if(isSel&&!iv) cls+=' selected-qcm'; if(iv) { var isCorrect=correctArr.indexOf(opt)!==-1; var wasSelected=Array.isArray(ans)&&ans.indexOf(opt)!==-1; if(wasSelected&&isCorrect) cls+=' correct-qcm'; else if(wasSelected&&!isCorrect) cls+=' wrong-qcm'; else if(!wasSelected&&isCorrect) cls+=' correct-qcm'; } h+='<div class="'+cls+'" data-qcm-val="'+opt+'" '+(iv?'disabled':'')+'>'+opt+'</div>'; }
-        h+='</div>';
+        const correctArr=Array.isArray(q.correct)?q.correct:[q.correct];
+        h+=`<div class="options-grid">`;
+        q.options.forEach(opt=>{
+          const isSel=Array.isArray(ans)&&ans.includes(opt);
+          let cls='qcm-option';
+          if(isSel&&!iv) cls+=' selected-qcm';
+          if(iv) {
+            const isCorrect=correctArr.includes(opt);
+            const wasSelected=Array.isArray(ans)&&ans.includes(opt);
+            if(wasSelected&&isCorrect) cls+=' correct-qcm';
+            else if(wasSelected&&!isCorrect) cls+=' wrong-qcm';
+            else if(!wasSelected&&isCorrect) cls+=' correct-qcm';
+          }
+          h+=`<div class="${cls}" data-qcm-val="${opt}" ${iv?'disabled':''}>${opt}</div>`;
+        });
+        h+=`</div>`;
       }
 
-      h+='<div class="btn-group">';
-      if(!iv) h+='<button class="btn btn-primary" id="vb">✅ Valider</button>';
-      else h+='<div class="feedback-box '+(corr?'feedback-correct':'feedback-wrong')+'"><div><strong>'+(corr?'✅ Bonne réponse':'❌ Mauvaise réponse')+'</strong></div><div class="explanation">'+q.explanation+'</div></div>';
-      h+='</div></div>';
+      h+=`<div class="btn-group">`;
+      if(!iv) h+=`<button class="btn btn-primary" id="vb">✅ Valider</button>`;
+      else h+=`<div class="feedback-box ${corr?'feedback-correct':'feedback-wrong'}"><div><strong>${corr?'✅ Bonne réponse':'❌ Mauvaise réponse'}</strong></div><div class="explanation">${q.explanation}</div></div>`;
+      h+=`</div></div>`;
       qv.innerHTML=h;
       ae();
     }
 
     function ae() {
-      var vb=document.getElementById('vb'); if(vb) vb.onclick=hv;
-      var elements = document.querySelectorAll('[data-col]');
-      for(var i=0;i<elements.length;i++){ (function(el){ el.onclick=function(e){ e.stopPropagation(); hmc(this.dataset.col, this.dataset.val); }; })(elements[i]); }
-      var qcmElements = document.querySelectorAll('[data-qcm-val]');
-      for(var i=0;i<qcmElements.length;i++){ (function(el){ el.onclick=function(){ tqcm(this.dataset.qcmVal); }; })(qcmElements[i]); }
-      var orderElements = document.querySelectorAll('[data-action="moveUp"],[data-action="moveDown"]');
-      for(var i=0;i<orderElements.length;i++){ (function(el){ el.onclick=function(){ mo(parseInt(this.dataset.itemidx),this.dataset.action==='moveUp'?-1:1); }; })(orderElements[i]); }
-      var vfElements = document.querySelectorAll('[data-action="vfSelect"]');
-      for(var i=0;i<vfElements.length;i++){ (function(el){ el.onclick=function(){ svf(parseInt(this.dataset.optidx),this.dataset.value); }; })(vfElements[i]); }
+      const vb=document.getElementById('vb'); if(vb) vb.onclick=hv;
+      document.querySelectorAll('[data-col]').forEach(el=>{ el.onclick=function(e){ e.stopPropagation(); hmc(this.dataset.col, this.dataset.val); }; });
+      document.querySelectorAll('[data-qcm-val]').forEach(el=>{ el.onclick=function(){ tqcm(this.dataset.qcmVal); }; });
+      document.querySelectorAll('[data-action="moveUp"],[data-action="moveDown"]').forEach(b=>b.onclick=function(){ mo(parseInt(this.dataset.itemidx),this.dataset.action==='moveUp'?-1:1); });
+      document.querySelectorAll('[data-action="vfSelect"]').forEach(b=>b.onclick=function(){ svf(parseInt(this.dataset.optidx),this.dataset.value); });
     }
 
     function rsl() {
-      var sessions=gs(), le=document.getElementById('sessionList');
-      var h='';
-      var keys=Object.keys(sessions);
-      for(var i=0;i<keys.length;i++){ var id=keys[i]; var s=sessions[id]; var ia=id===activeSessionId; var ac=s.validated?Object.keys(s.validated).length:0; var t=s.questionOrder?s.questionOrder.length:0; h+='<div class="session-item" style="'+(ia?'border:2px solid #00796b':'')+'"><div class="session-info"><div class="session-name">'+(s.sessionName||'Quiz')+' '+(ia?'✓':'')+'</div><div class="session-details">Score: '+(s.score||0)+'/'+t+' · '+ac+'/'+t+' répondues</div></div><div class="session-actions">'+(ia?'':'<button class="session-btn primary" data-load="'+id+'">📂</button>')+'<button class="session-btn danger" data-delete="'+id+'">🗑️</button></div></div>'; }
+      const sessions=gs(), le=document.getElementById('sessionList');
+      let h='';
+      Object.entries(sessions).forEach(([id,s])=>{ const ia=id===activeSessionId, ac=s.validated?Object.keys(s.validated).length:0, t=s.questionOrder?s.questionOrder.length:0; h+=`<div class="session-item" style="${ia?'border:2px solid #00796b':''}"><div class="session-info"><div class="session-name">${s.sessionName||'Quiz'} ${ia?'✓':''}</div><div class="session-details">Score: ${s.score||0}/${t} · ${ac}/${t} répondues</div></div><div class="session-actions">${!ia?`<button class="session-btn primary" data-load="${id}">📂</button>`:''}<button class="session-btn danger" data-delete="${id}">🗑️</button></div></div>`; });
       le.innerHTML=h||'<p style="text-align:center;color:#94a3b8;">Aucune session</p>';
-      var loadButtons = document.querySelectorAll('[data-load]');
-      for(var i=0;i<loadButtons.length;i++){ (function(el){ el.onclick=function(){ activeSessionId=this.dataset.load; localStorage.setItem(CSK,activeSessionId); iq(); sq(); }; })(loadButtons[i]); }
-      var deleteButtons = document.querySelectorAll('[data-delete]');
-      for(var i=0;i<deleteButtons.length;i++){ (function(el){ el.onclick=function(){ if(confirm('Supprimer cette session ?')){ ds(this.dataset.delete); rsl(); ub(); } }; })(deleteButtons[i]); }
+      document.querySelectorAll('[data-load]').forEach(b=>b.onclick=function(){ activeSessionId=this.dataset.load; localStorage.setItem(CSK,activeSessionId); iq(); sq(); });
+      document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=function(){ if(confirm('Supprimer cette session ?')){ ds(this.dataset.delete); rsl(); ub(); } });
     }
 
     // ===== GESTIONNAIRES D'ÉVÉNEMENTS =====
     pb.onclick=gp; nb.onclick=gn;
     document.getElementById('finishBtn').onclick=sf;
     document.getElementById('resumeQuizBtn').onclick=sq;
-    document.getElementById('resetFromFinishBtn').onclick=function(){ if(confirm('Réinitialiser toutes les réponses ?')){ vd={}; sc=0; ci=0; sel=null; for(var i=0;i<cq.length;i++){ var q=cq[i]; if(q.type==='order'){ var arr=[]; for(var k=0;k<q.options.length;k++){ arr.push(q.options[k]); } ua[i]=sh(arr); } else if(q.type==='vf'){ var arr=[]; for(var k=0;k<q.options.length;k++){ arr.push(null); } ua[i]=arr; } else if(q.type==='match'){ ua[i]=[]; } else if(q.type==='qcm'){ ua[i]=[]; } else { ua[i]=null; } } if(activeSessionId) sas(gst()); sq(); rq(); un(); us(); } };
+    document.getElementById('resetFromFinishBtn').onclick=()=>{ if(confirm('Réinitialiser toutes les réponses ?')){ vd={}; sc=0; ci=0; sel=null; cq.forEach((q,i)=>{ if(q.type==='order') ua[i]=sh([...q.options]); else if(q.type==='vf') ua[i]=Array(q.options.length).fill(null); else if(q.type==='match') ua[i]=[]; else if(q.type==='qcm') ua[i]=[]; else ua[i]=null; }); if(activeSessionId) sas(gst()); sq(); rq(); un(); us(); } };
     document.getElementById('saveFromFinishBtn').onclick=osm;
-    document.getElementById('quitAppBtn').onclick=function(){ if(confirm('Quitter le quiz ?')){ if(window.close) window.close(); else alert('Fermez cet onglet.'); } };
+    document.getElementById('quitAppBtn').onclick=()=>{ if(confirm('Quitter le quiz ?')){ if(window.close) window.close(); else alert('Fermez cet onglet.'); } };
     document.getElementById('backToQuizBtn').onclick=sq;
     document.getElementById('saveBannerBtn').onclick=osm;
     document.getElementById('sessionsBannerBtn').onclick=shs;
     
-    document.getElementById('saveConfirmBtn').onclick=function(){ 
-      var n=document.getElementById('saveSessionName').value.trim(); 
+    document.getElementById('saveConfirmBtn').onclick=()=>{ 
+      const n=document.getElementById('saveSessionName').value.trim(); 
       if(!n){ alert('Nom requis.'); return; } 
       if(activeSessionId && document.getElementById('saveModalOverlay').dataset.rename==='true'){ 
-        var s=gs(); 
+        const s=gs(); 
         if(s[activeSessionId]){ 
           s[activeSessionId].sessionName=n; 
           ss(s); 
@@ -1416,7 +1477,7 @@
         cas(n,gst()); 
         hapticFeedback();
       } else { 
-        var s=gs(); 
+        const s=gs(); 
         if(s[activeSessionId]){ 
           s[activeSessionId].sessionName=n; 
           ss(s); 
@@ -1429,27 +1490,23 @@
       ub(); rsl(); 
     };
     
-    document.getElementById('saveCancelBtn').onclick=function(){ document.getElementById('saveModalOverlay').style.display='none'; };
-    document.getElementById('createSessionBtn').onclick=function(){ 
-      var n=document.getElementById('newSessionName').value.trim(); 
+    document.getElementById('saveCancelBtn').onclick=()=>{ document.getElementById('saveModalOverlay').style.display='none'; };
+    document.getElementById('createSessionBtn').onclick=()=>{ 
+      const n=document.getElementById('newSessionName').value.trim(); 
       if(!n){ alert('Nom requis.'); return; } 
       document.getElementById('newSessionName').value=''; 
-      var nid='s'+Date.now(); 
-      var sessions=gs(); 
-      sessions[nid]={questionOrder:sh(questionBank.map(function(q){return q.id;})),currentIndex:0,userAnswers:{},validated:{},score:0,sessionName:n,lastModified:new Date().toISOString()}; 
-      var order=sessions[nid].questionOrder; 
-      for(var i=0;i<order.length;i++){ 
-        var qId=order[i]; 
-        var q=null; 
-        for(var j=0;j<questionBank.length;j++){ if(questionBank[j].id===qId){ q=questionBank[j]; break; } } 
+      const nid='s'+Date.now(), sessions=gs(); 
+      sessions[nid]={questionOrder:sh(questionBank.map(q=>q.id)),currentIndex:0,userAnswers:{},validated:{},score:0,sessionName:n,lastModified:new Date().toISOString()}; 
+      sessions[nid].questionOrder.forEach((qId,i)=>{ 
+        const q=questionBank.find(q=>q.id===qId); 
         if(q){ 
-          if(q.type==='order'){ var arr=[]; for(var k=0;k<q.options.length;k++){ arr.push(q.options[k]); } sessions[nid].userAnswers[i]=sh(arr); } 
-          else if(q.type==='vf'){ var arr=[]; for(var k=0;k<q.options.length;k++){ arr.push(null); } sessions[nid].userAnswers[i]=arr; } 
-          else if(q.type==='match'){ sessions[nid].userAnswers[i]=[]; } 
-          else if(q.type==='qcm'){ sessions[nid].userAnswers[i]=[]; } 
-          else { sessions[nid].userAnswers[i]=null; } 
+          if(q.type==='order') sessions[nid].userAnswers[i]=sh([...q.options]); 
+          else if(q.type==='vf') sessions[nid].userAnswers[i]=Array(q.options.length).fill(null); 
+          else if(q.type==='match') sessions[nid].userAnswers[i]=[]; 
+          else if(q.type==='qcm') sessions[nid].userAnswers[i]=[]; 
+          else sessions[nid].userAnswers[i]=null; 
         } 
-      } 
+      }); 
       ss(sessions); 
       activeSessionId=nid; 
       localStorage.setItem(CSK,nid); 
@@ -1459,14 +1516,16 @@
       ub(); 
     };
     
-    document.getElementById('infoBtn').onclick=function(){ document.getElementById('modalOverlay').style.display='flex'; };
-    document.getElementById('closeModalBtn').onclick=function(){ document.getElementById('modalOverlay').style.display='none'; };
-    document.getElementById('modalOverlay').onclick=function(e){ if(e.target===document.getElementById('modalOverlay')) document.getElementById('modalOverlay').style.display='none'; };
-    document.getElementById('saveModalOverlay').onclick=function(e){ if(e.target===document.getElementById('saveModalOverlay')) document.getElementById('saveModalOverlay').style.display='none'; };
+    document.getElementById('infoBtn').onclick=()=>document.getElementById('modalOverlay').style.display='flex';
+    document.getElementById('closeModalBtn').onclick=()=>document.getElementById('modalOverlay').style.display='none';
+    document.getElementById('modalOverlay').onclick=e=>{ if(e.target===document.getElementById('modalOverlay')) document.getElementById('modalOverlay').style.display='none'; };
+    document.getElementById('saveModalOverlay').onclick=e=>{ if(e.target===document.getElementById('saveModalOverlay')) document.getElementById('saveModalOverlay').style.display='none'; };
 
     // ===== INITIALISATION =====
-    function init() {
-      loadQuestions();
+    async function init() {
+      await loadQuestions();
+      iq();
+      ub();
     }
     
     init();
