@@ -1080,7 +1080,9 @@
 </div>
 
 <script>
-  (function() {
+  // Attendre que le DOM soit complètement chargé
+  document.addEventListener('DOMContentLoaded', function() {
+    
     // ============================================================
     // CHARGEMENT DU FICHIER JSON DEPUIS GITHUB - VERSION CORRIGÉE
     // ============================================================
@@ -1088,22 +1090,15 @@
     // URL directe de votre fichier raw sur GitHub
     const RAW_URL = 'https://raw.githubusercontent.com/ericf6598/GrandPublic/main/question.json';
     
-    // Plusieurs solutions de fallback pour le chargement
-    const CORS_PROXIES = [
-      // Solution 1 : Proxy AllOrigins (fonctionne souvent)
-      `https://api.allorigins.win/raw?url=${encodeURIComponent(RAW_URL)}`,
-      // Solution 2 : Autre proxy si AllOrigins est down
-      `https://corsproxy.io/?${encodeURIComponent(RAW_URL)}`,
-      // Solution 3 : Tentative directe (marche si GitHub permet CORS)
-      RAW_URL
-    ];
-    
     let questionBank = [];
     let questionsLoaded = false;
-    let loadingError = null;
 
     async function loadQuestions() {
       const qv = document.getElementById('questionView');
+      if (!qv) {
+        console.error('❌ Element questionView introuvable');
+        return false;
+      }
       
       // Afficher le chargement
       qv.innerHTML = `
@@ -1114,102 +1109,74 @@
         </div>
       `;
       
-      let lastError = null;
-      
-      // Essayer chaque proxy
-      for (let i = 0; i < CORS_PROXIES.length; i++) {
-        try {
-          console.log(`Tentative ${i + 1}: ${CORS_PROXIES[i].substring(0, 50)}...`);
-          
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 secondes timeout
-          
-          const response = await fetch(CORS_PROXIES[i], {
-            signal: controller.signal,
-            headers: {
-              'Accept': 'application/json',
-              'Cache-Control': 'no-cache'
-            }
-          });
-          
-          clearTimeout(timeoutId);
-          
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status} - ${response.statusText}`);
-          }
-          
-          const data = await response.json();
-          
-          // Validation des données
-          if (!data || typeof data !== 'object') {
-            throw new Error('Format de fichier invalide');
-          }
-          
-          // Extraire les questions selon la structure
-          if (data.questions && Array.isArray(data.questions)) {
-            questionBank = data.questions;
-          } else if (Array.isArray(data)) {
-            questionBank = data;
-          } else {
-            throw new Error('Structure non reconnue. Le fichier doit contenir un tableau de questions.');
-          }
-          
-          if (questionBank.length === 0) {
-            throw new Error('Aucune question trouvée');
-          }
-          
-          // SUCCÈS !
-          questionsLoaded = true;
-          console.log(`✅ ${questionBank.length} questions chargées avec succès !`);
-          return true;
-          
-        } catch (error) {
-          lastError = error;
-          console.warn(`Échec proxy ${i + 1}:`, error.message);
-          
-          if (i < CORS_PROXIES.length - 1) {
-            // Mise à jour du message de chargement
-            qv.innerHTML = `
-              <div class="loading-container">
-                <div class="loading-spinner"></div>
-                <p>Chargement des questions...</p>
-                <p style="font-size:12px;color:#64748b;">Essai d'une autre méthode...</p>
-              </div>
-            `;
-            // Petit délai avant le prochain essai
-            await new Promise(resolve => setTimeout(resolve, 1000));
-          }
+      try {
+        console.log('🔄 Tentative de chargement direct...');
+        
+        // Essayer d'abord le chargement direct (fonctionne si GitHub est accessible)
+        const response = await fetch(RAW_URL, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+          },
+          mode: 'cors' // Important pour mobile
+        });
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
         }
-      }
-      
-      // Si on arrive ici, toutes les tentatives ont échoué
-      loadingError = lastError?.message || 'Erreur inconnue';
-      
-      // Interface d'erreur améliorée
-      qv.innerHTML = `
-        <div style="text-align:center;padding:20px;background:#fff3cd;border-radius:12px;border:2px solid #ffc107;">
-          <div style="font-size:48px;margin-bottom:16px;">⚠️</div>
-          <h3 style="color:#856404;margin-bottom:12px;">Connexion impossible</h3>
-          <p style="color:#856404;margin-bottom:8px;">Impossible de charger les questions depuis le serveur</p>
-          <p style="color:#666;font-size:13px;margin-bottom:8px;">
-            <strong>Solutions :</strong><br>
-            1. Vérifiez votre connexion internet<br>
-            2. Réessayez dans quelques minutes<br>
-            3. Le fichier est peut-être temporairement indisponible
-          </p>
-          <p style="color:#999;font-size:12px;margin-bottom:16px;">Erreur: ${lastError?.message || 'Timeout'}</p>
-          <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
-            <button class="btn btn-primary" onclick="location.reload()" style="min-width:120px;">
-              🔄 Réessayer
-            </button>
-            <button class="btn btn-secondary" onclick="window.open('${RAW_URL}', '_blank')" style="min-width:120px;">
-              🔗 Voir le fichier
-            </button>
+        
+        const data = await response.json();
+        
+        // Validation des données
+        if (!data || typeof data !== 'object') {
+          throw new Error('Format invalide');
+        }
+        
+        // Extraire les questions
+        if (data.questions && Array.isArray(data.questions)) {
+          questionBank = data.questions;
+        } else if (Array.isArray(data)) {
+          questionBank = data;
+        } else {
+          throw new Error('Structure non reconnue');
+        }
+        
+        if (questionBank.length === 0) {
+          throw new Error('Aucune question');
+        }
+        
+        questionsLoaded = true;
+        console.log(`✅ ${questionBank.length} questions chargées !`);
+        return true;
+        
+      } catch (error) {
+        console.error('❌ Erreur:', error);
+        
+        // Afficher l'erreur
+        qv.innerHTML = `
+          <div style="text-align:center;padding:20px;background:#fff3cd;border-radius:12px;border:2px solid #ffc107;">
+            <div style="font-size:48px;margin-bottom:16px;">⚠️</div>
+            <h3 style="color:#856404;margin-bottom:12px;">Connexion impossible</h3>
+            <p style="color:#856404;margin-bottom:8px;">Le fichier n'a pas pu être chargé</p>
+            <p style="color:#666;font-size:13px;margin-bottom:8px;">
+              <strong>Causes possibles :</strong><br>
+              • Problème de connexion internet<br>
+              • Le fichier JSON est inaccessible<br>
+              • Blocage par le navigateur
+            </p>
+            <p style="color:#999;font-size:12px;margin-bottom:16px;">Erreur: ${error.message}</p>
+            <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+              <button class="btn btn-primary" onclick="location.reload()" style="min-width:120px;">
+                🔄 Réessayer
+              </button>
+              <button class="btn btn-secondary" onclick="window.open('${RAW_URL}', '_blank')" style="min-width:120px;">
+                🔗 Tester le fichier
+              </button>
+            </div>
           </div>
-        </div>
-      `;
-      
-      return false;
+        `;
+        return false;
+      }
     }
 
     // ============================================================
@@ -1243,8 +1210,19 @@
       const cb=document.getElementById('cb'); if(cb) cb.onclick=()=>{ if(confirm('Fermer cette session ?')){ deas(); ub(); } };
       const sb=document.getElementById('sb'); if(sb) sb.onclick=shs;
     }
-    function osm() { document.getElementById('saveModalOverlay').style.display='flex'; document.getElementById('saveSessionName').value=activeSessionId?(gas()?.sessionName||''):('Quiz '+new Date().toLocaleDateString()); }
-    function shs() { document.getElementById('quizContainer').style.display='none'; document.getElementById('finishContainer').style.display='none'; document.getElementById('sessionsContainer').style.display='block'; rsl(); }
+    function osm() { 
+      const modal = document.getElementById('saveModalOverlay');
+      if (modal) {
+        modal.style.display='flex'; 
+        document.getElementById('saveSessionName').value=activeSessionId?(gas()?.sessionName||''):('Quiz '+new Date().toLocaleDateString());
+      }
+    }
+    function shs() { 
+      document.getElementById('quizContainer').style.display='none'; 
+      document.getElementById('finishContainer').style.display='none'; 
+      document.getElementById('sessionsContainer').style.display='block'; 
+      rsl(); 
+    }
 
     // ============================================================
     // GESTION DU QUIZ
@@ -1259,13 +1237,6 @@
 
     function iq(fn=false) {
       if (!questionsLoaded) {
-        // Afficher le chargement
-        qv.innerHTML = `
-          <div class="loading-container">
-            <div class="loading-spinner"></div>
-            <p>Chargement des questions...</p>
-          </div>
-        `;
         // Réessayer le chargement
         loadQuestions().then(() => {
           if (questionsLoaded) {
@@ -1278,7 +1249,6 @@
       const session=fn?null:gas();
       if(session&&session.questionOrder&&session.questionOrder.length>0) { rs(session); }
       else {
-        // Créer un nouvel ordre de questions à partir de la banque chargée
         if (questionBank.length === 0) {
           qv.innerHTML = `<div style="text-align:center;padding:40px;color:#dc2626;">❌ Aucune question disponible</div>`;
           return;
@@ -1477,88 +1447,156 @@
     }
 
     // ===== GESTIONNAIRES D'ÉVÉNEMENTS =====
-    pb.onclick=gp; nb.onclick=gn;
-    document.getElementById('finishBtn').onclick=sf;
-    document.getElementById('resumeQuizBtn').onclick=sq;
-    document.getElementById('resetFromFinishBtn').onclick=()=>{ if(confirm('Réinitialiser toutes les réponses ?')){ vd={}; sc=0; ci=0; sel=null; cq.forEach((q,i)=>{ if(q.type==='order') ua[i]=sh([...q.options]); else if(q.type==='vf') ua[i]=Array(q.options.length).fill(null); else if(q.type==='match') ua[i]=[]; else if(q.type==='qcm') ua[i]=[]; else ua[i]=null; }); if(activeSessionId) sas(gst()); sq(); rq(); un(); us(); } };
-    document.getElementById('saveFromFinishBtn').onclick=osm;
-    document.getElementById('quitAppBtn').onclick=()=>{ if(confirm('Quitter le quiz ?')){ if(window.close) window.close(); else alert('Fermez cet onglet.'); } };
-    document.getElementById('backToQuizBtn').onclick=sq;
-    document.getElementById('saveBannerBtn').onclick=osm;
-    document.getElementById('sessionsBannerBtn').onclick=shs;
-    
-    document.getElementById('saveConfirmBtn').onclick=()=>{ 
-      const n=document.getElementById('saveSessionName').value.trim(); 
-      if(!n){ alert('Nom requis.'); return; } 
-      if(activeSessionId && document.getElementById('saveModalOverlay').dataset.rename==='true'){ 
-        const s=gs(); 
-        if(s[activeSessionId]){ 
-          s[activeSessionId].sessionName=n; 
-          ss(s); 
-          hapticFeedback();
+    function setupEventListeners() {
+      // Navigation
+      pb.onclick=gp; 
+      nb.onclick=gn;
+      
+      // Boutons principaux
+      document.getElementById('finishBtn').onclick=sf;
+      document.getElementById('resumeQuizBtn').onclick=sq;
+      document.getElementById('resetFromFinishBtn').onclick=()=>{ 
+        if(confirm('Réinitialiser toutes les réponses ?')){ 
+          vd={}; sc=0; ci=0; sel=null; 
+          cq.forEach((q,i)=>{ 
+            if(q.type==='order') ua[i]=sh([...q.options]); 
+            else if(q.type==='vf') ua[i]=Array(q.options.length).fill(null); 
+            else if(q.type==='match') ua[i]=[]; 
+            else if(q.type==='qcm') ua[i]=[]; 
+            else ua[i]=null; 
+          }); 
+          if(activeSessionId) sas(gst()); 
+          sq(); rq(); un(); us(); 
         } 
-      } else if(!activeSessionId) {
-        cas(n,gst()); 
+      };
+      document.getElementById('saveFromFinishBtn').onclick=osm;
+      document.getElementById('quitAppBtn').onclick=()=>{ 
+        if(confirm('Quitter le quiz ?')){ 
+          alert('Vous pouvez fermer cet onglet.');
+        } 
+      };
+      document.getElementById('backToQuizBtn').onclick=sq;
+      document.getElementById('saveBannerBtn').onclick=osm;
+      document.getElementById('sessionsBannerBtn').onclick=shs;
+      
+      // Sauvegarde
+      document.getElementById('saveConfirmBtn').onclick=()=>{ 
+        const n=document.getElementById('saveSessionName').value.trim(); 
+        if(!n){ alert('Nom requis.'); return; } 
+        if(activeSessionId && document.getElementById('saveModalOverlay').dataset.rename==='true'){ 
+          const s=gs(); 
+          if(s[activeSessionId]){ 
+            s[activeSessionId].sessionName=n; 
+            ss(s); 
+            hapticFeedback();
+          } 
+        } else if(!activeSessionId) {
+          cas(n,gst()); 
+          hapticFeedback();
+        } else { 
+          const s=gs(); 
+          if(s[activeSessionId]){ 
+            s[activeSessionId].sessionName=n; 
+            ss(s); 
+            sas(gst());
+            hapticFeedback();
+          } 
+        } 
+        document.getElementById('saveModalOverlay').style.display='none'; 
+        document.getElementById('saveModalOverlay').dataset.rename='false'; 
+        ub(); rsl(); 
+      };
+      
+      document.getElementById('saveCancelBtn').onclick=()=>{ 
+        document.getElementById('saveModalOverlay').style.display='none'; 
+      };
+      
+      document.getElementById('createSessionBtn').onclick=()=>{ 
+        const n=document.getElementById('newSessionName').value.trim(); 
+        if(!n){ alert('Nom requis.'); return; } 
+        document.getElementById('newSessionName').value=''; 
+        const nid='s'+Date.now(), sessions=gs(); 
+        sessions[nid]={questionOrder:sh(questionBank.map(q=>q.id)),currentIndex:0,userAnswers:{},validated:{},score:0,sessionName:n,lastModified:new Date().toISOString()}; 
+        sessions[nid].questionOrder.forEach((qId,i)=>{ 
+          const q=questionBank.find(q=>q.id===qId); 
+          if(q){ 
+            if(q.type==='order') sessions[nid].userAnswers[i]=sh([...q.options]); 
+            else if(q.type==='vf') sessions[nid].userAnswers[i]=Array(q.options.length).fill(null); 
+            else if(q.type==='match') sessions[nid].userAnswers[i]=[]; 
+            else if(q.type==='qcm') sessions[nid].userAnswers[i]=[]; 
+            else sessions[nid].userAnswers[i]=null; 
+          } 
+        }); 
+        ss(sessions); 
+        activeSessionId=nid; 
+        localStorage.setItem(CSK,nid); 
         hapticFeedback();
-      } else { 
-        const s=gs(); 
-        if(s[activeSessionId]){ 
-          s[activeSessionId].sessionName=n; 
-          ss(s); 
-          sas(gst());
-          hapticFeedback();
-        } 
-      } 
-      document.getElementById('saveModalOverlay').style.display='none'; 
-      document.getElementById('saveModalOverlay').dataset.rename='false'; 
-      ub(); rsl(); 
-    };
-    
-    document.getElementById('saveCancelBtn').onclick=()=>{ document.getElementById('saveModalOverlay').style.display='none'; };
-    document.getElementById('createSessionBtn').onclick=()=>{ 
-      const n=document.getElementById('newSessionName').value.trim(); 
-      if(!n){ alert('Nom requis.'); return; } 
-      document.getElementById('newSessionName').value=''; 
-      const nid='s'+Date.now(), sessions=gs(); 
-      sessions[nid]={questionOrder:sh(questionBank.map(q=>q.id)),currentIndex:0,userAnswers:{},validated:{},score:0,sessionName:n,lastModified:new Date().toISOString()}; 
-      sessions[nid].questionOrder.forEach((qId,i)=>{ 
-        const q=questionBank.find(q=>q.id===qId); 
-        if(q){ 
-          if(q.type==='order') sessions[nid].userAnswers[i]=sh([...q.options]); 
-          else if(q.type==='vf') sessions[nid].userAnswers[i]=Array(q.options.length).fill(null); 
-          else if(q.type==='match') sessions[nid].userAnswers[i]=[]; 
-          else if(q.type==='qcm') sessions[nid].userAnswers[i]=[]; 
-          else sessions[nid].userAnswers[i]=null; 
-        } 
-      }); 
-      ss(sessions); 
-      activeSessionId=nid; 
-      localStorage.setItem(CSK,nid); 
-      hapticFeedback();
-      iq(); 
-      sq(); 
-      ub(); 
-    };
-    
-    document.getElementById('infoBtn').onclick=()=>document.getElementById('modalOverlay').style.display='flex';
-    document.getElementById('closeModalBtn').onclick=()=>document.getElementById('modalOverlay').style.display='none';
-    document.getElementById('modalOverlay').onclick=e=>{ if(e.target===document.getElementById('modalOverlay')) document.getElementById('modalOverlay').style.display='none'; };
-    document.getElementById('saveModalOverlay').onclick=e=>{ if(e.target===document.getElementById('saveModalOverlay')) document.getElementById('saveModalOverlay').style.display='none'; };
+        iq(); 
+        sq(); 
+        ub(); 
+      };
+      
+      // Modales
+      const infoBtn = document.getElementById('infoBtn');
+      const modalOverlay = document.getElementById('modalOverlay');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      
+      if (infoBtn && modalOverlay) {
+        infoBtn.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('🟢 Clic sur "À propos"');
+          modalOverlay.style.display = 'flex';
+        };
+      }
+      
+      if (closeModalBtn && modalOverlay) {
+        closeModalBtn.onclick = function() {
+          modalOverlay.style.display = 'none';
+        };
+      }
+      
+      if (modalOverlay) {
+        modalOverlay.onclick = function(e) {
+          if (e.target === modalOverlay) {
+            modalOverlay.style.display = 'none';
+          }
+        };
+      }
+      
+      const saveModalOverlay = document.getElementById('saveModalOverlay');
+      if (saveModalOverlay) {
+        saveModalOverlay.onclick = function(e) {
+          if (e.target === saveModalOverlay) {
+            saveModalOverlay.style.display = 'none';
+          }
+        };
+      }
+      
+      console.log('✅ Tous les événements sont configurés');
+    }
 
     // ===== INITIALISATION =====
     async function init() {
+      console.log('🚀 Démarrage de l\'application...');
+      setupEventListeners();
       const success = await loadQuestions();
       if (success) {
         iq();
         ub();
+        console.log('✅ Application prête !');
       } else {
-        // En cas d'échec, on garde l'interface d'erreur déjà affichée par loadQuestions()
         ub();
+        console.log('⚠️ Application démarrée mais sans questions');
       }
     }
     
-    init();
-  })();
+    // Démarrer l'application
+    init().catch(error => {
+      console.error('❌ Erreur fatale:', error);
+    });
+    
+  }); // Fin de DOMContentLoaded
 </script>
 </body>
 </html>
